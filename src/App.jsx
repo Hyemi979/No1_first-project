@@ -20,6 +20,7 @@ function App() {
       <p>1조 화이팅!!!</p>
       <p>test</p>
       <p>test2</p>
+      <p>test3</p>
     </>
   )
 }
