@@ -1,11 +1,14 @@
 import { useState } from 'react'
 import './App.css'
 import Router from './shared/Router'
+import { RecoilRoot } from 'recoil'
 
 function App() {
-    const [count, setCount] = useState(0)
-
-    return <Router />
+    return (
+        <RecoilRoot>
+            <Router />
+        </RecoilRoot>
+    )
 }
 
 export default App
