@@ -1,3 +1,4 @@
+import TextField from '../../components/atoms/TextField'
 import { confirmModalState } from '../../shared/recoil/confirmModalState'
 import { useRecoilState } from 'recoil'
 
@@ -11,6 +12,7 @@ const Home = () => {
     return (
         <div>
             <button onClick={handleModal}>모달 오픈</button>
+            <TextField placeholder="(최소 10자 이상)"/>
         </div>
     )
 }
