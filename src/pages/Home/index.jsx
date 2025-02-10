@@ -15,7 +15,7 @@ const Home = () => {
       <Tag type="yellow">판타지</Tag>
       <Tag type="gray">나와요</Tag>
       <Tag type="skyblue">판타지</Tag>
-      <Tag type="">내향적인 관찰자</Tag>
+      <Tag type="">내향인 관찰자</Tag>
     </div>
   )
 }
