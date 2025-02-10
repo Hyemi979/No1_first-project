@@ -3,11 +3,11 @@ import { confirmModalState } from '../../shared/recoil/confirmModalState'
 import { useRecoilState } from 'recoil'
 
 const Home = () => {
-    const [modalOpen, setModalOpen] = useRecoilState(confirmModalState)
+  const [modalOpen, setModalOpen] = useRecoilState(confirmModalState)
 
-    const handleModal = () => {
-        setModalOpen({ isOpen: true })
-    }
+  const handleModal = () => {
+    setModalOpen({ isOpen: true })
+  }
 
     return (
         <div>
