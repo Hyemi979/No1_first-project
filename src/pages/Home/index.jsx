@@ -1,4 +1,4 @@
-import Tag from '../../components/atoms/Tag'
+import TextField from '../../components/atoms/TextField'
 import { confirmModalState } from '../../shared/recoil/confirmModalState'
 import { useRecoilState } from 'recoil'
 
@@ -9,15 +9,12 @@ const Home = () => {
     setModalOpen({ isOpen: true })
   }
 
-  return (
-    <div>
-      <button onClick={handleModal}>모달 오픈</button>
-      <Tag type="yellow">판타지</Tag>
-      <Tag type="gray">나와요</Tag>
-      <Tag type="skyblue">판타지</Tag>
-      <Tag type="">내향인 관찰자</Tag>
-    </div>
-  )
+    return (
+        <div>
+            <button onClick={handleModal}>모달 오픈</button>
+            <TextField placeholder="(최소 10자 이상)"/>
+        </div>
+    )
 }
 
 export default Home
