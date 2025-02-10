@@ -1,3 +1,4 @@
+import Chips from '../../components/atoms/chips'
 import { confirmModalState } from '../../shared/recoil/confirmModalState'
 import { useRecoilState } from 'recoil'
 
@@ -7,12 +8,15 @@ const Home = () => {
     const handleModal = () => {
         setModalOpen({ isOpen: true })
     }
+    
 
     return (
         <div>
-            <button onClick={handleModal}>모달 오픈</button>
+            <Chips isPress={true}>추리소설</Chips>
+            <Chips isPress={false}>판타지</Chips>
         </div>
     )
+    
 }
 
 export default Home
