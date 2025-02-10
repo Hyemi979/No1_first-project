@@ -15,6 +15,7 @@ const Home = () => {
             <TextField placeholder="(최소 10자 이상)"/>
         </div>
     )
+    
 }
 
 export default Home
