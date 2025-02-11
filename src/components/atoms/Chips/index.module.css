@@ -1,0 +1,26 @@
+.wrap {
+    height: 44px;
+    width: 111px;
+    background-color: rgb(219, 234, 255);
+    border-radius: 22px;
+    border: 1px, solid, rgb(95, 163, 252);
+    font-size: 16px;
+    font-family: 'neo';
+    font-weight: bold;
+    color :#056BF0;
+}
+.pressed {
+    height: 44px;
+    width: 111px;
+    background-color: rgb(230, 230, 230);
+    border-radius: 22px;
+    border: 1px, solid, rgb(204,204,204);
+    font-size: 16px;
+    font-family: 'neo';
+    color :#808080;
+}
+
+@font-face {
+    font-family: 'neo';
+    src: url('../src/fonts/NanumSquareNeo-bRg.ttf') format('truetype');
+}
