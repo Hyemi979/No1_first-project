@@ -1,0 +1,22 @@
+.progress {
+  appearance: none;
+  width: 335px;
+  height: 8px;
+  border-radius: 4px;
+  border: 1px solid #eeeeee;
+  background: #f0f0f0;
+  overflow: hidden;
+}
+
+/* 프로그래스 바의 배경 */
+.progress::-webkit-progress-bar {
+  background: #DBEAFF;
+  border-radius: 4px;
+}
+
+/* 프로그래스 값이 채워지는 부분 */
+.progress::-webkit-progress-value {
+  background: #5FA3FC;
+  border-radius: 4px;
+  transition: width 0.3s ease-in-out;
+}
