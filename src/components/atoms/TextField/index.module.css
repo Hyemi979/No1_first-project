@@ -4,4 +4,5 @@
     border: 1px solid #dadada;
     border-radius: 8px;
     padding: 18px;
+    resize: none;
 }
