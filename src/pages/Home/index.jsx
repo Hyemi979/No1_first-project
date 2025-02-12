@@ -1,15 +1,10 @@
 import CheckButton from '../../components/atoms/CheckButton';
-import { confirmModalState } from '../../shared/recoil/confirmModalState';
-import { useRecoilState } from 'recoil';
 import { useState } from 'react';
 import TextField from '../../components/atoms/TextField';
+import useCallModal from '../../hooks/useCallModal';
 
 const Home = () => {
-  const [modalOpen, setModalOpen] = useRecoilState(confirmModalState);
-
-  const handleModal = () => {
-    setModalOpen({ isOpen: true });
-  };
+  const { callModal } = useCallModal();
 
   const [isPress, setIsPress] = useState(false);
 
@@ -19,7 +14,7 @@ const Home = () => {
 
   return (
     <div>
-      <button onClick={handleModal}>모달 오픈</button>
+      <button onClick={callModal}>모달 오픈</button>
       <CheckButton isPress={isPress} onClick={handleClick}>
         취향 선택 버튼
       </CheckButton>
