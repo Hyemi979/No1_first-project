@@ -1,23 +1,26 @@
-import TextField from '../../components/atoms/TextField'
-import Title from '../../components/atoms/Title'
-import { confirmModalState } from '../../shared/recoil/confirmModalState'
-import { useRecoilState } from 'recoil'
+import CheckButton from '../../components/atoms/CheckButton';
+import { useState } from 'react';
+import TextField from '../../components/atoms/TextField';
+import useCallModal from '../../hooks/useCallModal';
 
 const Home = () => {
-  const [modalOpen, setModalOpen] = useRecoilState(confirmModalState)
+  const { callModal } = useCallModal();
 
-  const handleModal = () => {
-    setModalOpen({ isOpen: true })
-  }
+  const [isPress, setIsPress] = useState(false);
 
-    return (
-        <div>
-            <button onClick={handleModal}>모달 오픈</button>
-            <TextField placeholder="(최소 10자 이상)"/>
-            <Title>안녕하세요!</Title>
-        </div>
-    )
-    
-}
+  const handleClick = () => {
+    setIsPress(!isPress);
+  };
 
-export default Home
+  return (
+    <div>
+      <button onClick={callModal}>모달 오픈</button>
+      <CheckButton isPress={isPress} onClick={handleClick}>
+        취향 선택 버튼
+      </CheckButton>
+      <TextField placeholder='(최소 10자 이상)' />
+    </div>
+  );
+};
+
+export default Home;
