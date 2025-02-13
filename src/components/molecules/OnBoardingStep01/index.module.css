@@ -1,15 +1,14 @@
 .wrap {
-    background-color: beige;
-    padding: 10px;
-    border-radius: 5px;
-    border: 1px solid gray;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
-.input_wrap {
-    margin-bottom: 20px;
+.button_wrap {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
 }

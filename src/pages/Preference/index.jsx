@@ -1,6 +1,11 @@
 import { useState } from 'react';
 import OnBoardingStep01 from '../../components/molecules/OnBoardingStep01';
 import OnBoardingStep02 from '../../components/molecules/OnBoardingStep02';
+import OnBoardingStep03 from '../../components/molecules/OnBoardingStep03';
+import OnBoardingStep04 from '../../components/molecules/OnBoardingStep04';
+import OnBoardingStep05 from '../../components/molecules/OnBoardingStep05';
+import OnBoardingStep06 from '../../components/molecules/OnBoardingStep06';
+import OnBoardingStep07 from '../../components/molecules/OnBoardingStep07';
 
 const Home = () => {
   const [step, setStep] = useState(0);
@@ -31,13 +36,17 @@ const Home = () => {
     case 0:
       return <OnBoardingStep01 nextStep={handleOnBoarding} />;
     case 1:
-      if (onBoardingArr[0] === 'yes') {
-        return <OnBoardingStep02 nextStep={handleOnBoarding} />;
-      } else {
-        return <div>아니요 선택함</div>;
-      }
+      return <OnBoardingStep02 nextStep={handleOnBoarding} />;
     case 2:
-      return <div>{onBoardingArr[1]}</div>;
+      return <OnBoardingStep03 nextStep={handleOnBoarding} />;
+    case 3:
+      return <OnBoardingStep04 nextStep={handleOnBoarding} />;
+    case 4:
+      return <OnBoardingStep05 nextStep={handleOnBoarding} />;
+    case 5:
+      return <OnBoardingStep06 nextStep={handleOnBoarding} />;
+    case 6:
+      return <OnBoardingStep07 nextStep={handleOnBoarding} />;
     default:
       return <p>오류가 있습니다 새로고침 해주세요</p>;
   }
