@@ -1,5 +1,5 @@
 .container {
-  margin: 0 20px;
+  margin: 0 20px 0 20px ;
   display: flex;
   flex-direction: column;
   align-items: center; /* 전체 요소들 가운데 정렬 */
@@ -7,20 +7,22 @@
   width: 375px;  /* 화면 너비 고정 */
 }
 
-.favoriteTopNavbar {
+.favoritetopnavbar {
   /* 상단 내비게이션 바 스타일 */
   margin-top: 0; /* 상단바는 마진을 0으로 설정해줘야 상단에 맞게 붙을 수 있음 */
   padding: 10px 0; /* 적당한 패딩으로 텍스트와 바 간의 공간을 설정 */
   width: 100%; /* 전체 너비 사용 */
   display: flex; /* 플렉스를 사용하여 아이콘과 텍스트 정렬 */
-  justify-content: center; /* 가운데 정렬 */
-  align-items: center; /* 아이콘과 텍스트 수직 가운데 정렬 */
-  font-size: 20px;
-  font-weight: bold;
-  line-height: 150%;
-  font-family: 'NanumSquare Neo', sans-serif;
+  justify-content: space-between; /* 아이콘을 왼쪽, 텍스트는 가운데로 */
+  align-items: ceter; /* 아이콘과 텍스트 수직 정렬 */
 }
 
+
+.align_progress {
+  display: flex;
+  margin-right: auto;
+  padding: 30px 0 0 20px;
+}
 
 .progressCircle {
   transform: rotate(-90deg);
@@ -55,7 +57,7 @@
 
 .title {
   font-size: 20px;
-  font-weight: bold;
+  font-weight: 500px;
   line-height: 150%;
   font-family: 'NanumSquare Neo', sans-serif; /* 타이틀 폰트 */
   text-align: center;
