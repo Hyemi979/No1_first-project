@@ -5,7 +5,7 @@ import Button from '../../atoms/Button';
 import styles from './index.module.css';
 import ProgressBar from '../../atoms/ProgressBar';
 import FavoriteTopNavbar from '../../atoms/FavoriteTopNavbar';
-const OnBoardingStep02 = ({ nextStep }) => {
+const OnBoardingStep03 = ({ nextStep }) => {
   const [isAccept, setIsAccept] = useState(true);
   const ref = useRef(null);
   const handleNextStep = () => {
@@ -52,4 +52,4 @@ const OnBoardingStep02 = ({ nextStep }) => {
     </div>
   );
 };
-export default OnBoardingStep02;
+export default OnBoardingStep03;
