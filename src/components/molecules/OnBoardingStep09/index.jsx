@@ -4,7 +4,7 @@ import Title from '../../atoms/Title';
 import Button from '../../atoms/Button';
 import useNavigationPage from '../../../hooks/useNavigationPage';
 
-const OnBoardingStep07 = ({ nextStep }) => {
+const OnBoardingStep09 = ({ nextStep }) => {
   const ref = useRef(null);
   const { routePage } = useNavigationPage();
 
@@ -24,4 +24,4 @@ const OnBoardingStep07 = ({ nextStep }) => {
   );
 };
 
-export default OnBoardingStep07;
+export default OnBoardingStep09;
