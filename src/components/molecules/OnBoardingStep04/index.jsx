@@ -1,7 +1,9 @@
 import { useRef } from 'react';
-import Input from '../../atoms/Input';
 import Title from '../../atoms/Title';
 import Button from '../../atoms/Button';
+import Favorite_small_selection_button from '../../atoms/Favorite_small_selection_button';
+import ProgressBar from '../../atoms/ProgressBar';
+import styles from './index.module.css';
 
 const OnBoardingStep04 = ({ nextStep }) => {
   const ref = useRef(null);
@@ -13,10 +15,19 @@ const OnBoardingStep04 = ({ nextStep }) => {
   };
 
   return (
-    <div>
-      <Title>꿈꾸고 있는 미래의 모습을 적어줘</Title>
-      <Input inputRef={ref} />
-      <Button onClick={handleNextStep}>다음</Button>
+    <div className={styles.wrap}>
+      <ProgressBar className={styles.progressBar} />
+      
+
+      <div className={styles.buttonsWrapper}>
+      <Title className={styles.Title} >성별을 선택해주세요!</Title>
+      <Favorite_small_selection_button>남자</Favorite_small_selection_button>
+      <Favorite_small_selection_button>여자</Favorite_small_selection_button>
+      </div>
+
+      <div>
+      <Button  onClick={handleNextStep}>다음</Button>
+      </div>
     </div>
   );
 };
