@@ -1,15 +1,65 @@
 .wrap {
-    background-color: beige;
-    padding: 10px;
+    width: 335px;
+    height: 812px;
     border-radius: 5px;
-    border: 1px solid gray;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* 전체 요소 가운데 정렬 */
+    position: relative;
+    justify-content: space-between;
+}
+
+ .FavoriteTopNavbar{
+    text-align:center;
+    align-items: center; 
+    width: 100%;
+ }
+
+.contents {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start; /* 위쪽 정렬 */
+    flex-grow: 1; /* 남은 공간을 채우기 */
+    padding: 20px 0; /* 위아래 패딩 */
+    gap: 40px;
+}
+
+.content{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 20px;
+    align-items: center;
+}
+
+.progressBar {
+    width: 100%;
+    margin-top: 20px; /* ProgressBar와 Title 간의 간격 조정 */
+}
+
+.title {
+    display: flex;
+
+    margin-top: 20px; /* Title과 ProgressBar 간의 간격 */
+}
+
+.buttonsWrapper {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 300px;
+    gap: 20px; /* 버튼 간의 간격 조정 */
 }
 
-.input_wrap {
-    margin-bottom: 20px;
+.Favorite_small_selection_button {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    gap: 16px;
+}
+
+.Button {
+    
 }
