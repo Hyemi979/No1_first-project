@@ -6,6 +6,7 @@ import OnBoardingStep04 from '../../components/molecules/OnBoardingStep04';
 import OnBoardingStep05 from '../../components/molecules/OnBoardingStep05';
 import OnBoardingStep06 from '../../components/molecules/OnBoardingStep06';
 import OnBoardingStep07 from '../../components/molecules/OnBoardingStep07';
+import OnBoardingStep09 from '../../components/molecules/OnBoardingStep09';
 
 const Home = () => {
   const [step, setStep] = useState(0);
@@ -47,6 +48,10 @@ const Home = () => {
       return <OnBoardingStep06 nextStep={handleOnBoarding} />;
     case 6:
       return <OnBoardingStep07 nextStep={handleOnBoarding} />;
+    case 7:
+      return <OnBoardingStep08 nextStep={handleOnBoarding} />;
+    case 8:
+        return <OnBoardingStep09 nextStep={handleOnBoarding} />;
     default:
       return <p>오류가 있습니다 새로고침 해주세요</p>;
   }
