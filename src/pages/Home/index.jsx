@@ -2,6 +2,7 @@ import CheckButton from '../../components/atoms/CheckButton';
 import { useState } from 'react';
 import TextField from '../../components/atoms/TextField';
 import useCallModal from '../../hooks/useCallModal';
+import MainTopNavbar from '../../components/atoms/MainTopNavbar';
 
 const Home = () => {
   const { callModal } = useCallModal();
@@ -19,6 +20,8 @@ const Home = () => {
         취향 선택 버튼
       </CheckButton>
       <TextField placeholder='(최소 10자 이상)' />
+      <MainTopNavbar></MainTopNavbar>
+
     </div>
   );
 };
