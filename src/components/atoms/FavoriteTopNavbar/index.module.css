@@ -1,0 +1,21 @@
+.navbar {
+    width: 375px;
+    height: 60px;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: #ffffff;
+  }
+  
+  .icon {
+    margin-right: 10px;
+  }
+  
+  .text {
+    font-size: 18px;
+    line-height: 150%;
+    font-weight: 500;
+    color: #333;
+  }
+  
