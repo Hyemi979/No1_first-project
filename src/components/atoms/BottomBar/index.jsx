@@ -21,7 +21,7 @@ const BottomBar = ({ ...rest }) => {
     },
     {
       id: 'profile',
-      label: '프로필',
+      label: '마이',
       iconOff: profile_off,
       iconOn: profile_on,
     },
