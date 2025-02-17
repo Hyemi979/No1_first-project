@@ -1,2 +1,10 @@
 .wrap {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+}
+
+.content {
+  max-width: 500px;
 }
