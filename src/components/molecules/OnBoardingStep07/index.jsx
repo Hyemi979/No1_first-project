@@ -12,7 +12,6 @@ const OnBoardingStep07 = ({ nextStep }) => {
     const item = ref.current.value;
 
     nextStep(item);
-    routePage('/', item);
   };
 
   return (
