@@ -1,6 +1,6 @@
 import loading from '../../../assets/loading.gif'
 
-const Loading = ({ ...rest }) => {
+const OnBoardingStep10 = ({ ...rest }) => {
     return (
         <div>
         <img src={loading} alt='chaploading' height='100px' width='200px' /> 
@@ -8,4 +8,4 @@ const Loading = ({ ...rest }) => {
     )
 }
 
-export default Loading 
+export default OnBoardingStep10
