@@ -1,10 +1,9 @@
 import React, { useState } from 'react';
-import FavoriteTopNavbar from '../../components/atoms/FavoriteTopNavbar';
-import ProgressBar from '../../components/atoms/ProgressBar';
-import TextField from '../../components/atoms/TextField';
-import Favorite_selection_button from '../../components/atoms/CheckButton';
+import FavoriteTopNavbar from '../../atoms/FavoriteTopNavbar';
+import ProgressBar from '../../atoms/ProgressBar';
+import TextField from '../../atoms/TextField';
+import Favorite_selection_button from '../../atoms/CheckButton';
 import styles from './index.module.css';
-import favoriteimage from '../../assets/image/favoriteimage.svg';
 import { useNavigate } from 'react-router-dom'; // 페이지 이동을 위한 useNavigate
 
 const FavoritePage = () => {
