@@ -1,21 +1,23 @@
 .navbar {
-    width: 375px;
-    height: 60px;
-    padding: 0 20px;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    background-color: #ffffff;
-  }
-  
-  .icon {
-    margin-right: 10px;
-  }
-  
-  .text {
-    font-size: 18px;
-    line-height: 150%;
-    font-weight: 500;
-    color: #333;
-  }
-  
+  width: 375px;
+  height: 60px;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;  /* 아이콘을 왼쪽에 배치 */
+  background-color: #ffffff;
+  border-bottom: 1px solid #F2F2F2;  /* 상단 내비 아래에 선 추가 */
+}
+
+.icon {
+
+}
+
+.text {
+  font-size: 18px;
+  line-height: 150%;
+  font-weight: 500;
+  color: #000000;
+  flex-grow: 1; /* 텍스트 영역이 남은 공간을 차지하도록 */
+  text-align: center; /* 텍스트 가운데 정렬 */
+}
