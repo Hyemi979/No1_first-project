@@ -16,7 +16,6 @@
   font-family: 'bold';
   color :#000000;
   padding-bottom: 40px;
-  padding-top: 40px;
   text-align: center;
 }
 .wrap2 {
@@ -38,7 +37,13 @@
 .align_progress {
   display: flex;
   margin-right:auto;
+  padding: 30px;
 }
 .wrapper {
-  padding: 200px;
+  padding-top: 300px;
+}
+.text_box2{
+  font-size: 18px;
+  font-family: 'bold';
+  color :#000000;
 }

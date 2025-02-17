@@ -4,6 +4,7 @@ import Title from '../../atoms/Title';
 import Button from '../../atoms/Button';
 import styles from './index.module.css';
 import ProgressBar from '../../atoms/ProgressBar';
+import FavoriteTopNavbar from '../../atoms/FavoriteTopNavbar';
 const OnBoardingStep02 = ({ nextStep }) => {
   const [isAccept, setIsAccept] = useState(true);
   const ref = useRef(null);
@@ -27,7 +28,9 @@ const OnBoardingStep02 = ({ nextStep }) => {
       return <input ref={inputRef} {...rest} className={styles.wrap2}></input>;
     };
   return (
+    /* 전체 콘텐츠감싸고 있는 div*/
 <div className={styles.wrap}>
+<FavoriteTopNavbar><div className={styles.text_box2}>나의 독서 스타일은?</div></FavoriteTopNavbar>
 <div className={styles.align_progress}>
 <ProgressBar progress={progress} />
 </div>
