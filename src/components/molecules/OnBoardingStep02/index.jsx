@@ -7,11 +7,17 @@ const OnBoardingStep02 = ({ nextStep }) => {
   return (
     <div className={styles.wrap}>
       <img src={AppLogo} />
-      <Title style={{ textAlign: 'center' }}>
+      <Title
+        type='Title02'
+        className={styles.Title_02_Bold}
+        style={{ textAlign: 'center', lineHeight: 1.5, fontWeight: 'bold' }}
+      >
         1분안에
-        <br />내 독서 스타일 찾는 초간단 테스트
+        <br />내 독서 스타일 알아보기!
       </Title>
-      <Button onClick={() => nextStep('ok')}>다음</Button>
+      <div className={styles.button_container}>
+        <Button onClick={() => nextStep('ok')}>독서 스타일 찾기</Button>
+      </div>
     </div>
   );
 };
