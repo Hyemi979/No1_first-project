@@ -18,11 +18,14 @@ const OnBoardingStep08 = ({ nextStep }) => {
 
   return (
     <div className={styles.container}>
+      <div className={styles.favoritetopnavbar}>
       <FavoriteTopNavbar>나의 독서 스타일은?</FavoriteTopNavbar>
+      </div>
 
       {/* 프로그래스 바 추가 */}
-      <ProgressBar progress={5} />  {/* 5/7 상태 표시 */}
-
+      <div className={styles.align_progress}>
+        <ProgressBar progress={5} />  {/* 5/7 상태 표시 */}
+      </div>
       <img src={favorite_image08} alt="독서 스타일" className={styles.image} />
 
       <Title>책을 다 읽고 난 후, 당신의 피드는?</Title>
