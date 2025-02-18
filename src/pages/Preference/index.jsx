@@ -51,15 +51,19 @@ const Home = () => {
     case 6: {
       const choice = onBoardingArr[5];
       return <OnBoardingStep07
-          choice={choice} 
-          nextStep={handleOnBoarding}
-          beforeStep={beforeStep}/>;      
+        choice={choice}
+        nextStep={handleOnBoarding}
+        beforeStep={beforeStep} />;
     }
-      
     case 7:
       return <OnBoardingStep08 nextStep={handleOnBoarding} />;
-    case 8:
-      return <OnBoardingStep09 nextStep={handleOnBoarding} />;
+    case 8: {
+      const choice = onBoardingArr[7];
+      return <OnBoardingStep09
+        choice={choice}
+        nextStep={handleOnBoarding}
+        beforeStep={beforeStep} />;
+    }
     case 9:
       return <OnBoardingStep10 nextStep={handleOnBoarding} />;
     default:

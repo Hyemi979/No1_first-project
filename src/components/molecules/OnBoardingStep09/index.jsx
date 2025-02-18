@@ -8,7 +8,7 @@ import Favorite_selection_button from '../../atoms/Favorite_selection_button';
 import useNavigationPage from '../../../hooks/useNavigationPage';
 
 
-const OnBoardingStep09 = ({ nextStep, choice }) => {
+const OnBoardingStep09 = ({ nextStep, choice, beforeStep }) => {
   const { routePage } = useNavigationPage();
   const totalSteps = 7;
   const currentStep = 7;
