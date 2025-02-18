@@ -9,7 +9,9 @@
 .Title_02_Bold { 
     height: 60px;
     font-size: 20px;
-    font-weight: bold;
+    font-family: 'bold';
+    color :#000000;
+    line-height: 150%;
     text-align: center;
     padding: 20px 20px;
     margin-bottom: 24px;
