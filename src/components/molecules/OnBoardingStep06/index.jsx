@@ -31,7 +31,7 @@ const OnBoardingStep06 = ({ nextStep }) => {
         <Title> 책을 고르다가 SNS에서 <br /> "요즘 화제인 책"이라는 글을 봤다!</Title>
       </div>
       <div className={styles.buttonGroup}>
-        <Favorite_selection_button onClick={() => handleNextStep('감성적인 문장 및 리뷰를 찾아본다.')}>감성적인 문장 및 리뷰를 찾아본다.</Favorite_selection_button>
+        <Favorite_selection_button onClick={() => handleNextStep('optionA')}>감성적인 문장 및 리뷰를 찾아본다.</Favorite_selection_button>
         <Favorite_selection_button onClick={() => handleNextStep('핵심 내용이 정리된 내용을 찾아본다.')}>핵심 내용이 정리된 내용을 찾아본다.</Favorite_selection_button>
       </div>
     </div>

@@ -50,8 +50,10 @@ const Home = () => {
       return <OnBoardingStep06 nextStep={handleOnBoarding} />;
     case 6: {
       const choice = onBoardingArr[5];
-      return <OnBoardingStep07 
-          nextStep={handleOnBoarding}/>;
+      return <OnBoardingStep07
+          choice={choice} 
+          nextStep={handleOnBoarding}
+          beforeStep={beforeStep}/>;      
     }
       
     case 7:
