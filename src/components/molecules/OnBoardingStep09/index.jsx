@@ -1,54 +1,79 @@
-import React, { useState } from 'react';
+import styles from './index.module.css';
 import FavoriteTopNavbar from '../../atoms/FavoriteTopNavbar';
 import ProgressBar from '../../atoms/ProgressBar';
-import TextField from '../../atoms/TextField';
-import Favorite_selection_button from '../../atoms/CheckButton';
-import styles from './index.module.css';
-import { useNavigate } from 'react-router-dom'; // 페이지 이동을 위한 useNavigate
+import favorite_image10 from '../../../assets/image/favorite_image10.svg'
+import favorite_image11 from '../../../assets/image/favorite_image11.svg'
+import Title from '../../atoms/Title';
+import Favorite_selection_button from '../../atoms/Favorite_selection_button';
+import useNavigationPage from '../../../hooks/useNavigationPage';
 
-const FavoritePage = () => {
-  const [isPress, setIsPress] = useState(false);
-  const navigate = useNavigate(); // useNavigate 훅 사용
 
-  const handlePage = () => {
-    // 뒤로가기 버튼 클릭 시 이전 페이지로 이동
-    navigate(-1); // -1은 이전 페이지로 돌아가기
+const OnBoardingStep09 = ({ nextStep, choice }) => {
+  const { routePage } = useNavigationPage();
+  const totalSteps = 7;
+  const currentStep = 7;
+
+  const handleNextStep = (choice) => {
+    nextStep(choice);
   };
 
-  const handleNextPage = () => {
-    // 버튼 클릭 시 다음 페이지로 이동
-    navigate('/nextPage'); // /nextPage는 이동할 경로
-  };
+  if (choice === 'optionA') {
+    return (
+      <div className={styles.container}>
+        <FavoriteTopNavbar>나의 독서 스타일은?</FavoriteTopNavbar>
 
-  const handleClick = () => {
-    setIsPress(!isPress);
-  };
+        <div className={styles.progressContainer}>
+          <ProgressBar progress={7} />
+        </div>
+
+        <div className={styles.image}>
+          <img src={favorite_image10} alt="독서 스타일" />
+        </div>
+
+        <div className={styles.titleContainer}>
+          <Title
+            type='Title02'
+            className={styles.Title_02_Bold}
+            style={{ textAlign: 'center', lineHeight: 1.5, fontWeight: 'bold' }}>
+            모임에서 고른 자리는?
+          </Title>
+        </div>
+        <div className={styles.buttonGroup}>
+          <Favorite_selection_button onClick={() => handleNextStep('조용한 프라이빗 독서룸')}>조용한 프라이빗 독서룸</Favorite_selection_button>
+          <Favorite_selection_button onClick={() => handleNextStep('서로의 얼굴을 마주보는 원형 테이블')}>서로의 얼굴을 마주보는 원형 테이블</Favorite_selection_button>
+        </div>
+      </div>
+    );
+  }
 
   return (
-    <div className={styles.pageWrapper}>
-      {/* FavoriteTopNavbar 컴포넌트 */}
-      <FavoriteTopNavbar onClick={handlePage}>
-        나의 독서 스타일은?
-      </FavoriteTopNavbar>
+    <div className={styles.container}>
+        <FavoriteTopNavbar>나의 독서 스타일은?</FavoriteTopNavbar>
 
-      {/* 프로그레스 바 */}
-      <ProgressBar progress={60} />
+      <div className={styles.progressContainer}>
+        <ProgressBar progress={7} />
+      </div>
 
-      {/* My Taste 이미지 */}
-      <img src={favoriteimage} alt="My Taste" className={styles.myTaste} onClick={handlePage} />
+      <div className={styles.image}>
+        <img src={favorite_image11} alt="독서 스타일" />
+      </div>
 
-      {/* 텍스트 필드 */}
-      <TextField placeholder="(최소 10자 이상)" />
+      <div className={styles.titleContainer}>
+        <Title
+          type='Title02'
+          className={styles.Title_02_Bold}
+          style={{ textAlign: 'center', lineHeight: 1.5, fontWeight: 'bold' }}>
+          모임에서 책을 다 읽고<br/>분위기가 풀어졌다!
+        </Title>
+      </div>
 
-      {/* 버튼 2개 */}
-      <div className={styles.buttonsWrapper}>
-        <Favorite_selection_button isPress={isPress} onClick={handleClick}>
-          취향 선택 버튼
-        </Favorite_selection_button>
-        <Favorite_selection_button onClick={handleNextPage}>다음 페이지</Favorite_selection_button>
+      <div className={styles.buttonGroup}>
+        <Favorite_selection_button onClick={() => handleNextStep('편안하게 감상 공유')}>편안하게 감상 공유</Favorite_selection_button>
+        <Favorite_selection_button onClick={() => handleNextStep('생각을 정리하며, 남들의 이야기를 경청')}>생각을 정리하며, 남들의 이야기를 경청</Favorite_selection_button>
       </div>
     </div>
   );
+
 };
 
-export default FavoritePage;
+export default OnBoardingStep09;

@@ -1,21 +1,51 @@
-.pageWrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-  }
-  
-  .myTaste{
-    margin: 20px 0;
-    cursor: pointer;
-  }
-  
-  .buttonsWrapper {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    margin-top: 20px;
-  }
-  
-  /* 필요한 추가 스타일 */
-  
+.container {
+  margin: 0 20px 0 20px ;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.progressContainer {
+  display: flex;
+  justify-content: left;
+  margin-right: auto;
+  margin-top: 30px;
+  height: 50px;
+}
+
+.image {
+  width: 200px;
+  height: 200px; 
+  margin: 20px 0 30px 0;
+  align-self: center;
+}
+
+.titleContainer {
+  width: 100%;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 0 20px;
+}
+
+.Title_02_Bold {
+  font-size: 20px;
+  font-family: bold;
+  color: #000000;
+  line-height: 150%;
+  text-align: center;
+  vertical-align: middle;
+}
+
+
+.buttonGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  margin-top: 24px;
+}
