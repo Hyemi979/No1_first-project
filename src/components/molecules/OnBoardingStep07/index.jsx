@@ -7,10 +7,11 @@ import ProgressBar from '../../atoms/ProgressBar';
 import useNavigationPage from '../../../hooks/useNavigationPage';
 import styles from './index.module.css';
 
-const OnBoardingStep07 = ({ nextStep, choice }) => {
+const OnBoardingStep07 = ({ nextStep, choice, beforeStep }) => {
   const { routePage } = useNavigationPage();
   const totalSteps = 8; // 전체 단계 수
   const currentStep = 5; // 현재 단계
+  
 
   const handleNextStep = (choice) => {
     nextStep(choice);
@@ -20,7 +21,7 @@ const OnBoardingStep07 = ({ nextStep, choice }) => {
     return ( 
       <div className={styles.container}>
         <div className={styles.favoritetopnavbar}>
-        <FavoriteTopNavbar>나의 독서 스타일은?</FavoriteTopNavbar>
+        <FavoriteTopNavbar onClick = {beforeStep}>나의 독서 스타일은?</FavoriteTopNavbar>
         </div>
   
         {/* 프로그래스 바 추가 */}
@@ -53,7 +54,7 @@ const OnBoardingStep07 = ({ nextStep, choice }) => {
   return (
     <div className={styles.container}>
       <div className={styles.favoritetopnavbar}>
-      <FavoriteTopNavbar>나의 독서 스타일은?</FavoriteTopNavbar>
+      <FavoriteTopNavbar onClick = {beforeStep}>나의 독서 스타일은?</FavoriteTopNavbar>
       </div>
 
       {/* 프로그래스 바 추가 */}
