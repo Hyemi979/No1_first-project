@@ -1,11 +1,9 @@
-import { Children } from 'react';
 import styles from './index.module.css';
 
-const IconText = ({ icon: Icon, children, ...rest }) => {
-    console.log(Icon);
+const IconText = ({ icon, children, ...rest }) => {
     return (
         <div {...rest} className={styles.wrap}>
-            {Icon && <Icon />}
+            {icon && <img src={icon} />}
             <p {...rest} className={styles.space}>
                 {children}
             </p>
