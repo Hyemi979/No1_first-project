@@ -1,5 +1,4 @@
 import Title from '../../atoms/Title'
-import Text from '../../atoms/Text'
 import IconText from '../../atoms/IconText';
 import Tag from '../../atoms/Tag';
 import styles from './index.module.css';
@@ -27,15 +26,20 @@ const BookCard = ({
 
       {/* 책 정보 */}
       <div className={styles.info}>
-        {/* 태그 리스트 */}
-        <div className={styles.tags}>
-          <Tag type = "yellow"># {tag}</Tag>
-          <Tag type = "gray"># {booktag}</Tag>
-        </div>
+       
+       <div className={styles.topblock}>
 
-        {/* 제목 */}
-        <Title type = 'Body01'
-        className={styles.Body_01_Bold}>{title} </Title>
+          {/* 태그 리스트 */}
+           <div className={styles.tags}>
+            <Tag type = "yellow"># {tag}</Tag>
+            <Tag type = "gray"># {booktag}</Tag>
+           </div>
+
+           {/* 제목 */}
+          <Title type = 'Body01'
+          className={styles.Body_01_Bold}>{title} </Title>
+
+       </div>
 
         {/* 책 정보 리스트 (아이콘 + 텍스트 조합) */}
         <div className={styles.icontext}>
@@ -46,14 +50,26 @@ const BookCard = ({
 
         {/* 성향 일치율 */}
         <div className={styles.matchRate}>
-          <Text size="small">성향 일치율</Text>
+          <Title 
+          type='Caption01'
+          className={styles.Caption_01_Regular}
+          >성향 일치율</Title>
+
+        <div className={styles.progressBarContainer}>
           <div className={styles.progressBar}>
             <div 
               className={styles.progressFill} 
               style={{ width: `${matchRate}%` }} 
             />
           </div>
-          <Text size="small" align="right">{matchRate}%</Text>
+          <Title 
+            type='Caption02' 
+            className={styles.Caption_02_Regular}
+            >
+              {matchRate}%
+            </Title>
+          </div>
+          
         </div>
       </div>
     </div>

@@ -1,11 +1,12 @@
 .card {
   display: flex;
-  background: white;
+  background: #ffffff;
   border-radius: 12px;
   padding: 12px;
   border-color: #E6E6E6;
-  width: 335px; /* 카드 전체 너비 */
-  height: 205px; /* 카드 전체 높이 */
+  width: 100%; /* 카드 전체 너비 */
+  height: auto; /* 카드 전체 높이 */
+
 }
 
 .cover {
@@ -13,6 +14,7 @@
   height: 181px; /* 이미지 높이 */
   border-radius: 12px;
   overflow: hidden;
+  flex-shrink: 0;
 }
 
 .image {
@@ -27,44 +29,83 @@
   justify-content: space-between; /* 각 항목 사이에 균등 간격 */
   flex: 1;
   padding-left: 12px; /* 책 이미지와의 간격 */
+  gap:12px;
+}
+
+.topblock {
+  display: flex;
+  flex-direction: column; /* 세로 방향으로 배치 */
+  gap: 8px; /* 세로 간격 8px */
+  height: auto;
 }
 
 .tags {
   display: flex;
   gap: 4px;
-  margin-bottom: 8px;
-}
-
-.title {
-  font-size: 16px;
-  font-weight: bold;
-  margin-bottom: 12px;
+  margin:0 0 8px 0;
 }
 
 .icontext {
   display: flex;
   flex-direction: column; /* 아이콘 텍스트를 수직으로 배치 */
   gap: 6px; /* 아이콘 텍스트 간의 간격 */
-  margin-bottom: 12px;
+  line-height: 150%;
+  font-size: 12px;
+  font-weight: Regular;
+  justify-content: center;
+  font-family: NanumSquareNeo,sans-serif;
 }
 
 .matchRate {
   display: flex;
   flex-direction: column;
   gap: 4px; /* 성향 일치율 항목 간 간격 */
+  width: 100%;
+}
+
+
+.progressBarContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  min-width: 120px; /* 충분한 공간 확보 */
 }
 
 .progressBar {
-  width: 100%;
+  flex-grow: 1;
   height: 8px;
   background: #ddd;
   border-radius: 4px;
   overflow: hidden;
-  margin: 4px 0;
+  margin-right: 8px; /* 텍스트와 간격 추가 */
+  position: relative;
 }
 
 .progressFill {
   height: 100%;
   background: #facc15;
   transition: width 0.3s ease;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.progressText {
+  white-space: nowrap; /* 숫자가 줄바꿈되지 않도록 설정 */
+  font-size: 12px;
+  font-weight: bold;
+  color: #333;
+}
+
+.Caption_02_Regular {
+  font-size: 10px;
+  font-family: 'regular';
+  color :#000000;
+}
+
+.Caption_01_Regular {
+  font-size: 12px;
+  font-family: 'regular';
+  color :#000000;
 }
