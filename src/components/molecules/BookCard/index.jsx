@@ -37,7 +37,9 @@ const BookCard = ({
 
            {/* 제목 */}
           <Title type = 'Body01'
-          className={styles.Body_01_Bold}>{title} </Title>
+          className={styles.Body_01_Bold}
+          style={{ textAlign: 'left', lineHeight: 1.5, fontFamily:'bold' , color: '#333333'}}
+          >{title} </Title>
 
        </div>
 
