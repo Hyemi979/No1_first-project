@@ -5,11 +5,155 @@ import FavoriteTopNavbar from '../../atoms/FavoriteTopNavbar';
 import Tag from '../../atoms/Tag';
 import result_selfie from '../../../assets/image/result_selfie.svg';
 import result_selfie_fantasy from '../../../assets/image/result_selfie_fantasy.svg';
+import result_hipster_fantasy from '../../../assets/image/result_hipster_fantasy.svg';
+import result_infohunter_fantasy from '../../../assets/image/result_infohunter_fantasy.svg';
+import result_onebite_fantasy from '../../../assets/image/result_onebite_fantasy.svg';
 
-const OnBoardingStep11 = ({ ...rest }) => {
+const images = [
+  result_selfie_fantasy,
+  result_hipster_fantasy,
+  result_infohunter_fantasy,
+  result_onebite_fantasy,
+];
+
+const bookType = [
+  {
+    type: 0,
+    title: '만렙 성장 독서러',
+    content: '장기적으로 함께 읽으며 배움을 나누는 독서러',
+  },
+  {
+    type: 1,
+    title: '하이텐션 북토커',
+    content: '책에 대한 의견을 적극적으로 공유하는 타입',
+  },
+  {
+    type: 2,
+    title: '느긋한 책방 손님',
+    content: '부담 없이 읽고 가볍게 소감을 나누는 스타일',
+  },
+  {
+    type: 3,
+    title: '리스닝 요정',
+    content: '조용히 사색하며 남들의 의견을 경청하는 스타일',
+  },
+];
+
+// 1.책에 몰입 할 수 있는 곳 -> 조용한 프라이빗 독서룸 : 만렙 성장 독서러
+// 2.책에 몰입 할 수 있는 곳 -> 서로의 얼굴을 마주보는 원형 테이블 : 하이텐션 북토커
+
+// 3.감성있고,커피가 맛있는 곳 -> 편안하게 감상 공유 : 느긋한 책방 손님
+// 4.감성있고,커피가 맛있는 곳 -> 생각을 정리하며, 남들의 이야기를 경청 : 리스닝 요정
+
+const favoriteBooks = [
+  {
+    type: 0,
+    title: '소설/문학',
+    content: '1984, 노인과 바다',
+  },
+  {
+    type: 1,
+    title: '판타지',
+    content: 'ex. 포스 윙, 해리 포터와 마법사의 돌',
+  },
+  {
+    type: 2,
+    title: 'SF',
+    content: 'ex. 마션,  천 개의 파랑',
+  },
+  {
+    type: 3,
+    title: '미스터리',
+    content: 'ex. 셜록 홈즈 시리즈, 다빈치 코드',
+  },
+  {
+    type: 4,
+    title: '자기계발',
+    content: 'ex. 세이노의 가르침, 자존감 수업',
+  },
+  {
+    type: 5,
+    title: '사회/경제',
+    content: 'ex. 자본론 , 총, 균, 쇠',
+  },
+  {
+    type: 6,
+    title: '에세이/시',
+    content: 'ex. 내가 읽은 책들, 고백',
+  },
+  {
+    type: 7,
+    title: '인문/철학',
+    content: 'ex. 니코마코스 윤리학,존재와 시간',
+  },
+  {
+    type: 8,
+    title: '심리학',
+    content: 'ex. 마음의 법칙,생각에 관한 생각',
+  },
+];
+
+const myBookTypes = [
+  {
+    type: 0,
+    title: '감성셀피독서가!',
+    contentTitle: '책 한줄이 내 하루 분위기를 좌우함...',
+    content: `책 속 감정에 몰입하는 타입!<br/>내가 느낀 감정, 문장을 기록하면서<br/>그 순간을 나만의 감성으로 담아내는 게 중요해요.<br/>책을 읽는 것도, 내 감정을 기록하는 것도 모두 예술~`,
+  },
+  {
+    type: 1,
+    title: '사색의 힙스터!',
+    contentTitle: `이 문장, 의미 해석만 세 시간째...`,
+    content: `책 한 줄에서도 철학을 찾는 타입!한 권을 빨리 읽는 것보다, 한 문장을 곱씹으며세상과 연결 짓는 게 더 중요하죠.오늘도 깊은 사색 속으로~`,
+  },
+  {
+    type: 2,
+    title: '인포 헌터!',
+    contentTitle: '이 책에서 얻을 수 있는 핵심은 이거닷!!',
+    content:
+      '책을 읽을 때, 핵심만 파악하고 실용적인 정보만 쫙!최신 트렌드나 정보가 중요하죠. 길게 읽는 것보다는 중요한 부분만 정확하게 건져내는 게 내 스타일!',
+  },
+  {
+    type: 3,
+    title: '한입 독서러!',
+    contentTitle: '한 권만 읽기엔 세상이 너무 넓음',
+    content: `하나의 책을 완전히 끝내는 것보다는<br/>여러 책을 가볍게 맛보는 게 내 스타일!<br/>책의 핵심만 빠르게 짚어보며,<br/>다양한 책을 동시에 읽는 재미를 느껴요.`,
+  },
+];
+
+const OnBoardingStep11 = ({ items, beforeStep }) => {
+  const myStyle = myBookTypes.find((el) => {
+    if (el.type === items[6]) {
+      return true;
+    }
+    return false;
+  });
+  const { type, title, contentTitle, content } = myStyle;
+
+  const myBookStyle = favoriteBooks.find((el) => {
+    if (el.title === items[4][0]) {
+      return true;
+    }
+    return false;
+  });
+
+  const myBookType = bookType.find((el) => {
+    if (el.type === items[8]) {
+      return true;
+    }
+    return false;
+  });
+
   return (
-    <div {...rest} className={styles.wrap}>
+    <div
+      className={
+        myBookType.type === 0 || myBookType.type === 1
+          ? styles.wrap_00
+          : styles.wrap_01
+      }
+    >
       <FavoriteTopNavbar
+        onClick={beforeStep}
         style={{
           margin: '0',
           padding: '0',
@@ -43,7 +187,7 @@ const OnBoardingStep11 = ({ ...rest }) => {
               lineHeight: '1.5',
             }}
           >
-            감성셀피독서가!
+            {title}
           </Title>
         </div>
       </div>
@@ -103,7 +247,7 @@ const OnBoardingStep11 = ({ ...rest }) => {
               marginBottom: '20px',
             }}
           >
-            "책 한 줄이 내 하루 분위기를 좌우함…"
+            "{contentTitle}"
           </Title>
           <Title
             type='Body02'
@@ -114,12 +258,7 @@ const OnBoardingStep11 = ({ ...rest }) => {
               lineHeight: '1.5',
             }}
           >
-            책 속 감정에 몰입하는 타입!
-            <br />
-            내가 느낀 감정, 문장을 기록하면서
-            <br />그 순간을 나만의 감성으로 담아내는 게 중요해요.
-            <br />
-            책을 읽는 것도, 내 감정을 기록하는 것도 모두 예술~
+            {content}
           </Title>
         </div>
         {/* /첫 번쨰 말풍선 하단/ */}
@@ -147,7 +286,7 @@ const OnBoardingStep11 = ({ ...rest }) => {
                 marginBottom: '8px',
               }}
             >
-              느긋한 책방 손님(바뀌는부분)
+              {myBookType.title}
             </Title>
             <Title
               type='Caption01'
@@ -158,7 +297,7 @@ const OnBoardingStep11 = ({ ...rest }) => {
                 lineHeight: '1.5',
               }}
             >
-              부담 없이 읽고 가볍게 소감을 나누는 스타일(바뀌는부분)
+              {myBookType.content}
             </Title>
           </div>
           <div className={styles.line}></div>
@@ -185,7 +324,7 @@ const OnBoardingStep11 = ({ ...rest }) => {
                 marginBottom: '8px',
               }}
             >
-              판타지(바뀌는 부분)
+              {myBookStyle.title}
             </Title>
             <Title
               type='Caption01'
@@ -196,13 +335,13 @@ const OnBoardingStep11 = ({ ...rest }) => {
                 lineHeight: '1.5',
               }}
             >
-              ex. 포스 윙, 해리 포터와 마법사의 돌(바뀌는부분)
+              ex. {myBookStyle.content}
             </Title>
           </div>
         </div>
       </div>
       <div className={styles.middle_con}>
-        <img src={result_selfie_fantasy} alt='환상&환장' />
+        <img src={images[type]} alt='환상&환장' />
       </div>
       <div className={styles.bottom_con}>
         <div className={styles.text_box3}>
@@ -215,17 +354,21 @@ const OnBoardingStep11 = ({ ...rest }) => {
               marginBottom: '10px',
             }}
           >
-            “느긋한 책방 손님”인
+            "{myBookType.title}"인
             <br />
             채터님에게 딱 맞는
             <span
-              style={{
-                fontFamily: 'extraBold',
-                fontSize: '18px',
-                color: '#E0A200',
-              }}
+              className={
+                myBookType.type === 0 || myBookType.type === 1
+                  ? styles.book_type_highlight_00
+                  : styles.book_type_highlight_01
+              }
             >
-              &nbsp;단기챕&nbsp;
+              &nbsp;
+              {myBookType.type === 0 || myBookType.type === 1
+                ? '장기챕'
+                : '단기챕'}
+              &nbsp;
             </span>
             추천해드려요
           </Title>
