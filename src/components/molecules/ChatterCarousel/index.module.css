@@ -1,0 +1,47 @@
+.wrap0 {
+    background-color: rgb(255, 255, 255);
+    border-radius: 5px;
+    border: 1px solid rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    width: 438px;
+    height: 153px;
+}
+
+.wrap1 {
+    margin-bottom: 20px;
+    margin-top: 20px;
+    padding: 24px;
+}
+
+.wrap2 {
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.wrap3 {
+    display: flex;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    column-gap: 10px;
+}
+
+.button1{
+   border-radius: 100px;
+   border: 1px solid #E6E6E6;
+   height: 58px;
+   width: 58px;
+}
+
+.SubTitle_02_Bold {
+    font-size: 18px;
+    font-family: 'bold';
+    color :#1A1A1A;
+}
+
+@font-face {
+    font-family: 'bold';
+    src: url('../src/fonts/NanumSquareNeo-cBd.ttf') format('truetype');
+}
