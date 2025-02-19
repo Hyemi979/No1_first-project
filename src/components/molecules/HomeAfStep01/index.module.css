@@ -1,0 +1,47 @@
+.wrap {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+
+.container {
+    background: #91C0FD;
+    overflow: hidden;
+    padding: 36px 50px 36px 24px;
+    border-radius: 12px;
+    position: relative;
+    width: fit-content;
+}
+
+h2 {
+    font-size: 24px;
+    font-family: 'extrabold';
+    color: #FFFFFF;
+}
+
+.tags {
+    margin: 10px 0;
+}
+
+.retest {
+    display: flex;
+    gap: 8px;
+}
+
+.retry {
+    font-size: 16px;
+    color: #F5F9FF;
+    cursor: pointer;
+}
+
+.image {
+    position: absolute;
+    left: 390px;
+    top: 50px;
+    width: 100px;
+    height: 180px;
+}
