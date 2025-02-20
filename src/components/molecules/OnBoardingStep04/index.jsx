@@ -25,8 +25,12 @@ const OnBoardingStep04 = ({ nextStep, beforeStep }) => {
   return (
     <OnboardingLayout>
       <div className={styles.contents}>
-        <FavoriteTopNavbar onClick={beforeStep}>타이틀</FavoriteTopNavbar>
-        <ProgressBar progress={2} className={styles.progressBar} />
+        <FavoriteTopNavbar onClick={beforeStep}>
+          나의 독서 스타일은?
+        </FavoriteTopNavbar>
+        <div className={styles.progressBar}>
+          <ProgressBar progress={2} />
+        </div>
 
         <div className={styles.subtitle}>
           <Title style={{ fontSize: '20px', fontWeight: '600' }}>
@@ -34,7 +38,6 @@ const OnBoardingStep04 = ({ nextStep, beforeStep }) => {
           </Title>
         </div>
 
-        {/* 성별 선택 버튼 목록 */}
         <div className={styles.genderGrid}>
           <Favorite_small_selection_button
             onClick={() => handleGenderSelection('male')}

@@ -83,9 +83,10 @@ const Home = () => {
         />
       );
     }
-    // case 9:
-    //   return <OnBoardingStep10 nextStep={handleOnBoarding} />;
     case 9:
+      return <OnBoardingStep10 nextStep={handleOnBoarding} />;
+
+    case 10:
       return (
         <OnBoardingStep11
           items={onBoardingArr}

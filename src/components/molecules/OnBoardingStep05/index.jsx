@@ -5,6 +5,7 @@ import Favorite_small_selection_button from '../../atoms/Favorite_small_selectio
 import ProgressBar from '../../atoms/ProgressBar';
 import styles from './index.module.css';
 import FavoriteTopNavbar from '../../atoms/FavoriteTopNavbar';
+import OnboardingLayout from '../../atoms/OnboardingLayout';
 
 // 온보딩 프로세스의 다섯 번째 스텝 컴포넌트
 const OnBoardingStep05 = ({ nextStep, beforeStep }) => {
@@ -45,19 +46,21 @@ const OnBoardingStep05 = ({ nextStep, beforeStep }) => {
   ];
 
   return (
-    <div className={styles.wrap}>
+    <OnboardingLayout>
       {/* 최상단 네비게이션 바 */}
       <FavoriteTopNavbar
         onClick={beforeStep}
         className={styles.FavoriteTopNavbar}
       >
-        타이틀
+        나의 독서 스타일은?
       </FavoriteTopNavbar>
 
       <div className={styles.contents}>
         <div className={styles.content}>
           {/* 진행률 바 표시 */}
-          <ProgressBar progress={3} className={styles.progressBar} />
+          <div className={styles.progressBar}>
+            <ProgressBar progress={3} />
+          </div>
 
           {/* 제목 및 설명 */}
           <div className={styles.subtitle}>
@@ -85,14 +88,12 @@ const OnBoardingStep05 = ({ nextStep, beforeStep }) => {
       </div>
 
       {/* '다음' 버튼 (선택된 장르가 없을 경우 비활성화) */}
-      <Button
-        className={styles.Button}
-        onClick={handleNextStep}
-        disabled={selectedGenres.length === 0}
-      >
-        다음
-      </Button>
-    </div>
+      <div className={styles.buttonWrap}>
+        <Button onClick={handleNextStep} disabled={selectedGenres.length === 0}>
+          다음
+        </Button>
+      </div>
+    </OnboardingLayout>
   );
 };
 

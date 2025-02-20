@@ -1,5 +1,7 @@
 import { useEffect } from 'react';
 import loading from '../../../assets/loading.gif';
+import styles from './index.module.css';
+import OnboardingLayout from '../../atoms/OnboardingLayout';
 
 const OnBoardingStep10 = ({ nextStep }) => {
   useEffect(() => {
@@ -8,9 +10,11 @@ const OnBoardingStep10 = ({ nextStep }) => {
     }, 3000);
   }, []);
   return (
-    <div>
-      <img src={loading} alt='chaploading' height='100px' width='200px' />
-    </div>
+    <OnboardingLayout>
+      <div className={styles.img_wrap}>
+        <img src={loading} alt='chaploading' height='330px' width='400px' />
+      </div>
+    </OnboardingLayout>
   );
 };
 

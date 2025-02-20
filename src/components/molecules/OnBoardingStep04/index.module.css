@@ -13,26 +13,13 @@
 }
 
 .contents {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start; /* 위쪽 정렬 */
-  flex-grow: 1; /* 남은 공간을 채우기 */
-  gap: 40px;
   width: 100%;
-}
-
-.content {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  gap: 20px;
-  align-items: center;
 }
 
 .progressBar {
-  width: 100%;
-  margin-top: 20px; /* ProgressBar와 Title 간의 간격 조정 */
+  display: flex;
+  margin-right: auto;
+  margin-top: 20px;
 }
 
 .buttonWrap {
@@ -44,6 +31,7 @@
   flex-direction: column;
   align-items: center;
   gap: 5px;
+  margin-bottom: 40px;
 }
 
 .genderGrid {
@@ -52,4 +40,10 @@
   align-items: center;
   gap: 16px;
   width: 100%;
+}
+
+.selected {
+  background-color: #91c0fd;
+  color: black;
+  font-weight: bold;
 }
