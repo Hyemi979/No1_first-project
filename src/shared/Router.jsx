@@ -5,6 +5,7 @@ import Layout from '../components/commons/Layout';
 import ShortTerm from '../pages/ShortTerm';
 import ChapDetail from '../pages/ChapDetail';
 import ChatRoom from '../pages/ChatRoom';
+import OnBoarding from '../pages/Onboarding';
 
 const Router = () => {
   return (
@@ -12,6 +13,7 @@ const Router = () => {
       <Routes>
         <Route element={<Layout />}>
           <Route path='/' element={<Home />} />
+          <Route path='/onboarding' element={<OnBoarding />} />
           <Route path='/preference' element={<Preference />} />
           <Route path='/shortTerm' element={<ShortTerm />} />
           <Route path='/chapDetail' element={<ChapDetail />} />

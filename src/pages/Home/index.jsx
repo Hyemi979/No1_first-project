@@ -13,6 +13,7 @@ const Home = () => {
   return (
     <div className={styles.wrap}>
       <img src={myTaste} onClick={handlePage} className={styles.my_taste} />
+      <button onClick={() => routePage('/shortTerm')}>단기 챕</button>
     </div>
   );
 };
