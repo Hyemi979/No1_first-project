@@ -116,7 +116,7 @@ const myBookTypes = [
   },
 ];
 
-const OnBoardingStep11 = ({ items, beforeStep }) => {
+const OnBoardingStep11 = ({ items, beforeStep, resetStep }) => {
   const { routePage } = useNavigationPage();
 
   const myStyle = myBookTypes.find((el) => {
@@ -382,9 +382,21 @@ const OnBoardingStep11 = ({ items, beforeStep }) => {
               color: '#666666',
             }}
           >
-            <span style={{ fontFamily: 'Bold' }}>단기챕</span>이란?
-            <br />
-            특정 책이나 주제로 가볍게 이야기 나누는 모임
+            {myBookType.type === 0 || myBookType.type === 1 ? (
+              <>
+                <span style={{ fontFamily: 'Bold' }}>장기챕</span>이란?
+                <br />
+                같은 멤버들과 정해진 일정에 맞춰 책을 읽고
+                <br />
+                깊이 있는 대화를 나누는 모임
+              </>
+            ) : (
+              <>
+                <span style={{ fontFamily: 'Bold' }}>단기챕</span>이란?
+                <br />
+                특정 책이나 주제로 가볍게 이야기 나누는 모임
+              </>
+            )}
           </Title>
         </div>
         <div className={styles.meeting_components}>
@@ -393,7 +405,7 @@ const OnBoardingStep11 = ({ items, beforeStep }) => {
       </div>
       <div className={styles.button_box}>
         <div className={styles.button_inner}>
-          <Button onClick={handleNextStep}>버튼</Button>
+          <Button onClick={handleNextStep}>심오한 이야기 나누러 가기</Button>
         </div>
         <Title
           type='Body02'
@@ -401,7 +413,9 @@ const OnBoardingStep11 = ({ items, beforeStep }) => {
             fontFamily: 'regular',
             color: '#808080',
             paddingBottom: '20px',
+            cursor: 'pointer',
           }}
+          onClick={resetStep}
         >
           테스트 다시하기
         </Title>

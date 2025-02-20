@@ -25,6 +25,10 @@ const Home = () => {
     setStep(step - 1);
   };
 
+  const resetStep = () => {
+    setStep(1);
+  };
+
   // 현재 step을 기준으로 배열에 값을 기록하는 함수
   const handleOnBoarding = (item) => {
     const result = [...onBoardingArr];
@@ -92,6 +96,7 @@ const Home = () => {
           items={onBoardingArr}
           nextStep={handleOnBoarding}
           beforeStep={beforeStep}
+          resetStep={resetStep}
         />
       );
     default:
