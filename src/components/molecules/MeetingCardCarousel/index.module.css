@@ -1,0 +1,58 @@
+.wrap {
+    display: flex;
+    flex-direction: column;
+    height: 100%
+    
+  }
+  
+  
+  
+  :global(.slick-dots) {
+    position: absolute;
+    bottom: -34px; 
+    left: 3px;
+    display: block;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-align: center;
+  }
+  
+  :global(.slick-dots li) {
+    position: relative;
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    margin: 0px;
+    padding: 0;
+    cursor: pointer;
+  }
+  
+  
+  .container {
+    width: 100%;
+    max-width: 360px; /* 카드의 최대 너비 */
+    margin: 0 auto;
+    
+  }
+  
+   
+  /* 슬라이더 트랙 */
+  .wrap :global(.slick-track) {
+    display: flex !important;
+    
+  }
+  
+  /* 개별 슬라이드 아이템 */
+  .slideItem {
+    width: 100% !important;
+    padding: 0px 20px 0px  20px; /* 양쪽 패딩 */
+    box-sizing: border-box;
+  }
+  
+  /* 슬라이더 리스트 (드래그 영역) */
+  .wrap :global(.slick-list) {
+    overflow: visible; /* 드래그 시 넘치는 부분 보이게 */
+    margin: 0 -8px; /* 패딩 보정 */
+  }
