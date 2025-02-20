@@ -1,0 +1,62 @@
+.wrap {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    width: 156px;
+    height: 218px; 
+    border-radius: 0 6px 0 0;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.info {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    padding: 10px 6px 6px 6px;
+    background: rgba(255, 255, 255, 0.9); /* 반투명 배경 */
+    z-index: 10;
+    gap: 14px;
+    width: 100%;
+    box-sizing: border-box;
+    border: none; /* 모든 테두리 제거 */
+    border-left: 1px solid #E6E6E6;
+    border-right: 1px solid #E6E6E6;
+    border-bottom: 1px solid #E6E6E6;
+}
+
+.topblock {
+    display: flex;
+    flex-direction: column;
+    gap : 6px
+    
+}
+
+.icontext {
+    display: flex;
+    font-family: NanumSquareNeo,sans-serif;
+    font-size: 12px;
+    font-weight: 'Regular';
+    color: #666666;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.tags {
+    display: flex;
+    gap: 4px;
+}
+
+.tagGray {
+    display: inline-block;
+    background-color: #f0f0f0; /* 회색 배경 */
+    color: #333; /* 글자 색상 */
+    padding: 2px 6px;
+    font-size: 10px;
+    border-radius: 4px;
+}
+
