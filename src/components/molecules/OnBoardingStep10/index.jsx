@@ -12,7 +12,7 @@ const OnBoardingStep10 = ({ nextStep }) => {
   return (
     <OnboardingLayout>
       <div className={styles.img_wrap}>
-        <img src={loading} alt='chaploading' height='330px' width='400px' />
+        <img src={loading} alt='chaploading' height='250px' width='278px' />
       </div>
     </OnboardingLayout>
   );

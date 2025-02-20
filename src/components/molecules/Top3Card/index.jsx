@@ -7,7 +7,8 @@ import peopleIcon from '../../../assets/peopleIcon.svg';
 import calendarIcon from '../../../assets/calendarIcon.svg';
 
 // 북카드 컴포넌트
-const BookCard = ({
+const Top3Card = ({
+    ranking,
     title, 
     coverImage, 
     bookname, 
@@ -15,13 +16,22 @@ const BookCard = ({
     participants, 
     matchRate, 
     tag,
-    booktag, 
+    booktag,
     ...rest }) => {
 
   return (
     <div className={styles.card} {...rest}>
+    
+    <div className={styles.leftbox}>
+        <Title 
+        type='Title02'
+        className={styles.Title_02_ExtraBold}
+        style={{ textAlign: 'left', lineHeight: 1.5, fontFamily:'extrabold' , color: '#FFBE14'}}
+        >{ranking}</Title>
+        
       <div className={styles.cover}>
         <img src={coverImage} alt= "책표지" className={styles.image} />
+      </div>
       </div>
 
       {/* 책 정보 */}
@@ -39,7 +49,8 @@ const BookCard = ({
           <Title type = 'Body01'
           className={styles.Body_01_Bold}
           style={{ textAlign: 'left', lineHeight: 1.5, fontFamily:'bold' , color: '#333333'}}
-          >{title} </Title>
+          >
+            {title} </Title>
 
        </div>
 
@@ -50,33 +61,11 @@ const BookCard = ({
           <IconText icon={peopleIcon}>{`${participants}명이 의견을 남겼어요`}</IconText>
         </div>
 
-        {/* 성향 일치율 */}
-        <div className={styles.matchRate}>
-          <Title 
-          type='Caption01'
-          className={styles.Caption_01_Regular}
-          >성향 일치율</Title>
 
-        <div className={styles.progressBarContainer}>
-          <div className={styles.progressBar}>
-            <div 
-              className={styles.progressFill} 
-              style={{ width: `${matchRate}%` }} 
-            />
-          </div>
-          <Title 
-            type='Caption02' 
-            className={styles.Caption_02_Regular}
-            >
-              {matchRate}%
-            </Title>
-          </div>
-          
-        </div>
       </div>
     </div>
   )
 };
 
     
-export default BookCard;
+export default Top3Card;

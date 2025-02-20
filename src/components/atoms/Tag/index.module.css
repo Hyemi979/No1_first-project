@@ -1,66 +1,67 @@
 .blue {
-  background-color: #5fa3fc;
-  font-size: 16px;
-  padding: 6px 16px;
-  height: 30px;
-  border-radius: 36px;
-  margin: 10px 10px;
+  background-color: #C4DEFE;
+  font-size: 11px;
+  line-height: 150%;
+  padding: 4px 8px;
+  height: auto;
+  border-radius: 15px;
 
   align-items: center;
   justify-content: center;
-  color: #fff;
+  color: #056BF0;
   border: none;
-  font-family: 'Lato', sans-serif;
+  font-family: 'NanumSquareNeo', sans-serif;
   display: inline-flex;
   white-space: nowrap;
 }
 .skyblue {
-  background-color: #c3ddfe;
-  font-size: 16px;
-  padding: 6px 16px;
-  height: 30px;
-  border-radius: 36px;
-  margin: 10px 10px;
+  background-color: #DBEAFF;
+  font-size: 11px;
+  line-height: 150%;
+  padding: 4px 8px;
+  height: auto;
+  border-radius: 15px;
+  border-color:#5FA3FC;
 
   align-items: center;
   justify-content: center;
-  color: #056bf0;
+  color: #056BF0;
   border: none;
-  font-family: 'Lato', sans-serif;
+  font-family: 'NanumSquareNeo', sans-serif;
   display: inline-flex;
   white-space: nowrap;
 }
 
 .yellow {
-  background-color: #ffda79;
-  font-size: 16px;
-  padding: 6px 16px;
-  height: 30px;
-  border-radius: 36px;
-  margin: 10px 10px;
+  background-color: #FFE8AD;
+  font-size: 11px;
+  line-height: 150%;
+  padding: 4px 8px;
+  height: auto;
+  border-radius: 15px;
 
   align-items: center;
   justify-content: center;
-  color: #1a1a1a;
+  color: #7A5900;
   border: none;
-  font-family: 'Lato', sans-serif;
+  font-family: 'NanumSquareNeo', sans-serif;
   display: inline-flex;
   white-space: nowrap;
 }
 
 .gray {
-  background-color: #cccccc;
-  font-size: 16px;
-  padding: 6px 16px;
-  height: 30px;
-  border-radius: 36px;
-  margin: 10px 10px;
+  background-color: #E6E6E6;
+  font-size: 11px;
+  line-height: 150%;
+  padding: 4px 8px;
+  height: auto;
+  border-radius: 15px;
 
   align-items: center;
   justify-content: center;
-  color: #1a1a1a;
+  color: #666666;
   border: none;
-  font-family: 'Lato', sans-serif;
+  font-family: 'NanumSquareNeo', sans-serif;
   display: inline-flex;
   white-space: nowrap;
 }
