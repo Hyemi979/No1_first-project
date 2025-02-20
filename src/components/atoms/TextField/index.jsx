@@ -1,13 +1,7 @@
-import styles from './index.module.css'
-import Title from '../Title'
-import Input from '../Input'
+import styles from './index.module.css';
 
 const TextField = ({ ...rest }) => {
-    return (
-        <textarea {...rest} className={styles.wrap}>
+  return <textarea {...rest} className={styles.wrap}></textarea>;
+};
 
-        </textarea>
-    )
-}
-
-export default TextField
+export default TextField;

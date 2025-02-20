@@ -1,6 +1,6 @@
 import styles from './index.module.css'
 
-const Tag = ({ type, children, ...rest }) => {
+const Tag = ({ type, size='large', children, ...rest }) => {
   let className
   switch (type) {
     case 'yellow':
@@ -18,7 +18,7 @@ const Tag = ({ type, children, ...rest }) => {
   }
 
   return (
-    <p {...rest} className={className}>
+    <p {...rest} className={`${className} ${size==='small' && styles.small}`}>
       {children}
     </p>
   )

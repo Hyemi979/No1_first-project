@@ -1,4 +1,14 @@
-.wrap {
+.wrap_00 {
+  background-color: #f5f9ff;
+  border-radius: 5px;
+  border: 1px solid rgb(255, 255, 255);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.wrap_01 {
   background-color: #fffbf0;
   border-radius: 5px;
   border: 1px solid rgb(255, 255, 255);
@@ -7,6 +17,7 @@
   justify-content: center;
   align-items: center;
 }
+
 .result_title {
   display: flex;
   flex-direction: column;
@@ -79,4 +90,16 @@
 }
 .button_inner {
   margin: 10px 20px 20px 20px;
+}
+
+.book_type_highlight_00 {
+  font-family: 'extraBold';
+  font-size: 18px;
+  color: #056bf0;
+}
+
+.book_type_highlight_01 {
+  font-family: 'extraBold';
+  font-size: 18px;
+  color: #e0a200;
 }
