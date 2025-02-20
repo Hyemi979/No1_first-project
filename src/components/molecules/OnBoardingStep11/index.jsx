@@ -8,6 +8,7 @@ import result_selfie_fantasy from '../../../assets/image/result_selfie_fantasy.s
 import result_hipster_fantasy from '../../../assets/image/result_hipster_fantasy.svg';
 import result_infohunter_fantasy from '../../../assets/image/result_infohunter_fantasy.svg';
 import result_onebite_fantasy from '../../../assets/image/result_onebite_fantasy.svg';
+import useNavigationPage from '../../../hooks/useNavigationPage';
 
 const images = [
   result_selfie_fantasy,
@@ -38,12 +39,6 @@ const bookType = [
     content: '조용히 사색하며 남들의 의견을 경청하는 스타일',
   },
 ];
-
-// 1.책에 몰입 할 수 있는 곳 -> 조용한 프라이빗 독서룸 : 만렙 성장 독서러
-// 2.책에 몰입 할 수 있는 곳 -> 서로의 얼굴을 마주보는 원형 테이블 : 하이텐션 북토커
-
-// 3.감성있고,커피가 맛있는 곳 -> 편안하게 감상 공유 : 느긋한 책방 손님
-// 4.감성있고,커피가 맛있는 곳 -> 생각을 정리하며, 남들의 이야기를 경청 : 리스닝 요정
 
 const favoriteBooks = [
   {
@@ -98,30 +93,32 @@ const myBookTypes = [
     type: 0,
     title: '감성셀피독서가!',
     contentTitle: '책 한줄이 내 하루 분위기를 좌우함...',
-    content: `책 속 감정에 몰입하는 타입!<br/>내가 느낀 감정, 문장을 기록하면서<br/>그 순간을 나만의 감성으로 담아내는 게 중요해요.<br/>책을 읽는 것도, 내 감정을 기록하는 것도 모두 예술~`,
+    content: `책 속 감정에 몰입하는 타입!\n내가 느낀 감정, 문장을 기록하면서\n그 순간을 나만의 감성으로 담아내는 게 중요해요.\n책을 읽는 것도, 내 감정을 기록하는 것도 모두 예술~`,
   },
   {
     type: 1,
     title: '사색의 힙스터!',
     contentTitle: `이 문장, 의미 해석만 세 시간째...`,
-    content: `책 한 줄에서도 철학을 찾는 타입!한 권을 빨리 읽는 것보다, 한 문장을 곱씹으며세상과 연결 짓는 게 더 중요하죠.오늘도 깊은 사색 속으로~`,
+    content: `책 한 줄에서도 철학을 찾는 타입!\n한 권을 빨리 읽는 것보다,\n한 문장을 곱씹으며세상과 연결 짓는 게 더 중요하죠.\n오늘도 깊은 사색 속으로~`,
   },
   {
     type: 2,
     title: '인포 헌터!',
     contentTitle: '이 책에서 얻을 수 있는 핵심은 이거닷!!',
     content:
-      '책을 읽을 때, 핵심만 파악하고 실용적인 정보만 쫙!최신 트렌드나 정보가 중요하죠. 길게 읽는 것보다는 중요한 부분만 정확하게 건져내는 게 내 스타일!',
+      '책을 읽을 때, 핵심만 파악하고 실용적인 정보만 쫙!\n최신 트렌드나 정보가 중요하죠. 길게 읽는 것보다는\n중요한 부분만 정확하게 건져내는 게 내 스타일!',
   },
   {
     type: 3,
     title: '한입 독서러!',
     contentTitle: '한 권만 읽기엔 세상이 너무 넓음',
-    content: `하나의 책을 완전히 끝내는 것보다는<br/>여러 책을 가볍게 맛보는 게 내 스타일!<br/>책의 핵심만 빠르게 짚어보며,<br/>다양한 책을 동시에 읽는 재미를 느껴요.`,
+    content: `하나의 책을 완전히 끝내는 것보다는\n여러 책을 가볍게 맛보는 게 내 스타일!\n책의 핵심만 빠르게 짚어보며,\n다양한 책을 동시에 읽는 재미를 느껴요.`,
   },
 ];
 
 const OnBoardingStep11 = ({ items, beforeStep }) => {
+  const { routePage } = useNavigationPage();
+
   const myStyle = myBookTypes.find((el) => {
     if (el.type === items[6]) {
       return true;
@@ -143,6 +140,10 @@ const OnBoardingStep11 = ({ items, beforeStep }) => {
     }
     return false;
   });
+
+  const handleNextStep = () => {
+    routePage('/', { ...myStyle });
+  };
 
   return (
     <div
@@ -258,7 +259,7 @@ const OnBoardingStep11 = ({ items, beforeStep }) => {
               lineHeight: '1.5',
             }}
           >
-            {content}
+            <pre>{content}</pre>
           </Title>
         </div>
         {/* /첫 번쨰 말풍선 하단/ */}
@@ -392,7 +393,7 @@ const OnBoardingStep11 = ({ items, beforeStep }) => {
       </div>
       <div className={styles.button_box}>
         <div className={styles.button_inner}>
-          <Button>버튼</Button>
+          <Button onClick={handleNextStep}>버튼</Button>
         </div>
         <Title
           type='Body02'

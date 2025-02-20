@@ -49,7 +49,9 @@ const OnBoardingStep09 = ({ nextStep, choice, beforeStep }) => {
 
   return (
     <div className={styles.container}>
-      <FavoriteTopNavbar>나의 독서 스타일은?</FavoriteTopNavbar>
+      <FavoriteTopNavbar onClick={beforeStep}>
+        나의 독서 스타일은?
+      </FavoriteTopNavbar>
 
       <div className={styles.progressContainer}>
         <ProgressBar progress={7} />

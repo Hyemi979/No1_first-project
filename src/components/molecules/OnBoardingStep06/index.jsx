@@ -3,16 +3,10 @@ import FavoriteTopNavbar from '../../atoms/FavoriteTopNavbar';
 import ProgressBar from '../../atoms/ProgressBar';
 import Favorite_selection_button from '../../atoms/Favorite_selection_button';
 import Title from '../../atoms/Title';
-import useNavigationPage from '../../../hooks/useNavigationPage';
 import styles from './index.module.css';
 import like336 from '../../../assets/like336.svg';
 
 const OnBoardingStep06 = ({ nextStep, beforeStep }) => {
-  const ref = useRef(null);
-
-  const { routePage } = useNavigationPage();
-  const totalSteps = 7;
-  const currentStep = 4;
   const handleNextStep = (choice) => {
     nextStep(choice);
   };
