@@ -6,20 +6,14 @@ import SearchBar from '../../components/molecules/SearchBar';
 import useNavigationPage from '../../hooks/useNavigationPage';
 import styles from './index.module.css';
 import Top3Card from '../../components/molecules/Top3Card';
-
-const chapInfo = {
-  title: '만약 단 하루, 과거로 돌아갈 수 있다면 누구를 만나고 싶나요?',
-  coverImage: '', // 책 이미지 스샷 찍어서 이미지 이름이랑 동일하게 첨부 ex)책 이름이 아몬드면 아몬드.svg
-  bookname: '세상의 마지막 기차역',
-  genre: '소설',
-  date: '25.02.28',
-  participants: 28,
-  tag: ['느긋한 책방 손님', '소설'],
-};
+import { useRecoilValue } from 'recoil';
+import { chapState } from '../../shared/recoil/chapState';
+import BookCard from '../../components/molecules/BookCard';
 
 const Home = () => {
   const { routePage, state } = useNavigationPage();
-  console.log('state', state);
+  const { chaps } = useRecoilValue(chapState);
+  console.log('chaps', chaps);
   const handlePage = () => {
     routePage('/preference');
   };
@@ -33,16 +27,98 @@ const Home = () => {
         <Title>실시간 TOP 챕</Title>
         <Text>지금 뜨고 있는 TOP 챕을 소개 할게요!</Text>
       </div>
-      <Top3Card
-        ranking={1}
-        title='주인공의 갈등과 성장 과정'
-        coverImage
-        bookname='몰라'
-        date={25.02}
-        participants={24}
-        tag={'태그'}
-        booktag={'북태그'}
-      />
+      <section className={styles.section_00}>
+        <div>단기챕 TOP3</div>
+        {chaps.map((el, idx) => {
+          if (idx < 3) {
+            return (
+              <Top3Card
+                key={el.title}
+                ranking={idx + 1}
+                title={el.title}
+                coverImage={el.coverImage}
+                bookname={el.bookName}
+                date={el.date}
+                participants={el.participants}
+                tags={el.tag}
+              />
+            );
+          }
+          return false;
+        })}
+      </section>
+      <div>장기챕 TOP3</div>
+      <section className={styles.section_00}>
+        {chaps.map((el, idx) => {
+          if (idx < 3) {
+            return (
+              <Top3Card
+                key={el.title}
+                ranking={idx + 1}
+                title={el.title}
+                coverImage={el.coverImage}
+                bookname={el.bookName}
+                date={el.date}
+                participants={el.participants}
+                tags={el.tag}
+              />
+            );
+          }
+          return false;
+        })}
+      </section>
+
+      <div>
+        <Title>발견</Title>
+        <Text>내 성향에 맞는 모임. 직접 찾아보세요</Text>
+      </div>
+      <section className={styles.section_00}>
+        {chaps.map((el, idx) => {
+          if (idx < 3) {
+            return (
+              <BookCard
+                key={el.title}
+                ranking={idx + 1}
+                title={el.title}
+                coverImage={el.coverImage}
+                bookname={el.bookName}
+                date={el.date}
+                participants={el.participants}
+                tag={el.tag}
+              />
+            );
+          }
+          return false;
+        })}
+      </section>
+
+      <div>
+        <Title>
+          각기 다른 사람들이
+          <br />
+          모여서 완성된 색다른 챕
+        </Title>
+      </div>
+      <section className={styles.section_04}>
+        {chaps.map((el, idx) => {
+          if (idx < 3) {
+            return (
+              <BookCard
+                key={el.title}
+                ranking={idx + 1}
+                title={el.title}
+                coverImage={el.coverImage}
+                bookname={el.bookName}
+                date={el.date}
+                participants={el.participants}
+                tag={el.tag}
+                matchRate={30}
+              />
+            );
+          }
+          return false;
+        })}
+      </section>
     </div>
   );
 };

@@ -14,8 +14,7 @@ const Top3Card = ({
   bookname,
   date,
   participants,
-  tag,
-  booktag,
+  tags,
   ...rest
 }) => {
   return (
@@ -44,8 +43,11 @@ const Top3Card = ({
         <div className={styles.topblock}>
           {/* 태그 리스트 */}
           <div className={styles.tags}>
-            <Tag type='yellow'># {tag}</Tag>
-            <Tag type='gray'># {booktag}</Tag>
+            {tags.map((el) => (
+              <Tag key={el} type='yellow'>
+                # {el}
+              </Tag>
+            ))}
           </div>
 
           {/* 제목 */}
