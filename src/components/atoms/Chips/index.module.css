@@ -1,10 +1,12 @@
 .wrap {
-    height: 44px;
-    width: 111px;
+    height: 100%;
+    width: fit-content; /* 내용물에 맞게 너비 조절 */
+    white-space: nowrap;
+    padding: 6px 16px;
     background-color: rgb(219, 234, 255);
     border-radius: 22px;
     border: 1px, solid, rgb(95, 163, 252);
-    font-size: 16px;
+    font-size: 14px;
     font-family: 'neo';
     font-weight: bold;
     color :#056BF0;
