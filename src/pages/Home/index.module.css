@@ -8,11 +8,27 @@
 }
 
 .section_00 {
+  display: flex;
+  gap: 10px;
+
+  width: 100%;
+}
+
+.section_01 {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
   padding: 0 20px;
 }
 
-.section_04 {
+.section_02 {
   display: flex;
   overflow: scroll;
   gap: 5px;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.section_02::-webkit-scrollbar {
+  display: none;
 }

@@ -18,7 +18,7 @@ const BookCard = ({
   ...rest
 }) => {
   return (
-    <div className={styles.card} {...rest}>
+    <div className={matchRate ? styles.card : styles.card_small} {...rest}>
       <div className={matchRate ? styles.cover : styles.cover_small}>
         <img src={coverImage} alt='책표지' className={styles.image} />
       </div>
