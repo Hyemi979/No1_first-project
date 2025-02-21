@@ -75,12 +75,6 @@
   margin-bottom: 36px;
 }
 
-.temp {
-  margin: 20px;
-  width: 335px;
-  height: 182px;
-  background-color: skyblue;
-}
 .button_box {
   display: flex;
   flex-direction: column;
@@ -102,4 +96,36 @@
   font-family: 'extraBold';
   font-size: 18px;
   color: #e0a200;
+}
+
+.longchap {
+  display: flex;
+  overflow: scroll;
+  background-color: #f5f9ff;
+  gap: 8px;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  margin: 20px;
+  width: 335px;
+  height: 182px;
+}
+
+.longchap::-webkit-scrollbar {
+  display: none;
+}
+
+.shortchap {
+  display: flex;
+  overflow: scroll;
+  background-color: #fffbf0;
+  gap: 8px;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  margin: 20px;
+  width: 335px;
+  height: 182px;
+}
+
+.shortchap::-webkit-scrollbar {
+  display: none;
 }
