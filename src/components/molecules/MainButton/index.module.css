@@ -6,6 +6,7 @@
   align-items: center;
   width: 100%;
   cursor: pointer;
+  position: relative;
 }
 
 .container {
@@ -17,6 +18,9 @@
   height: 66px;
   position: relative;
   overflow: hidden;
+  background: #ffe8ad; /* 기본 배경색 */
+  border: 2px solid #ffda79;
+  transition: background-image 0.3s ease-in-out; /* 부드러운 효과 */
 }
 
 .header {
@@ -36,13 +40,30 @@
   color: #4d4d4d;
   line-height: 150%;
 }
-
 .character {
   position: absolute;
   right: 10px;
   top: 20px;
   width: 42px;
   height: 82px;
+  /* 이미지가 나타날 때 애니메이션 적용 */
+  animation: popUp 0.5s ease-out forwards;
+}
+
+/* 애니메이션 keyframes 정의 */
+@keyframes popUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px) scale(0.5);
+  }
+  60% {
+    opacity: 1;
+    transform: translateY(-10px) scale(1.05);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
 }
 
 .Content {
