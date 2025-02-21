@@ -14,10 +14,20 @@ import MainTopNavbar from '../../components/atoms/MainTopNavbar';
 import BottomBar from '../../components/atoms/BottomBar';
 import filter_image from '../../assets/image/filter_image.svg';
 import _ from 'lodash';
+import { useEffect } from 'react';
+import { myTasteState } from '../../shared/recoil/myTasteState';
 
 const Home = () => {
   const { routePage } = useNavigationPage();
+
   const { chaps } = useRecoilValue(chapState);
+  const { isOnboarding } = useRecoilValue(myTasteState);
+
+  useEffect(() => {
+    if (!isOnboarding) {
+      routePage('/onboarding');
+    }
+  });
 
   const handlePage = () => {
     routePage('/preference');
