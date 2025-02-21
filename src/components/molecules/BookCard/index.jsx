@@ -28,7 +28,7 @@ const BookCard = ({
         <div className={styles.topblock}>
           {/* 태그 리스트 */}
           <div className={styles.tags}>
-            {tag.map((el) => (
+            {tag?.map((el) => (
               <Tag key={el} type={'yellow'}>
                 # {el}
               </Tag>
