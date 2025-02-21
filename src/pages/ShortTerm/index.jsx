@@ -18,20 +18,32 @@ import bookcover23 from '../../assets/bookcover23.svg';
 import 눈부신안부 from '../../assets/눈부신안부.svg';
 import 바깥은여름 from '../../assets/바깥은여름.svg';
 import 로맨스도파민 from '../../assets/로맨스도파민.svg';
+import 어떤어른 from '../../assets/어떤어른.svg';
+import 얼마나많은여름이 from '../../assets/얼마나많은여름이.svg';
+import 외사랑 from '../../assets/외사랑.svg';
+import 천개의파랑 from '../../assets/천개의파랑.svg';
+import 아직멀었다는말 from '../../assets/아직멀었다는말.svg';
+import 강건너에는 from '../../assets/강건너에는.svg';
+import 행복할거야이래도되나싶을정도로 from '../../assets/행복할거야이래도되나싶을정도로.svg';
 const ShortTerm = () => {
   const { routePage } = useNavigationPage();
 
+
+  
   const handlePage = () => {
     routePage('/chapDetail');
   };
 
   return (
     <div className={styles.wrap}>
-      <TopNavBar navtitle='단기챕챕' search={true} bell={true} chat={true} />
+      
+      <TopNavBar navtitle='단기챕' search={true} bell={true} chat={true} />
       <div className={styles.topcontentWrap}>
         <HelloChater />
         <ToastBar />
+         
         <MeetingCardCarousel />
+         
       </div>
 
       <div className={styles.keywordcontentWrap}>
@@ -64,7 +76,7 @@ const ShortTerm = () => {
         <div className={styles.soonBookCardWrap}>
           <BookCard
             coverImage={로맨스도파민}
-            tag={['느긋한책방손님']}
+            tag={['느긋한책방손님','소설/문학']}
             title={'사랑의 화학적 반응: 우리...'}
             bookname={'로맨스 도파민'}
             date={'25.02.13(목)∙17시 진행 예정'}
@@ -73,7 +85,7 @@ const ShortTerm = () => {
           ></BookCard>
           <BookCard
             coverImage={눈부신안부}
-            tag={['느긋한책방손님']}
+            tag={['느긋한책방손님','소설/문학']}
             title={'안부 인사는 단순한 예의...'}
             bookname={'눈부신 안부'}
             date={'25.02.10(월)∙18시 진행 '}
@@ -82,7 +94,7 @@ const ShortTerm = () => {
           ></BookCard>
           <BookCard
             coverImage={바깥은여름}
-            tag={['느긋한책방손님']}
+            tag={['느긋한책방손님','소설/문학']}
             title={'이별과 상실, 우리는 얼마...'}
             bookname={'바깥은 여름'}
             date={'25.02.13(목)∙17시 진행 예정'}
@@ -147,17 +159,38 @@ const ShortTerm = () => {
             <img src={rightarrow} />
           </div>
         </div>
-
-        <section className={styles.section_01}>
+       <div className={styles.LiveBookCardWarp}>
+         
           <BookCard
-            coverImage={바깥은여름}
-            tag={['느긋한책방손님']}
-            title={'이별과 상실, 우리는 얼마...'}
-            bookname={'바깥은 여름'}
+            coverImage={어떤어른}
+            tag={['D-day','느긋한책방손님','에세이/시']}
+            title={'특정한 음식이 과거의 감정을 떠올리게 하는 이유는 무엇일까?'}
+            bookname={'어떤 어른'}
+            date={'25.02.13(목)∙17시 진행 예정'}
+            participants={21}
+          />
+         
+        
+          <BookCard
+            coverImage={얼마나많은여름이}
+            tag={['D-day','리스닝요정','에세이/시']}
+            title={'우리는 기억을 통해 성장하는가, 아니면 성장하면서 기억을 해석하는 방식이 변하는가?'}
+            bookname={'얼마나 많은 여름이'}
             date={'25.02.13(목)∙17시 진행 예정'}
             participants={11}
           />
-        </section>
+         
+         
+          <BookCard
+            coverImage={외사랑}
+            tag={['D-day','하이텐션북토커','에세이/시']}
+            title={'짝사랑은 상대를 향한 감정인가, 아니면 자기만족적인 감정인가?'}
+            bookname={'외사랑'}
+            date={'25.02.13(목)∙17시 진행 예정'}
+            participants={11}
+          />
+         
+        </div>
       </div>
 
       <div className={styles.calendercontentWrap}>
@@ -180,9 +213,41 @@ const ShortTerm = () => {
             <img src={chevron_down} />
           </div>
         </div>
-
+<div className={styles.calenderdatewrap}>
         <img src='calenderdate.svg' />
-        <BookCard></BookCard>
+        </div>
+        <div className={styles.LiveBookCardWarp}>
+        <div className={styles.section_01}>
+          <BookCard
+            coverImage={행복할거야이래도되나싶을정도로}
+            tag={['D-day','만렙성장독서러','에세이/시']}
+            title={'행복의 정의와 그것을 추구하는 방식'}
+            bookname={'행복할거야 이래도 되나 싶을 정도로'}
+            date={'25.02.13(목)∙17시 진행 예정'}
+            participants={21}
+          />
+        </div>
+        <div className={styles.section_01}>
+          <BookCard
+            coverImage={강건너에는}
+            tag={['D-day','리스닝요정','에세이/시']}
+            title={'갈등, 희망, 그리고 변화의 가능성 기억을 통해 성장하는가, 아니면 성장하면서 기억을 해석하는 방식이 변하는가?'}
+            bookname={'강 건너에는'}
+            date={'25.02.13(목)∙17시 진행 예정'}
+            participants={11}
+          />
+        </div>
+        <div className={styles.section_01}>
+          <BookCard
+            coverImage={아직멀었다는말}
+            tag={['D-day','하이텐션북토커','에세이/시']}
+            title={'자기 발견과 성장의 과정'}
+            bookname={'아직 멀었다는 말'}
+            date={'25.02.13(목)∙17시 진행 예정'}
+            participants={11}
+          />
+        </div>
+        </div>
       </div>
 
       <button onClick={handlePage}>단기 챕 상세 보기</button>
