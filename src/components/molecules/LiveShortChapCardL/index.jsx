@@ -47,7 +47,7 @@ const LiveShortChapCardL = ({
             marginBottom: '8px',
           }}
         >
-          {bookTitle}
+          {`[${bookTitle}]`}
         </Title>
         <Title
           type='Body02'

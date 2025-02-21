@@ -1,9 +1,10 @@
 import styles from './index.module.css';
 import information_circle from '../../../assets/information-circle.png';
 import Tag from '../../atoms/Tag';
-import Title from '../../atoms/Title';
 
-const MatchBar = ({ ...rest }) => {
+const color = ['skyblue', 'yellow', 'skyblue', 'yellow', 'gray'];
+
+const MatchBar = ({ tags, ...rest }) => {
   return (
     <div {...rest} className={styles.wrap0}>
       <div {...rest} className={styles.wrap1}>
@@ -24,11 +25,11 @@ const MatchBar = ({ ...rest }) => {
 
         <div className={styles.wraptag}>
           <div className={styles.wrap3}>
-            <Tag type={'skyblue'}>#감성셀피독서가</Tag>
-            <Tag type={'yellow'}>#느긋한책방손님</Tag>
-            <Tag type={'skyblue'}>#토론</Tag>
-            <Tag type={'yellow'}>#리스닝요정</Tag>
-            <Tag type={'gray'}>#소설</Tag>
+            {tags.map((el, idx) => (
+              <Tag key={el} type={color[idx]}>
+                #{el}
+              </Tag>
+            ))}
           </div>
         </div>
       </div>

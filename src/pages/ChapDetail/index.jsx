@@ -7,33 +7,44 @@ import ChatterCarousel from '../../components/molecules/ChatterCarousel';
 import RegisteredAnswerPreview from '../../components/molecules/RegisteredAnswerPreview';
 import InfoCard from '../../components/molecules/InfoCard';
 import MeetingCardS from '../../components/molecules/MeetingCardS';
-import liveshortchapcard_l_default from '../../assets/image/liveshortchapcard_l_default.svg';
 import Title from '../../components/atoms/Title';
 import right_arrow_mini from '../../assets/right_arrow_mini.svg';
 import Button from '../../components/atoms/Button';
+import { useRecoilValue } from 'recoil';
+import { chapState } from '../../shared/recoil/chapState';
+import _ from 'lodash';
 
 const ChapDetail = () => {
-  const { routePage } = useNavigationPage();
+  const { routePage, state } = useNavigationPage();
+  const { chaps } = useRecoilValue(chapState);
+  const { bookName, coverImage, date, genre, participants, tag, title } = state;
 
-  const handlePage = () => {
+  const handlePage = (data) => {
+    window.scrollTo(0, 0);
+    routePage('/chapDetail', data);
+  };
+
+  const handleChatRoom = () => {
+    window.scrollTo(0, 0);
     routePage('/chatRoom');
   };
 
   return (
     <div className={styles.wrap}>
       <TopNavbar navtitle='챕페이지' bell={true} dots={true} />
-      <LiveShortChapCardL />
-      <MatchBar />
-      <div className={styles.carousel_box}>
-        <ChatterCarousel />
-      </div>
+      <LiveShortChapCardL
+        image={coverImage}
+        topic={title}
+        bookTitle={bookName}
+      />
+      <MatchBar tags={tag} />
+      <ChatterCarousel />
       <RegisteredAnswerPreview />
       <InfoCard
         bookname='소설'
-        bookname2='추리, 판타지'
-        date='1일 진행'
-        date2='지금 진행 중'
-        participants='21/30명'
+        bookname2={genre}
+        date={date}
+        participants={`${participants}/30`}
         participants2='자유참여'
         uploadtext='답변 등록 마감'
       />
@@ -58,38 +69,25 @@ const ChapDetail = () => {
         </div>
 
         <div className={styles.list_box}>
-          <MeetingCardS
-            title='돌아가서 단 하나의 일을 바꿀 수 있다면, 어떤 선택을 바꾸고 싶나요?'
-            coverImage={liveshortchapcard_l_default}
-            date='25.02.20(목)'
-            participants='8'
-            tag='느긋한책방손님'
-            booktag='소설/문학'
-          />
-          <MeetingCardS
-            title='마지막 기차역에서 단 한 사람만 만날 수 있다면, 누구를 선택할까요?'
-            coverImage={liveshortchapcard_l_default}
-            date='25.02.20(목)'
-            participants='8'
-            tag='하이텐션북토커'
-            booktag='소설/문학'
-          />
-          <MeetingCardS
-            title='영원한 작별이 아닌, 다시 만날 수 있는 이별이 있다면 어떻게 받아들일까요?'
-            coverImage={liveshortchapcard_l_default}
-            date='25.02.20(목)'
-            participants='8'
-            tag='리스닝요정'
-            booktag='소설/문학'
-          />
-          <MeetingCardS
-            title='영원한 작별이 아닌, 다시 만날 수 있는 이별이 있다면 어떻게 받아들일까요?'
-            coverImage={liveshortchapcard_l_default}
-            date='25.02.20(목)'
-            participants='8'
-            tag='리스닝요정'
-            booktag='소설/문학'
-          />
+          {_.shuffle(chaps).map((el, idx) => {
+            if (idx < 3) {
+              console.log('el', el);
+              return (
+                <MeetingCardS
+                  key={el.title}
+                  onClick={() => handlePage(el)}
+                  title={el.title}
+                  coverImage={el.coverImage}
+                  bookname={el.bookName}
+                  date={el.date}
+                  participants={el.participants}
+                  tags={el.tag}
+                  matchRate={97}
+                />
+              );
+            }
+            return false;
+          })}
         </div>
       </div>
       <div className={styles.same_genre_group}>
@@ -111,38 +109,25 @@ const ChapDetail = () => {
         </div>
 
         <div className={styles.list_box}>
-          <MeetingCardS
-            title='돌아가서 단 하나의 일을 바꿀 수 있다면, 어떤 선택을 바꾸고 싶나요?'
-            coverImage={liveshortchapcard_l_default}
-            date='25.02.20(목)'
-            participants='8'
-            tag='만렙성장독서러'
-            booktag='소설/문학'
-          />
-          <MeetingCardS
-            title='돌아가서 단 하나의 일을 바꿀 수 있다면, 어떤 선택을 바꾸고 싶나요?'
-            coverImage={liveshortchapcard_l_default}
-            date='25.02.20(목)'
-            participants='8'
-            tag='느긋한책방손님'
-            booktag='소설/문학'
-          />
-          <MeetingCardS
-            title='돌아가서 단 하나의 일을 바꿀 수 있다면, 어떤 선택을 바꾸고 싶나요?'
-            coverImage={liveshortchapcard_l_default}
-            date='25.02.20(목)'
-            participants='8'
-            tag='느긋한책방손님'
-            booktag='소설/문학'
-          />
-          <MeetingCardS
-            title='돌아가서 단 하나의 일을 바꿀 수 있다면, 어떤 선택을 바꾸고 싶나요?'
-            coverImage={liveshortchapcard_l_default}
-            date='25.02.20(목)'
-            participants='8'
-            tag='느긋한책방손님'
-            booktag='소설/문학'
-          />
+          {_.shuffle(chaps).map((el, idx) => {
+            if (idx < 3) {
+              console.log('el', el);
+              return (
+                <MeetingCardS
+                  key={el.title}
+                  onClick={() => handlePage(el)}
+                  title={el.title}
+                  coverImage={el.coverImage}
+                  bookname={el.bookName}
+                  date={el.date}
+                  participants={el.participants}
+                  tags={el.tag}
+                  matchRate={97}
+                />
+              );
+            }
+            return false;
+          })}
         </div>
       </div>
       <div className={styles.same_tag_group}>
@@ -164,38 +149,25 @@ const ChapDetail = () => {
         </div>
 
         <div className={styles.list_box}>
-          <MeetingCardS
-            title='돌아가서 단 하나의 일을 바꿀 수 있다면, 어떤 선택을 바꾸고 싶나요?'
-            coverImage={liveshortchapcard_l_default}
-            date='25.02.20(목)'
-            participants='8'
-            tag='느긋한책방손님'
-            booktag='소설/문학'
-          />
-          <MeetingCardS
-            title='돌아가서 단 하나의 일을 바꿀 수 있다면, 어떤 선택을 바꾸고 싶나요?'
-            coverImage={liveshortchapcard_l_default}
-            date='25.02.20(목)'
-            participants='8'
-            tag='느긋한책방손님'
-            booktag='소설/문학'
-          />
-          <MeetingCardS
-            title='돌아가서 단 하나의 일을 바꿀 수 있다면, 어떤 선택을 바꾸고 싶나요?'
-            coverImage={liveshortchapcard_l_default}
-            date='25.02.20(목)'
-            participants='8'
-            tag='느긋한책방손님'
-            booktag='소설/문학'
-          />
-          <MeetingCardS
-            title='돌아가서 단 하나의 일을 바꿀 수 있다면, 어떤 선택을 바꾸고 싶나요?'
-            coverImage={liveshortchapcard_l_default}
-            date='25.02.20(목)'
-            participants='8'
-            tag='느긋한책방손님'
-            booktag='소설/문학'
-          />
+          {_.shuffle(chaps).map((el, idx) => {
+            if (idx < 3) {
+              console.log('el', el);
+              return (
+                <MeetingCardS
+                  key={el.title}
+                  onClick={() => handlePage(el)}
+                  title={el.title}
+                  coverImage={el.coverImage}
+                  bookname={el.bookName}
+                  date={el.date}
+                  participants={el.participants}
+                  tags={el.tag}
+                  matchRate={97}
+                />
+              );
+            }
+            return false;
+          })}
         </div>
       </div>
       <div className={styles.button_container}>
@@ -204,11 +176,10 @@ const ChapDetail = () => {
             type='Caption01'
             style={{ color: '#056BF0', fontFamily: 'bold', lineHeight: '1.5' }}
           >
-            {' '}
-            🔥현재 22명 참여 중! 함께 이야기해 보세요!
+            🔥현재 {participants}명 참여 중! 함께 이야기해 보세요!
           </Title>
         </div>
-        <Button>지금 바로 참여하기</Button>
+        <Button onClick={handleChatRoom}>지금 바로 참여하기</Button>
       </div>
     </div>
   );

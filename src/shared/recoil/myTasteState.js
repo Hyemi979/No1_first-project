@@ -16,7 +16,7 @@ export const localStorageEffect =
 export const myTasteState = atom({
   key: 'myTasteState', // unique ID (with respect to other atoms/selectors)
   default: {
-    isTest: false,
+    isTaste: false,
     isOnboarding: false,
     myTastes: [],
   }, // default value (aka initial value)
