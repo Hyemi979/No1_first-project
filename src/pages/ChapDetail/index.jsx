@@ -7,7 +7,6 @@ import ChatterCarousel from '../../components/molecules/ChatterCarousel';
 import RegisteredAnswerPreview from '../../components/molecules/RegisteredAnswerPreview';
 import InfoCard from '../../components/molecules/InfoCard';
 import MeetingCardS from '../../components/molecules/MeetingCardS';
-import liveshortchapcard_l_default from '../../assets/image/liveshortchapcard_l_default.svg';
 import Title from '../../components/atoms/Title';
 import right_arrow_mini from '../../assets/right_arrow_mini.svg';
 import Button from '../../components/atoms/Button';

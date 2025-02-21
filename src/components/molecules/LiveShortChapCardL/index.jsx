@@ -33,6 +33,7 @@ const LiveShortChapCardL = ({
             lineHeight: '1.5',
             color: '#333',
             marginBottom: '10px',
+            wordBreak: 'keep-all',
           }}
         >
           {topic}

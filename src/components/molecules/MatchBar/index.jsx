@@ -1,7 +1,6 @@
 import styles from './index.module.css';
 import information_circle from '../../../assets/information-circle.png';
 import Tag from '../../atoms/Tag';
-import Title from '../../atoms/Title';
 
 const color = ['skyblue', 'yellow', 'skyblue', 'yellow', 'gray'];
 
