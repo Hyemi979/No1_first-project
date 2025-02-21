@@ -1,7 +1,6 @@
 import myTaste from '../../assets/image/main_mytaste.svg';
 import Title from '../../components/atoms/Title';
 import Text from '../../components/atoms/Text';
-import HelloChater from '../../components/molecules/HelloChater';
 import SearchBar from '../../components/molecules/SearchBar';
 import useNavigationPage from '../../hooks/useNavigationPage';
 import styles from './index.module.css';
@@ -10,6 +9,7 @@ import { useRecoilValue } from 'recoil';
 import { chapState } from '../../shared/recoil/chapState';
 import BookCard from '../../components/molecules/BookCard';
 import MainButton from '../../components/molecules/MainButton';
+import _ from 'lodash';
 
 const Home = () => {
   const { routePage } = useNavigationPage();
@@ -34,7 +34,7 @@ const Home = () => {
       </div>
       <div>단기챕 TOP3</div>
       <section className={styles.section_01}>
-        {chaps.map((el, idx) => {
+        {_.shuffle(chaps).map((el, idx) => {
           if (idx < 3) {
             return (
               <Top3Card
@@ -54,7 +54,7 @@ const Home = () => {
       </section>
       <div>장기챕 TOP3</div>
       <section className={styles.section_01}>
-        {chaps.map((el, idx) => {
+        {_.shuffle(chaps).map((el, idx) => {
           if (idx < 3) {
             return (
               <Top3Card
@@ -78,7 +78,7 @@ const Home = () => {
         <Text>내 성향에 맞는 모임. 직접 찾아보세요</Text>
       </div>
       <section className={styles.section_01}>
-        {chaps.map((el, idx) => {
+        {_.shuffle(chaps).map((el, idx) => {
           if (idx < 3) {
             return (
               <BookCard
@@ -105,7 +105,7 @@ const Home = () => {
         </Title>
       </div>
       <section className={styles.section_02}>
-        {chaps.map((el, idx) => {
+        {_.shuffle(chaps).map((el, idx) => {
           if (idx < 3) {
             return (
               <BookCard
