@@ -44,9 +44,13 @@ const BookCard = ({
               lineHeight: 1.5,
               fontFamily: 'bold',
               color: '#333333',
+              textOverflow: 'ellipsis',
+              whiteSpace: 'nowrap',
+              overflow: 'hidden',
+              width: '200px',
             }}
           >
-            {title}{' '}
+            {title}
           </Title>
         </div>
 

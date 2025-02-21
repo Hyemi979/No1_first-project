@@ -5,6 +5,9 @@ import chap_book_image02 from '../../assets/image/chap_book_image02.svg';
 import chap_book_image03 from '../../assets/image/chap_book_image03.svg';
 import chap_book_image04 from '../../assets/image/chap_book_image04.svg';
 import chap_book_image05 from '../../assets/image/chap_book_image05.svg';
+import chap_book_image06 from '../../assets/image/chap_book_image06.svg';
+import chap_book_image07 from '../../assets/image/chap_book_image07.svg';
+import chap_book_image08 from '../../assets/image/chap_book_image08.svg';
 
 export const chapState = atom({
   key: 'chapState', // unique ID (with respect to other atoms/selectors)
@@ -64,6 +67,33 @@ export const chapState = atom({
         date: '25.03.10',
         participants: 30,
         tag: ['느긋한 책방 손님', '에세이/시'],
+      },
+      {
+        title: '힐링 독서 소확행',
+        coverImage: chap_book_image06,
+        bookName: '너무 잘하려고 애쓰지 마라',
+        genre: '시',
+        date: '매주 수요일 ∙ 오후',
+        participants: 17, // 참여인원
+        tag: ['느긋한 책방 손님', '감상', '시'],
+      },
+      {
+        title: '소소서가 : 하루 10분 토론',
+        coverImage: chap_book_image07,
+        bookName: '아직 멀었다는 말',
+        genre: '소설/문학',
+        date: '매주 월요일 ∙ 오전',
+        participants: 15, // 참여인원
+        tag: ['하이텐션북토커', '토론', '소설'],
+      },
+      {
+        title: '30일 챌린지 독서',
+        coverImage: chap_book_image08,
+        bookName: '행복할 거야 이래도 되나 싶을 정도로',
+        genre: '에세이/시',
+        date: '매주 목요일 ∙ 오전',
+        participants: 12, // 참여인원
+        tag: ['만렙성장독서러', '에세이'],
       },
     ],
   }, // default value (aka initial value)
