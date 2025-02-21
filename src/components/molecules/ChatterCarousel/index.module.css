@@ -10,22 +10,20 @@
   height: auto;
 }
 
-.wrap1 {
-  margin-bottom: 20px;
-  margin-top: 20px;
-  padding: 24px;
-}
-
 .wrap2 {
-  margin-bottom: 20px;
-  margin-top: 20px;
+  margin: 24px 20px 20px 20px;
 }
 
 .wrap3 {
   display: flex;
-  margin-bottom: 20px;
-  margin-top: 20px;
+  margin-bottom: 24px;
+  /* margin-top: 20px; */
   column-gap: 10px;
+  padding: 0 20px;
+  overflow-x: auto;
+}
+.wrap3::-webkit-scrollbar {
+  display: none;
 }
 
 .button1 {
