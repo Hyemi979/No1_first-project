@@ -1,9 +1,18 @@
 .wrap {
   display: flex;
   flex-direction: column;
-  width: 375px;
+  width: 100%;
   overflow: hidden;
 }
+.carousel_box {
+  display: flex;
+  width: 100%;
+  overflow: auto;
+}
+.carousel_box::-webkit-scrollbar {
+  display: none;
+}
+
 .title_box {
   display: flex;
   width: auto;

@@ -24,7 +24,9 @@ const ChapDetail = () => {
       <TopNavbar navtitle='챕페이지' bell={true} dots={true} />
       <LiveShortChapCardL />
       <MatchBar />
-      <ChatterCarousel />
+      <div className={styles.carousel_box}>
+        <ChatterCarousel />
+      </div>
       <RegisteredAnswerPreview />
       <InfoCard
         bookname='소설'
@@ -80,6 +82,14 @@ const ChapDetail = () => {
             tag='리스닝요정'
             booktag='소설/문학'
           />
+          <MeetingCardS
+            title='영원한 작별이 아닌, 다시 만날 수 있는 이별이 있다면 어떻게 받아들일까요?'
+            coverImage={liveshortchapcard_l_default}
+            date='25.02.20(목)'
+            participants='8'
+            tag='리스닝요정'
+            booktag='소설/문학'
+          />
         </div>
       </div>
       <div className={styles.same_genre_group}>
@@ -125,6 +135,14 @@ const ChapDetail = () => {
             tag='느긋한책방손님'
             booktag='소설/문학'
           />
+          <MeetingCardS
+            title='돌아가서 단 하나의 일을 바꿀 수 있다면, 어떤 선택을 바꾸고 싶나요?'
+            coverImage={liveshortchapcard_l_default}
+            date='25.02.20(목)'
+            participants='8'
+            tag='느긋한책방손님'
+            booktag='소설/문학'
+          />
         </div>
       </div>
       <div className={styles.same_tag_group}>
@@ -146,6 +164,14 @@ const ChapDetail = () => {
         </div>
 
         <div className={styles.list_box}>
+          <MeetingCardS
+            title='돌아가서 단 하나의 일을 바꿀 수 있다면, 어떤 선택을 바꾸고 싶나요?'
+            coverImage={liveshortchapcard_l_default}
+            date='25.02.20(목)'
+            participants='8'
+            tag='느긋한책방손님'
+            booktag='소설/문학'
+          />
           <MeetingCardS
             title='돌아가서 단 하나의 일을 바꿀 수 있다면, 어떤 선택을 바꾸고 싶나요?'
             coverImage={liveshortchapcard_l_default}
