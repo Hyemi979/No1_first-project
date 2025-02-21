@@ -1,8 +1,9 @@
 import styles from './index.module.css';
-import shortChapImage from '../../../assets/image/shortChap_image.svg';
+import shortChap_image from '../../../assets/image/shortChap_image.svg';
 import shortChapRightArrow from '../../../assets/image/shortChapRightArrow.svg';
-import longChapImage from '../../../assets/image/longChap_image.svg';
+import longChap_image from '../../../assets/image/longChap_image.svg';
 import longChapRightArrow from '../../../assets/image/longChapRightArrow.svg';
+import { useState } from 'react';
 
 const CHAP_CONFIG = {
   shortChap: {
@@ -12,7 +13,7 @@ const CHAP_CONFIG = {
     bgColor: '#FFE8AD',
     borderColor: '#FFDA79',
     contentBgColor: '#FFFBF0',
-    image: shortChapImage,
+    image: shortChap_image,
     arrow: shortChapRightArrow,
   },
   longChap: {
@@ -22,19 +23,28 @@ const CHAP_CONFIG = {
     bgColor: '#C4DEFE',
     borderColor: '#91C0FD',
     contentBgColor: '#F5F9FF',
-    image: longChapImage,
+    image: longChap_image,
     arrow: longChapRightArrow,
   },
 };
 
 const MainButton = ({ type = 'shortChap', ...rest }) => {
   const config = CHAP_CONFIG[type];
+  const [isHovered, setIsHovered] = useState(false);
 
   return (
-    <div {...rest} className={styles.wrap}>
+    <div
+      {...rest}
+      className={styles.wrap}
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+    >
       <div
         className={styles.container}
-        style={{ background: config.bgColor, borderColor: config.borderColor }}
+        style={{
+          background: config.bgColor,
+          borderColor: config.borderColor,
+        }}
       >
         <div className={styles.header}>
           <p className={styles.title} style={{ color: '#333333' }}>
@@ -43,11 +53,14 @@ const MainButton = ({ type = 'shortChap', ...rest }) => {
           <img src={config.arrow} alt='아이콘' width={24} height={24} />
         </div>
         <p className={styles.Subtitle}>{config.subtitle}</p>
-        <img
-          src={config.image}
-          alt={`${config.title} 이미지`}
-          className={styles.character}
-        />
+        {/* hover 상태일 때만 기존 이미지(원래 .character 위치, 사이즈) 렌더링 */}
+        {isHovered && (
+          <img
+            src={config.image}
+            alt={`${config.title} 이미지`}
+            className={styles.character}
+          />
+        )}
       </div>
       <div
         className={styles.Content}
