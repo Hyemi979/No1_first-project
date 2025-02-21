@@ -1,7 +1,7 @@
 import styles from './index.module.css';
 import upArrow_icon from '../../../assets/image/upArrow_icon.svg';
 
-const DebateTopicCard = ({ subtitle, title, replyCount, ...rest }) => {
+const DebateTopicCard01 = ({ subtitle, title, replyCount, ...rest }) => {
   return (
     <div {...rest} className={styles.wrap}>
       <div className={styles.card}>
@@ -20,4 +20,4 @@ const DebateTopicCard = ({ subtitle, title, replyCount, ...rest }) => {
   );
 };
 
-export default DebateTopicCard;
+export default DebateTopicCard01;
