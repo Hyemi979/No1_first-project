@@ -10,6 +10,7 @@ import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import styles from './index.module.css';
+import './styles.css';
 
 const OnBoardingStep00 = ({ handlePage }) => {
   const [activeIndex, setActiveIndex] = useState(0); // 현재 활성화된 슬라이드 인덱스
@@ -18,10 +19,8 @@ const OnBoardingStep00 = ({ handlePage }) => {
     beforeChange: (current, next) => setActiveIndex(next), // 슬라이드 변경 시 activeIndex 업데이트
 
     dots: true,
-    infinite: false,
     speed: 500,
     slidesToShow: 1,
-    centerMode: true,
     slidesToScroll: 1,
 
     customPaging: (i) => (
@@ -51,25 +50,15 @@ const OnBoardingStep00 = ({ handlePage }) => {
 
   return (
     <div className={styles.wrap}>
-      {' '}
-      {/* 전체 화면을 감싸는 div */}
       <div className={styles.slider_wrap}>
-        {' '}
-        {/* 슬라이더를 감싸는 div */}
         <Slider {...settings}>
-          {' '}
-          {/* react-slick 슬라이더 컴포넌트 */}
           {slides.map((slide, index) => (
-            <div key={index} className={styles.img_wrap}>
-              {' '}
-              {/* 각 슬라이드 컨테이너 */}
-              <img
-                src={slide.src}
-                className={styles.img}
-                alt={slide.alt}
-              />{' '}
-              {/* 슬라이드 이미지 */}
-            </div>
+            <img
+              key={index}
+              src={slide.src}
+              className={styles.img}
+              alt={slide.alt}
+            />
           ))}
         </Slider>
       </div>

@@ -1,70 +1,42 @@
 .wrap {
-    
-    width: 100%;
-    height: 100vh;
-    border-radius: 5px;
-    display: flex;
-    flex-direction: column;
-    align-items: center; 
-    position: relative;
-    justify-content: space-between;
-   
-} 
- 
-
-.slider_wrap{
-     
-    width: 100%;
-       
+  width: 100%;
+  height: 100vh;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  justify-content: space-between;
 }
 
-.img_wrap{  
-       width: 100%;
-   display: flex;
-   flex-direction: column;
-   margin-top: 150px;
-   justify-content: center;
-   
-   align-items: center;
-  
-   
+.slider_wrap {
+  width: 100%;
+  margin-top: 150px;
 }
 
- 
-
- .img {
-    max-width: 100%;
-    height: auto;
-    padding-left: 30px;
-     
- }
-
- .img_wrap:first-child .img {
-    transform: translateX(5px); /* 왼쪽으로 10px 이동 */
+.img {
+  width: 100%;
+  height: auto;
 }
- 
+
 :global(.slick-dots) {
-    position: absolute;
-    bottom: -50px;
-    left: 3px;
-    display: block;
-    width: 100%;
-    padding: 0;
-    margin: 0;
-    list-style: none;
-    text-align: center;
+  position: absolute;
+  bottom: -50px;
+  left: 3px;
+  display: block;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  text-align: center;
 }
 
 :global(.slick-dots li) {
-    position: relative;
-    display: inline-block;
-    width: 20px;
-    height: 20px;
-    margin: 0px;
-    padding: 0;
-    cursor: pointer;
+  position: relative;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin: 0px;
+  padding: 0;
+  cursor: pointer;
 }
-
- 
-
- 

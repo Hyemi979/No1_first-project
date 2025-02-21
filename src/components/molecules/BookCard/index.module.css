@@ -84,7 +84,7 @@
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  min-width: 120px; /* 충분한 공간 확보 */
+  min-width: 100px; /* 충분한 공간 확보 */
 }
 
 .progressBar {

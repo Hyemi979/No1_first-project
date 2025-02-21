@@ -10,10 +10,20 @@ import { chapState } from '../../shared/recoil/chapState';
 import BookCard from '../../components/molecules/BookCard';
 import MainButton from '../../components/molecules/MainButton';
 import _ from 'lodash';
+import { useEffect } from 'react';
+import { myTasteState } from '../../shared/recoil/myTasteState';
 
 const Home = () => {
   const { routePage } = useNavigationPage();
+
   const { chaps } = useRecoilValue(chapState);
+  const { isOnboarding } = useRecoilValue(myTasteState);
+
+  useEffect(() => {
+    if (!isOnboarding) {
+      routePage('/onboarding');
+    }
+  });
 
   const handlePage = () => {
     routePage('/preference');

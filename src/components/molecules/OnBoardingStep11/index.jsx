@@ -416,8 +416,7 @@ const OnBoardingStep11 = ({ items, beforeStep, resetStep }) => {
                     date='매주 금요일∙오후'
                     participants={'12/20'}
                     matchRate={96}
-                    tag={'만렙성장독서가'}
-                    booktag={'소설/문학'}
+                    tag={['만렙성장독서가', '소설/문학']}
                   />
                   <BookCard
                     title='독서를합시다'
@@ -426,8 +425,7 @@ const OnBoardingStep11 = ({ items, beforeStep, resetStep }) => {
                     date='매주 토요일∙야간'
                     participants={'8/20'}
                     matchRate={88}
-                    tag={'리스닝 요정'}
-                    booktag={'에세이/시'}
+                    tag={['리스닝 요정', '에세이/시']}
                   />
                 </div>
               </>
