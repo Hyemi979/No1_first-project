@@ -9,6 +9,10 @@ import { useRecoilValue } from 'recoil';
 import { chapState } from '../../shared/recoil/chapState';
 import BookCard from '../../components/molecules/BookCard';
 import MainButton from '../../components/molecules/MainButton';
+import ViewButton from '../../components/atoms/ViewButton';
+import MainTopNavbar from '../../components/atoms/MainTopNavbar';
+import BottomBar from '../../components/atoms/BottomBar';
+import filter_image from '../../assets/image/filter_image.svg';
 import _ from 'lodash';
 
 const Home = () => {
@@ -21,63 +25,185 @@ const Home = () => {
 
   return (
     <div className={styles.wrap}>
+      <div className={styles.TopNavbar}>
+        <MainTopNavbar></MainTopNavbar>
+      </div>
       <img src={myTaste} onClick={handlePage} className={styles.my_taste} />
       <section className={styles.section_00}>
         <MainButton onClick={() => routePage('/shortTerm')} />
         <MainButton type={'longChap'} />
       </section>
-
       <SearchBar />
-      <div className={styles.content_wrap}>
-        <Title>실시간 TOP 챕</Title>
-        <Text>지금 뜨고 있는 TOP 챕을 소개 할게요!</Text>
-      </div>
-      <div>단기챕 TOP3</div>
-      <section className={styles.section_01}>
-        {_.shuffle(chaps).map((el, idx) => {
-          if (idx < 3) {
-            return (
-              <Top3Card
-                key={el.title}
-                ranking={idx + 1}
-                title={el.title}
-                coverImage={el.coverImage}
-                bookname={el.bookName}
-                date={el.date}
-                participants={el.participants}
-                tags={el.tag}
-              />
-            );
-          }
-          return false;
-        })}
-      </section>
-      <div>장기챕 TOP3</div>
-      <section className={styles.section_01}>
-        {_.shuffle(chaps).map((el, idx) => {
-          if (idx < 3) {
-            return (
-              <Top3Card
-                key={el.title}
-                ranking={idx + 1}
-                title={el.title}
-                coverImage={el.coverImage}
-                bookname={el.bookName}
-                date={el.date}
-                participants={el.participants}
-                tags={el.tag}
-              />
-            );
-          }
-          return false;
-        })}
-      </section>
 
-      <div>
-        <Title>발견</Title>
-        <Text>내 성향에 맞는 모임. 직접 찾아보세요</Text>
+      <div className={styles.content_wrap01}>
+        <Title
+          type='Title02'
+          className={styles.Title_02_ExtraBold}
+          style={{
+            textAlign: 'left',
+            lineHeight: 1.5,
+            fontFamily: 'extrabold',
+            color: '#333333',
+            textOverflow: 'ellipsis',
+            whiteSpace: 'nowrap',
+            overflow: 'hidden',
+            width: '200px',
+          }}
+        >
+          실시간 TOP 챕
+        </Title>
+        <Title
+          type='Body01'
+          className={styles.Body_01_Bold}
+          style={{
+            textAlign: 'left',
+            lineHeight: 1.5,
+            fontFamily: 'bold',
+            color: '#4D4D4D',
+            overflow: 'hidden',
+          }}
+        >
+          지금 뜨고 있는 TOP 챕을 소개 할게요!
+        </Title>
       </div>
-      <section className={styles.section_01}>
+      <div className={styles.Top3_Box_Container01}>
+        <div className={styles.top_text_box_container}>
+          <div className={styles.Top_text_box}>
+            <Title
+              type='SubTitle02'
+              className={styles.Body_01_ExtraBold}
+              style={{
+                textAlign: 'left',
+                lineHeight: 1.5,
+                fontFamily: 'extrabold',
+                color: '#333333',
+                overflow: 'hidden',
+              }}
+            >
+              단기챕
+            </Title>
+            <Title
+              type='SubTitle02'
+              className={styles.Body_01_ExtraBold}
+              style={{
+                textAlign: 'left',
+                lineHeight: 1.5,
+                fontFamily: 'extrabold',
+                color: '#FFBE14',
+                overflow: 'hidden',
+              }}
+            >
+              TOP3
+            </Title>
+          </div>
+          <ViewButton>전체보기</ViewButton>
+        </div>
+        <section className={styles.section_01}>
+          {_.shuffle(chaps).map((el, idx) => {
+            if (idx < 3) {
+              return (
+                <Top3Card
+                  key={el.title}
+                  ranking={idx + 1}
+                  title={el.title}
+                  coverImage={el.coverImage}
+                  bookname={el.bookName}
+                  date={el.date}
+                  participants={el.participants}
+                  tags={el.tag}
+                />
+              );
+            }
+            return false;
+          })}
+        </section>
+      </div>
+      <div className={styles.Top3_Box_Container02}>
+        <div className={styles.top_text_box_container}>
+          <div className={styles.Top_text_box}>
+            <Title
+              type='SubTitle02'
+              className={styles.Body_01_ExtraBold}
+              style={{
+                textAlign: 'left',
+                lineHeight: 1.5,
+                fontFamily: 'extrabold',
+                color: '#333333',
+                overflow: 'hidden',
+              }}
+            >
+              장기챕
+            </Title>
+            <Title
+              type='SubTitle02'
+              className={styles.Body_01_ExtraBold}
+              style={{
+                textAlign: 'left',
+                lineHeight: 1.5,
+                fontFamily: 'extrabold',
+                color: '#2D87FB',
+                overflow: 'hidden',
+              }}
+            >
+              TOP3
+            </Title>
+          </div>
+          <ViewButton>전체보기</ViewButton>
+        </div>
+        <section className={styles.section_01}>
+          {_.shuffle(chaps).map((el, idx) => {
+            if (idx < 3) {
+              return (
+                <Top3Card
+                  key={el.title}
+                  ranking={idx + 1}
+                  title={el.title}
+                  coverImage={el.coverImage}
+                  bookname={el.bookName}
+                  date={el.date}
+                  participants={el.participants}
+                  tags={el.tag}
+                />
+              );
+            }
+            return false;
+          })}
+        </section>
+      </div>
+      <div className={styles.content_wrap02_container}>
+        <div className={styles.content_wrap02}>
+          <Title
+            type='Title02'
+            className={styles.Title_02_Bold}
+            style={{
+              textAlign: 'left',
+              lineHeight: 1.5,
+              fontFamily: 'extrabold',
+              color: '#333333',
+              overflow: 'hidden',
+            }}
+          >
+            발견
+          </Title>
+          <Title
+            type='Body01'
+            className={styles.Body_01_Bold}
+            style={{
+              textAlign: 'left',
+              lineHeight: 1.5,
+              fontFamily: 'bold',
+              color: '#4D4D4D',
+              overflow: 'hidden',
+            }}
+          >
+            내 성향에 맞는 모임. 직접 찾아보세요
+          </Title>
+        </div>
+        <div className={styles.image}>
+          <img src={filter_image} alt='필터이미지' />
+        </div>
+      </div>
+      <section className={styles.section_01_discover}>
         {_.shuffle(chaps).map((el, idx) => {
           if (idx < 3) {
             return (
@@ -96,13 +222,23 @@ const Home = () => {
           return false;
         })}
       </section>
-
-      <div>
-        <Title>
+      <div className={styles.top_text_box_container_02}>
+        <Title
+          type='SubTitle02'
+          className={styles.Title_02_Bold}
+          style={{
+            textAlign: 'left',
+            lineHeight: 1.5,
+            fontFamily: 'extrabold',
+            color: '#333333',
+            overflow: 'hidden',
+          }}
+        >
           각기 다른 사람들이
           <br />
           모여서 완성된 색다른 챕
         </Title>
+        <ViewButton>전체보기</ViewButton>
       </div>
       <section className={styles.section_02}>
         {_.shuffle(chaps).map((el, idx) => {
@@ -124,6 +260,7 @@ const Home = () => {
           return false;
         })}
       </section>
+      <BottomBar></BottomBar>
     </div>
   );
 };
