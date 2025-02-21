@@ -9,6 +9,11 @@ import result_hipster_fantasy from '../../../assets/image/result_hipster_fantasy
 import result_infohunter_fantasy from '../../../assets/image/result_infohunter_fantasy.svg';
 import result_onebite_fantasy from '../../../assets/image/result_onebite_fantasy.svg';
 import useNavigationPage from '../../../hooks/useNavigationPage';
+import BookCard from '../../../components/molecules/BookCard';
+import book_image_lasttrain from '../../../assets/image/book_image_lasttrain.svg';
+import book_image_jump from '../../../assets/image/book_image_jump.svg';
+import book_image_your from '../../../assets/image/book_image_your.svg';
+import book_image_adult from '../../../assets/image/book_image_adult.svg';
 
 const images = [
   result_selfie_fantasy,
@@ -400,7 +405,59 @@ const OnBoardingStep11 = ({ items, beforeStep, resetStep }) => {
           </Title>
         </div>
         <div className={styles.meeting_components}>
-          <div className={styles.temp}></div>
+          <div className={styles.temp}>
+            {myBookType.type === 0 || myBookType.type === 1 ? (
+              <>
+                <div className={styles.longchap}>
+                  <BookCard
+                    title='한 줄의 여운'
+                    coverImage={book_image_jump}
+                    bookname='여름을 달려 너에게 점프!'
+                    date='매주 금요일∙오후'
+                    participants={'12/20'}
+                    matchRate={96}
+                    tag={'만렙성장독서가'}
+                    booktag={'소설/문학'}
+                  />
+                  <BookCard
+                    title='독서를합시다'
+                    coverImage={book_image_adult}
+                    bookname='어떤 어른'
+                    date='매주 토요일∙야간'
+                    participants={'8/20'}
+                    matchRate={88}
+                    tag={'리스닝 요정'}
+                    booktag={'에세이/시'}
+                  />
+                </div>
+              </>
+            ) : (
+              <>
+                <div className={styles.shortchap}>
+                  <BookCard
+                    title='만약 단 하루, 과거로 돌...'
+                    coverImage={book_image_lasttrain}
+                    bookname='세상의 마지막 기차역'
+                    date='지금 진행 중'
+                    participants={22}
+                    matchRate={96}
+                    tag={'느긋한책방손님'}
+                    booktag={'소설/문학'}
+                  />
+                  <BookCard
+                    title='누군가와 함께하는 것이...'
+                    coverImage={book_image_your}
+                    bookname='너의 췌장을 먹고 싶어'
+                    date='25.02.21(금)∙19시'
+                    participants={21}
+                    matchRate={88}
+                    tag={'느긋한책방손님'}
+                    booktag={'소설/문학'}
+                  />
+                </div>
+              </>
+            )}
+          </div>
         </div>
       </div>
       <div className={styles.button_box}>
