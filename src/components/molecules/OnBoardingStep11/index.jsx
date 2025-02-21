@@ -14,6 +14,8 @@ import book_image_lasttrain from '../../../assets/image/book_image_lasttrain.svg
 import book_image_jump from '../../../assets/image/book_image_jump.svg';
 import book_image_your from '../../../assets/image/book_image_your.svg';
 import book_image_adult from '../../../assets/image/book_image_adult.svg';
+import { useSetRecoilState } from 'recoil';
+import { myTasteState } from '../../../shared/recoil/myTasteState';
 
 const images = [
   result_selfie_fantasy,
@@ -123,6 +125,7 @@ const myBookTypes = [
 
 const OnBoardingStep11 = ({ items, beforeStep, resetStep }) => {
   const { routePage } = useNavigationPage();
+  const setMyTaste = useSetRecoilState(myTasteState);
 
   const myStyle = myBookTypes.find((el) => {
     if (el.type === items[6]) {
@@ -147,6 +150,13 @@ const OnBoardingStep11 = ({ items, beforeStep, resetStep }) => {
   });
 
   const handleNextStep = () => {
+    const result = {
+      name: items[2],
+      tags: [title, myBookType.title, myBookStyle.title],
+    };
+    setMyTaste((prev) => {
+      return { ...prev, myTastes: result, isTaste: true };
+    });
     routePage('/', { ...myStyle });
   };
 
@@ -439,8 +449,7 @@ const OnBoardingStep11 = ({ items, beforeStep, resetStep }) => {
                     date='지금 진행 중'
                     participants={22}
                     matchRate={96}
-                    tag={'느긋한책방손님'}
-                    booktag={'소설/문학'}
+                    tag={['느긋한책방손님', '소설/문학']}
                   />
                   <BookCard
                     title='누군가와 함께하는 것이...'
@@ -449,8 +458,7 @@ const OnBoardingStep11 = ({ items, beforeStep, resetStep }) => {
                     date='25.02.21(금)∙19시'
                     participants={21}
                     matchRate={88}
-                    tag={'느긋한책방손님'}
-                    booktag={'소설/문학'}
+                    tag={['느긋한책방손님', '소설/문학']}
                   />
                 </div>
               </>

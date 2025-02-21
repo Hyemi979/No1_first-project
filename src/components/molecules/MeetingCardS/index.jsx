@@ -10,8 +10,7 @@ const MeetingCardS = ({
   coverImage,
   date,
   participants,
-  tag,
-  booktag,
+  tags,
   ...rest
 }) => {
   return (
@@ -23,16 +22,13 @@ const MeetingCardS = ({
       <div className={styles.info}>
         <div className={styles.topblock}>
           <div className={styles.tags}>
-            <div className={styles.tag_wrap1}>
-              <Tag size='small' type='gray'>
-                # {booktag}
-              </Tag>
-            </div>
-            <div className={styles.tag_wrap2}>
-              <Tag size='small' type='yellow'>
-                # {tag}
-              </Tag>
-            </div>
+            {tags.map((el) => (
+              <div key={el} className={styles.tag_wrap1}>
+                <Tag size='small' type='gray'>
+                  # {el}
+                </Tag>
+              </div>
+            ))}
           </div>
 
           <Title

@@ -5,6 +5,7 @@ import SearchBar from '../../components/molecules/SearchBar';
 import useNavigationPage from '../../hooks/useNavigationPage';
 import styles from './index.module.css';
 import Top3Card from '../../components/molecules/Top3Card';
+import HomeAfStep01 from '../../components/molecules/HomeAfStep01';
 import { useRecoilValue } from 'recoil';
 import { chapState } from '../../shared/recoil/chapState';
 import BookCard from '../../components/molecules/BookCard';
@@ -21,7 +22,7 @@ const Home = () => {
   const { routePage } = useNavigationPage();
 
   const { chaps } = useRecoilValue(chapState);
-  const { isOnboarding } = useRecoilValue(myTasteState);
+  const { isOnboarding, myTastes, isTaste } = useRecoilValue(myTasteState);
 
   useEffect(() => {
     if (!isOnboarding) {
@@ -29,8 +30,14 @@ const Home = () => {
     }
   });
 
-  const handlePage = () => {
+  const handlePreference = () => {
+    window.scrollTo(0, 0);
     routePage('/preference');
+  };
+
+  const handlePage = (data) => {
+    window.scrollTo(0, 0);
+    routePage('/chapDetail', data);
   };
 
   return (
@@ -38,7 +45,20 @@ const Home = () => {
       <div className={styles.TopNavbar}>
         <MainTopNavbar></MainTopNavbar>
       </div>
-      <img src={myTaste} onClick={handlePage} className={styles.my_taste} />
+      {isTaste ? (
+        <HomeAfStep01
+          handleClick={handlePreference}
+          tags={myTastes.tags}
+          name={myTastes.name}
+        />
+      ) : (
+        <img
+          src={myTaste}
+          onClick={handlePreference}
+          className={styles.my_taste}
+        />
+      )}
+
       <section className={styles.section_00}>
         <MainButton onClick={() => routePage('/shortTerm')} />
         <MainButton type={'longChap'} />
@@ -114,6 +134,7 @@ const Home = () => {
               return (
                 <Top3Card
                   key={el.title}
+                  onClick={() => handlePage(el)}
                   ranking={idx + 1}
                   title={el.title}
                   coverImage={el.coverImage}
@@ -166,6 +187,7 @@ const Home = () => {
               return (
                 <Top3Card
                   key={el.title}
+                  onClick={() => handlePage(el)}
                   ranking={idx + 1}
                   title={el.title}
                   coverImage={el.coverImage}
@@ -219,6 +241,7 @@ const Home = () => {
             return (
               <BookCard
                 key={el.title}
+                onClick={() => handlePage(el)}
                 ranking={idx + 1}
                 title={el.title}
                 coverImage={el.coverImage}
@@ -256,6 +279,7 @@ const Home = () => {
             return (
               <BookCard
                 key={el.title}
+                onClick={() => handlePage(el)}
                 ranking={idx + 1}
                 title={el.title}
                 coverImage={el.coverImage}
