@@ -20,7 +20,7 @@ const OnBoardingStep06 = ({ nextStep, beforeStep }) => {
 
       {/* 프로그래스 바 추가 */}
       <div className={styles.align_progress}>
-        <ProgressBar progress={6} /> {/* 5/7 상태 표시 */}
+        <ProgressBar progress={4} /> {/* 5/7 상태 표시 */}
       </div>
 
       <div className={styles.image}>

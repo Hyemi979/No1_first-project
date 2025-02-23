@@ -26,7 +26,7 @@ const OnBoardingStep04 = ({ nextStep, beforeStep }) => {
     <OnboardingLayout>
       <div className={styles.contents}>
         <FavoriteTopNavbar onClick={beforeStep}>
-          나의 독서 스타일은?
+           <div className={styles.text_box2}>나의 독서 스타일은?</div>
         </FavoriteTopNavbar>
         <div className={styles.progressBar}>
           <ProgressBar progress={2} />

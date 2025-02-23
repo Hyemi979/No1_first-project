@@ -1,6 +1,6 @@
 .card {
   display: flex;
-  background: #f5f9ff;
+   
   border-radius: 12px;
   padding: 12px;
   width: 100%; /* 카드 전체 너비 */

@@ -4,6 +4,7 @@
   justify-content: space-between;
   align-items: center;
   height: 100vh;
+  padding: 0 20px;
 }
 
 .FavoriteTopNavbar {
@@ -14,16 +15,19 @@
 
 .contents {
   width: 100%;
+  padding: 0 20px;
 }
 
 .progressBar {
   display: flex;
   margin-right: auto;
-  margin-top: 20px;
+  margin-top: 30px;
 }
 
 .buttonWrap {
   margin-bottom: 34px;
+  width: 100%;
+  padding: 0 20px;
 }
 
 .subtitle {
@@ -46,4 +50,11 @@
   background-color: #91c0fd;
   color: black;
   font-weight: bold;
+}
+
+
+.text_box2 {
+  font-size: 18px;
+  font-family: 'bold';
+  color: #000000;
 }

@@ -47,7 +47,7 @@ const OnBoardingStep01 = ({ nextStep }) => {
               fontWeight: 'bold',
             }}
           >
-            카카오로 로그인
+            카카오로 시작하기
           </Title>
         </Button>
         {/* 네이버 로그인 버튼 */}
@@ -66,7 +66,7 @@ const OnBoardingStep01 = ({ nextStep }) => {
               color: '#fff',
             }}
           >
-            네이버로 로그인
+            네이버로 시작하기
           </Title>
         </Button>
         {/* 구글 로그인 버튼 */}
@@ -85,7 +85,7 @@ const OnBoardingStep01 = ({ nextStep }) => {
               color: '#000',
             }}
           >
-            구글로 로그인
+            구글로 시작하기
           </Title>
         </Button>
         {/* 애플 로그인 버튼 */}
@@ -104,7 +104,7 @@ const OnBoardingStep01 = ({ nextStep }) => {
               color: '#fff',
             }}
           >
-            애플로 로그인
+            애플로 시작하기
           </Title>
         </Button>
       </div>

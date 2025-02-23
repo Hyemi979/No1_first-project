@@ -1,5 +1,5 @@
 .container {
-  margin: 0 20px 0 20px ;
+  padding: 0 20px 0 20px ;
   display: flex;
   flex-direction: column;
   align-items: center; /* 전체 요소들 가운데 정렬 */
@@ -20,7 +20,6 @@
   display: flex;
   margin-right: auto;
   margin-top: 30px;
-  height: 50px;
 }
 
 .progressCircle {
