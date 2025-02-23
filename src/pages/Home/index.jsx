@@ -132,6 +132,7 @@ const Home = () => {
           {_.shuffle(chaps).map((el, idx) => {
             if (idx < 3) {
               return (
+                <div className={styles.Top3Card}>
                 <Top3Card
                   key={el.title}
                   onClick={() => handlePage(el)}
@@ -143,6 +144,7 @@ const Home = () => {
                   participants={el.participants}
                   tags={el.tag}
                 />
+                </div>
               );
             }
             return false;
@@ -280,6 +282,7 @@ const Home = () => {
         {_.shuffle(chaps).map((el, idx) => {
           if (idx < 3) {
             return (
+              <div className={styles.bookCard}>
               <BookCard
                 key={el.title}
                 onClick={() => handlePage(el)}
@@ -290,8 +293,9 @@ const Home = () => {
                 date={el.date}
                 participants={el.participants}
                 tag={el.tag}
-                matchRate={30}
+                 
               />
+              </div>
             );
           }
           return false;

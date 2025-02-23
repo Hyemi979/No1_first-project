@@ -1,10 +1,7 @@
 .card {
   display: flex;
-  background: #ffffff;
-  border-radius: 8px;
   padding: 12px;
-  background-color: #fffbf0;
-  border: 1px solid #e6e6e6;
+   
   width: 100%; /* 카드 전체 너비 */
   height: auto; /* 카드 전체 높이 */
 }
@@ -51,7 +48,8 @@
 
 .tags {
   display: flex;
-  gap: 4px;
+  gap: 2px;
+  flex-wrap: wrap
 }
 
 .icontext {
@@ -62,7 +60,9 @@
   font-size: 12px;
   font-weight: Regular;
   justify-content: center;
+  width: 200px;
   font-family: NanumSquareNeo, sans-serif;
+   
 }
 
 .Caption_02_Regular {

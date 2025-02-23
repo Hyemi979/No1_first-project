@@ -17,6 +17,9 @@ const BookCard = ({
   tag,
   ...rest
 }) => {
+
+   
+     
   return (
     <div className={matchRate ? styles.card : styles.card_small} {...rest}>
       <div className={matchRate ? styles.cover : styles.cover_small}>
@@ -47,7 +50,7 @@ const BookCard = ({
               textOverflow: 'ellipsis',
               whiteSpace: 'nowrap',
               overflow: 'hidden',
-              width: '200px',
+              width: '100%',
             }}
           >
             {title}
