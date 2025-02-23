@@ -188,6 +188,7 @@ const Home = () => {
             {_.shuffle(chaps).map((el, idx) => {
               if (idx < 3) {
                 return (
+                  <div className={styles.Top3Card}>
                   <Top3Card
                     key={el.title}
                     onClick={() => handlePage(el)}
@@ -199,6 +200,7 @@ const Home = () => {
                     participants={el.participants}
                     tags={el.tag}
                   />
+                  </div>
                 );
               }
               return false;
