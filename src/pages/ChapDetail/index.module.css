@@ -4,6 +4,7 @@
   width: 100%;
   overflow: hidden;
 }
+
 .carousel_box {
   display: flex;
   width: 100%;
@@ -16,7 +17,7 @@
 .title_box {
   display: flex;
   width: auto;
-  margin: 24px 20px;
+  margin: 24px 20px 20px 20px;
   justify-content: space-between;
   overflow: hidden;
   /* border: 1px solid; */
@@ -38,7 +39,7 @@
   overflow-x: auto;
   width: 100%;
   box-sizing: border-box;
-  margin-bottom: 20px;
+  margin-bottom: 24px;
 }
 .list_box::-webkit-scrollbar {
   display: none;
