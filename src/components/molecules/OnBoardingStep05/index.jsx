@@ -48,12 +48,11 @@ const OnBoardingStep05 = ({ nextStep, beforeStep }) => {
   return (
     <OnboardingLayout>
       {/* 최상단 네비게이션 바 */}
-      <FavoriteTopNavbar
-        onClick={beforeStep}
-        className={styles.FavoriteTopNavbar}
-      >
-        나의 독서 스타일은?
-      </FavoriteTopNavbar>
+      <div className={styles.favoritetopnavbar}>
+        <FavoriteTopNavbar onClick={beforeStep}>
+          나의 독서 스타일은?
+        </FavoriteTopNavbar>
+      </div>
 
       <div className={styles.contents}>
         <div className={styles.content}>

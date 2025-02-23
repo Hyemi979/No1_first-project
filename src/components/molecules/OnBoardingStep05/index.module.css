@@ -7,12 +7,16 @@
   align-items: center; /* 전체 요소 가운데 정렬 */
   position: relative;
   justify-content: space-between;
+  padding: 0px 20px
 }
 
-.FavoriteTopNavbar {
-  text-align: center;
-  align-items: center;
-  width: 100%;
+.favoritetopnavbar {
+  /* 상단 내비게이션 바 스타일 */
+  margin-top: 0; /* 상단바는 마진을 0으로 설정해줘야 상단에 맞게 붙을 수 있음 */
+  width: 100%; /* 전체 너비 사용 */
+  display: flex; /* 플렉스를 사용하여 아이콘과 텍스트 정렬 */
+  justify-content: space-between; /* 아이콘을 왼쪽, 텍스트는 가운데로 */
+  align-items: ceter; /* 아이콘과 텍스트 수직 정렬 */
 }
 
 .contents {
@@ -22,6 +26,7 @@
   justify-content: flex-start; /* 위쪽 정렬 */
   flex-grow: 1; /* 남은 공간을 채우기 */
   gap: 40px;
+   padding: 0 20px;
 }
 
 .content {
@@ -36,7 +41,7 @@
 .progressBar {
   display: flex;
   margin-right: auto;
-  margin-top: 20px;
+  margin-top: 30px;
 }
 
 .subtitle {
@@ -78,4 +83,6 @@
 
 .buttonWrap {
   margin-bottom: 34px;
+  width: 100%;
+  padding: 0 20px;
 }

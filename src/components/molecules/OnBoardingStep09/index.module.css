@@ -1,5 +1,5 @@
 .container {
-  margin: 0 20px 0 20px ;
+  padding: 0 20px 0 20px ;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -8,10 +8,8 @@
 
 .progressContainer {
   display: flex;
-  justify-content: left;
   margin-right: auto;
   margin-top: 30px;
-  height: 50px;
 }
 
 .image {

@@ -1,17 +1,18 @@
-.wrap {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  height: 100vh;
-}
+ 
 
 .buttonWrap {
   margin-bottom: 34px;
+  width: 100%;
+  padding: 0 20px; 
 }
 
 .header_wrap {
   width: 100%;
+  padding: 0 20px; 
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .text_box {
@@ -26,7 +27,7 @@
 .align_progress {
   display: flex;
   margin-right: auto;
-  margin-top: 20px;
+  margin-top: 0px;
 }
 
 .text_box2 {

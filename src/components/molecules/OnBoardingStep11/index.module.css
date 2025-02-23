@@ -81,9 +81,12 @@
   align-items: center;
   position: bottom;
   margin-bottom: 24px;
+  width: 100%;
+  padding: 0 20px;
 }
 .button_inner {
   margin: 10px 20px 20px 20px;
+  width: 100%;
 }
 
 .book_type_highlight_00 {
@@ -128,3 +131,10 @@
 .shortchap::-webkit-scrollbar {
   display: none;
 }
+
+
+.longchap .bookCard {
+  background: #ffffff; /* 하얀색 배경 */
+  border: 0;
+  border-radius: 12px;
+} 

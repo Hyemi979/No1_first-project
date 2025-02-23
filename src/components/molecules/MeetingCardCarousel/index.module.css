@@ -22,10 +22,10 @@
   }
   
   
-  .container {
+  .wrap {
     width: 100%;
     max-width: 360px; /* 카드의 최대 너비 */
-    margin: 0 auto;
+   
     
   }
   

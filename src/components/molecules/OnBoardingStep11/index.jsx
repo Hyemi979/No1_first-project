@@ -91,7 +91,7 @@ const favoriteBooks = [
   {
     type: 8,
     title: '심리학',
-    content: 'ex. 마음의 법칙,생각에 관한 생각',
+    content: ' 마음의 법칙,생각에 관한 생각',
   },
 ];
 
@@ -419,6 +419,7 @@ const OnBoardingStep11 = ({ items, beforeStep, resetStep }) => {
             {myBookType.type === 0 || myBookType.type === 1 ? (
               <>
                 <div className={styles.longchap}>
+                <div className={styles.bookCard}>
                   <BookCard
                     title='한 줄의 여운'
                     coverImage={book_image_jump}
@@ -428,6 +429,8 @@ const OnBoardingStep11 = ({ items, beforeStep, resetStep }) => {
                     matchRate={96}
                     tag={['만렙성장독서가', '소설/문학']}
                   />
+                  </div>
+                  <div className={styles.bookCard}>
                   <BookCard
                     title='독서를합시다'
                     coverImage={book_image_adult}
@@ -438,10 +441,12 @@ const OnBoardingStep11 = ({ items, beforeStep, resetStep }) => {
                     tag={['리스닝 요정', '에세이/시']}
                   />
                 </div>
+                </div>
               </>
             ) : (
               <>
                 <div className={styles.shortchap}>
+                <div className={styles.bookCard}>
                   <BookCard
                     title='만약 단 하루, 과거로 돌...'
                     coverImage={book_image_lasttrain}
@@ -451,6 +456,8 @@ const OnBoardingStep11 = ({ items, beforeStep, resetStep }) => {
                     matchRate={96}
                     tag={['느긋한책방손님', '소설/문학']}
                   />
+                  </div>
+                  <div className={styles.bookCard}>
                   <BookCard
                     title='누군가와 함께하는 것이...'
                     coverImage={book_image_your}
@@ -460,6 +467,7 @@ const OnBoardingStep11 = ({ items, beforeStep, resetStep }) => {
                     matchRate={88}
                     tag={['느긋한책방손님', '소설/문학']}
                   />
+                </div>
                 </div>
               </>
             )}

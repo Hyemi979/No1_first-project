@@ -78,7 +78,7 @@ const MeetingCardCarousel = ({ nextStep }) => {
 
 
   return (
-  <div className={styles.container}>
+  
     <div className={styles.wrap} >
       
         <Slider {...settings}> 
@@ -92,7 +92,7 @@ const MeetingCardCarousel = ({ nextStep }) => {
           </div>
         </Slider>
         </div>
-        </div>
+        
   );
 };
 
