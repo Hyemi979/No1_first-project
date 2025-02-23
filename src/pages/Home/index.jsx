@@ -150,61 +150,61 @@ const Home = () => {
             return false;
           })}
         </section>
-      </div>
-      <div className={styles.Top3_Box_Container02}>
-        <div className={styles.top_text_box_container}>
-          <div className={styles.Top_text_box}>
-            <Title
-              type='SubTitle02'
-              className={styles.Body_01_ExtraBold}
-              style={{
-                textAlign: 'left',
-                lineHeight: 1.5,
-                fontFamily: 'extrabold',
-                color: '#333333',
-                overflow: 'hidden',
-              }}
-            >
-              장기챕
-            </Title>
-            <Title
-              type='SubTitle02'
-              className={styles.Body_01_ExtraBold}
-              style={{
-                textAlign: 'left',
-                lineHeight: 1.5,
-                fontFamily: 'extrabold',
-                color: '#2D87FB',
-                overflow: 'hidden',
-              }}
-            >
-              TOP3
-            </Title>
+
+        <div className={styles.Top3_Box_Container02}>
+          <div className={styles.top_text_box_container}>
+            <div className={styles.Top_text_box}>
+              <Title
+                type='SubTitle02'
+                className={styles.Body_01_ExtraBold}
+                style={{
+                  textAlign: 'left',
+                  lineHeight: 1.5,
+                  fontFamily: 'extrabold',
+                  color: '#333333',
+                  overflow: 'hidden',
+                }}
+              >
+                장기챕
+              </Title>
+              <Title
+                type='SubTitle02'
+                className={styles.Body_01_ExtraBold}
+                style={{
+                  textAlign: 'left',
+                  lineHeight: 1.5,
+                  fontFamily: 'extrabold',
+                  color: '#2D87FB',
+                  overflow: 'hidden',
+                }}
+              >
+                TOP3
+              </Title>
+            </div>
+
+            <ViewButton>전체보기</ViewButton>
           </div>
-          <ViewButton>전체보기</ViewButton>
+          <section className={styles.section_01}>
+            {_.shuffle(chaps).map((el, idx) => {
+              if (idx < 3) {
+                return (
+                  <Top3Card
+                    key={el.title}
+                    onClick={() => handlePage(el)}
+                    ranking={idx + 1}
+                    title={el.title}
+                    coverImage={el.coverImage}
+                    bookname={el.bookName}
+                    date={el.date}
+                    participants={el.participants}
+                    tags={el.tag}
+                  />
+                );
+              }
+              return false;
+            })}
+          </section>
         </div>
-        <section className={styles.section_01}>
-          {_.shuffle(chaps).map((el, idx) => {
-            if (idx < 3) {
-              return (
-                <div className={styles.Top3Card}>
-                <Top3Card
-                  key={el.title}
-                  onClick={() => handlePage(el)}
-                  ranking={idx + 1}
-                  title={el.title}
-                  coverImage={el.coverImage}
-                  bookname={el.bookName}
-                  date={el.date}
-                  participants={el.participants}
-                  tags={el.tag}
-                />
-                </div>
-              );
-            }
-            return false;
-          })}
-        </section>
       </div>
       <div className={styles.content_wrap02_container}>
         <div className={styles.content_wrap02}>
@@ -238,27 +238,28 @@ const Home = () => {
         <div className={styles.image}>
           <img src={filter_image} alt='필터이미지' />
         </div>
+
+        <section className={styles.section_01_discover}>
+          {_.shuffle(chaps).map((el, idx) => {
+            if (idx < 3) {
+              return (
+                <BookCard
+                  key={el.title}
+                  onClick={() => handlePage(el)}
+                  ranking={idx + 1}
+                  title={el.title}
+                  coverImage={el.coverImage}
+                  bookname={el.bookName}
+                  date={el.date}
+                  participants={el.participants}
+                  tag={el.tag}
+                />
+              );
+            }
+            return false;
+          })}
+        </section>
       </div>
-      <section className={styles.section_01_discover}>
-        {_.shuffle(chaps).map((el, idx) => {
-          if (idx < 3) {
-            return (
-              <BookCard
-                key={el.title}
-                onClick={() => handlePage(el)}
-                ranking={idx + 1}
-                title={el.title}
-                coverImage={el.coverImage}
-                bookname={el.bookName}
-                date={el.date}
-                participants={el.participants}
-                tag={el.tag}
-              />
-            );
-          }
-          return false;
-        })}
-      </section>
       <div className={styles.top_text_box_container_02}>
         <Title
           type='SubTitle02'
