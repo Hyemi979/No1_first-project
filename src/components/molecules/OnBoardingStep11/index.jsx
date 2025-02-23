@@ -56,42 +56,42 @@ const favoriteBooks = [
   {
     type: 1,
     title: '판타지',
-    content: 'ex. 포스 윙, 해리 포터와 마법사의 돌',
+    content: '포스 윙, 해리 포터와 마법사의 돌',
   },
   {
     type: 2,
     title: 'SF',
-    content: 'ex. 마션,  천 개의 파랑',
+    content: '마션,  천 개의 파랑',
   },
   {
     type: 3,
     title: '미스터리',
-    content: 'ex. 셜록 홈즈 시리즈, 다빈치 코드',
+    content: '셜록 홈즈 시리즈, 다빈치 코드',
   },
   {
     type: 4,
     title: '자기계발',
-    content: 'ex. 세이노의 가르침, 자존감 수업',
+    content: '세이노의 가르침, 자존감 수업',
   },
   {
     type: 5,
     title: '사회/경제',
-    content: 'ex. 자본론 , 총, 균, 쇠',
+    content: '자본론 , 총, 균, 쇠',
   },
   {
     type: 6,
     title: '에세이/시',
-    content: 'ex. 내가 읽은 책들, 고백',
+    content: '내가 읽은 책들, 고백',
   },
   {
     type: 7,
     title: '인문/철학',
-    content: 'ex. 니코마코스 윤리학,존재와 시간',
+    content: '니코마코스 윤리학,존재와 시간',
   },
   {
     type: 8,
     title: '심리학',
-    content: ' 마음의 법칙,생각에 관한 생각',
+    content: '마음의 법칙,생각에 관한 생각',
   },
 ];
 

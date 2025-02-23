@@ -1,3 +1,4 @@
+import { useState } from 'react'; // useState 추가
 import BottomBar from '../../components/atoms/BottomBar';
 import Chips from '../../components/atoms/Chips';
 import Title from '../../components/atoms/Title';
@@ -19,6 +20,21 @@ import _ from 'lodash';
 const ShortTerm = () => {
   const { routePage } = useNavigationPage();
   const { chaps } = useRecoilValue(chapState);
+  
+ // Chips의 클릭 상태를 관리하는 상태
+ const [pressedChips, setPressedChips] = useState([]);
+
+
+  // Chips 클릭 핸들러
+  const handleChipClick = (chip) => {
+    if (pressedChips.includes(chip)) {
+      // 이미 클릭된 Chips라면 제거
+      setPressedChips(pressedChips.filter((c) => c !== chip));
+    } else {
+      // 클릭되지 않은 Chips라면 추가
+      setPressedChips([...pressedChips, chip]);
+    }
+  };
 
   const handlePage = (data) => {
     window.scrollTo(0, 0);
@@ -55,15 +71,31 @@ const ShortTerm = () => {
           </div>
         </div>
         <div className={styles.chipswrap}>
-          <Chips>#느긋한책방손님</Chips>
-          <Chips>#소설/문학</Chips>
-          <Chips>#판타지</Chips>
+         <Chips
+            isPressed={pressedChips.includes('#느긋한책방손님')} // 클릭 상태 전달
+            onClick={() => handleChipClick('#느긋한책방손님')} // 클릭 핸들러
+          >
+            #느긋한책방손님
+          </Chips>
+          <Chips
+            isPressed={pressedChips.includes('#소설/문학')}
+            onClick={() => handleChipClick('#소설/문학')}
+          >
+            #소설/문학
+          </Chips>
+          <Chips
+            isPressed={pressedChips.includes('#판타지')}
+            onClick={() => handleChipClick('#판타지')}
+          >
+            #판타지
+          </Chips>
         </div>
         <div className={styles.soonBookCardWrap}>
           {_.shuffle(chaps).map((el, idx) => {
             if (idx < 3) {
               console.log('el', el);
               return (
+                <div className={styles.bookCard}>
                 <BookCard
                   key={el.title}
                   onClick={() => handlePage(el)}
@@ -74,7 +106,9 @@ const ShortTerm = () => {
                   participants={el.participants}
                   tag={el.tag}
                   matchRate={97}
+                   
                 />
+                </div>
               );
             }
             return false;
@@ -132,6 +166,7 @@ const ShortTerm = () => {
             if (idx < 3) {
               console.log('el', el);
               return (
+                <div className={styles.bookCard}>
                 <BookCard
                   key={el.title}
                   onClick={() => handlePage(el)}
@@ -142,6 +177,7 @@ const ShortTerm = () => {
                   participants={el.participants}
                   tag={el.tag}
                 />
+                </div>
               );
             }
             return false;

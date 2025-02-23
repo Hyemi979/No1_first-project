@@ -67,7 +67,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+     
     width: 100%;
     padding: 0px 0px 24px 0px;
   }
@@ -76,7 +76,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+     
     width: 100%;
     padding: 0px 0px;
   }
@@ -163,7 +163,10 @@
     
  
 
-
+.bookCard{
+    background-color: #FFFBF0;
+    border-radius: 12px;
+}
 .BookCardWrap{
 
     display: flex;
@@ -193,7 +196,7 @@
     display: flex;
     flex-direction: column;
     gap: 12px;
-    
+     
   }
  
 
@@ -208,8 +211,12 @@
 
 
 .calenderdatewrap{
+    
     border-bottom: 1px solid #E6E6E6;
     margin-bottom: 16px;
+    display: flex;
+    flex-direction: column;
+   align-items: center;
 }
  
 
