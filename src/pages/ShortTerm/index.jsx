@@ -12,7 +12,8 @@ import useNavigationPage from '../../hooks/useNavigationPage';
 import styles from './index.module.css';
 import chevron_down from '../../assets/chevron_down.svg';
 import rightarrow from '../../assets/rightarrow.svg';
-
+import Viewbutton from '../../components/atoms/ViewButton';
+import calenderdate02 from '../../assets/image/calenderdate02.svg';
 import { useRecoilValue } from 'recoil';
 import { chapState } from '../../shared/recoil/chapState';
 import _ from 'lodash';
@@ -64,10 +65,7 @@ const ShortTerm = () => {
           >
             성향에 맞는 챕을 <br></br>키워드로 찾아보세요!
           </Title>
-          <div className={styles.keywordwrap}>
-            <span>전체보기</span>
-            <img src={rightarrow} />
-          </div>
+          <Viewbutton>전체보기</Viewbutton>
         </div>
         <div className={styles.chipswrap}>
           <Chips
@@ -127,10 +125,7 @@ const ShortTerm = () => {
           >
             지금 진행 중인 단기챕
           </Title>
-          <div className={styles.livewrap}>
-            <span>전체보기</span>
-            <img src={rightarrow} />
-          </div>
+          <Viewbutton>전체보기</Viewbutton>
         </div>
         <div className={styles.LiveShortChapCardMWarp}>
           <LiveShortChapCardM></LiveShortChapCardM>
@@ -153,10 +148,7 @@ const ShortTerm = () => {
           >
             잠시 후 챕이 시작됩니다!
           </Title>
-          <div className={styles.soonwrap}>
-            <span>전체보기</span>
-            <img src={rightarrow} />
-          </div>
+          <Viewbutton>전체보기</Viewbutton>
         </div>
         <div className={styles.LiveBookCardWarp}>
           {_.shuffle(chaps).map((el, idx) => {
@@ -203,8 +195,9 @@ const ShortTerm = () => {
           </div>
         </div>
         <div className={styles.calenderdatewrap}>
-          <img src='calenderdate.svg' />
+          <img src={calenderdate02} />
         </div>
+
         <div className={styles.LiveBookCardWarp}>
           {_.shuffle(chaps).map((el, idx) => {
             if (idx < 3) {
