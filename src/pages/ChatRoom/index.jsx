@@ -1,5 +1,3 @@
-
-
 import Chatting from '../../components/molecules/Chatting';
 import profile_image01 from '/src/assets/image/profile_image01.svg';
 import profile_image02 from '/src/assets/image/profile_image02.svg';
@@ -11,35 +9,19 @@ import seed_badge from '/src/assets/image/seed_badge.svg';
 import tree_badgeY from '/src/assets/image/tree_badgeY.svg';
 import tree_badgeB from '/src/assets/image/tree_badgeB.svg';
 import DebateTopicCard from '../../components/molecules/DebateTopicCard';
-import TopNavBar from '../../components/atoms/TopNavbar';
+import TopNavBar from '../../components/atoms/TopNavBar';
 import styles from './index.module.css';
 import React, { useRef, useEffect, useState } from 'react';
 
-
-
-
-
-
-
 const datas = [
-  {
-    profileImg: profile_image01,
-    name: '김영윤T',
-    sex: '남자',
-    contents: '나도 어릴 때 이런 말을 들었다면 더 용기 냈을 것 같아!',
-    emojis: [
-      { emoji: '👍', count: 21 },
-      { emoji: '✨', count: 16 },
-    ],
-  },
   {
     profileImg: profile_image02,
     name: '김혜미',
     sex: '여자',
-    contents: '가족들과 따뜻한 밥 한 끼를 먹으며, 그동안 못했던 이야기를 나누고 싶어요.',
+    contents: '고생했던 만큼 의미 있던 시간들이었습니다!\n고생해 준 팀원들에게 무한 감사🙏',
     emojis: [
-      { emoji: '😭', count: 20 },
-      { emoji: '🍚', count: 26 },
+      { emoji: '🙏', count: 16 },
+      { emoji: '😊', count: 26 },
       { emoji: '💗', count: 14 },
     ],
   },
@@ -47,103 +29,67 @@ const datas = [
     profileImg: profile_image03,
     name: '김재경',
     sex: '남자',
-    contents: '예전에 갑자기 멀어진 친구와 다시 좋은 추억을 만들고 싶어요.',
+    contents: '한 달 동안 정말 많은 걸 배워갔습니다.\n팀원분들이 정말 열심히 해주셔서 감사했습니다.\n다들 퇴실 버튼 누르셨나요?',
     emojis: [
-      { emoji: '🥺', count: 16 },
-      { emoji: '💖', count: 22 },
+      { emoji: '💲', count: 16 },
+      { emoji: '💸', count: 25 },
+      { emoji: '💰', count: 14 },
     ],
   },
   {
     profileImg: profile_image04,
-    name: '이주영',
+    name: '윤주영',
     sex: '여자',
-    contents: '인생의 중요한 가르침을 주셨던 선생님께 감사 인사를 전하고 싶어요.',
+    isMe :true,
+    contents: '처음 기획 단계에서 많이 힘들었지만\n그런 과정을 함께하면서 성장했고, 이후 디자인 단계에서\n어벤저스를 보여주셨던 우리 취탈원 1조 여러분들!\n모두 감사했고 즐거웠습니다! 수료하시고 나서\n다들 취뽀 성공하시고 멋진 직장인으로 만났으면 좋겠어요!',
     emojis: [
-      { emoji: '💛', count: 26 },
-      { emoji: '😊', count: 14 },
+      { emoji: '💛', count: 24 },
+      { emoji: '😊', count: 16 },
+      { emoji: '⭐', count: 15 },
     ],
   },
   {
     profileImg: profile_image05,
     name: '김예림',
     sex: '여자',
-    contents: '너무 빨리 떠나보낸 반려동물을 다시 만나서 더 많은 사랑을 주고 싶어요.',
+    contents: '팀원들과 함께 고민하고 성장할 수 있었던 값진 시간이었습니다.\n우리 1조 팀원분들 정말 고생 많으셨고, 감사합니다!!\n디자인 8기 수강생 모두 끝까지 응원합니다! 화이팅!😎',
     emojis: [
-      { emoji: '😭', count: 26 },
-      { emoji: '💙', count: 22 },
+      { emoji: '🐾', count: 18 },
+      { emoji: '👽', count: 22 },
+      { emoji: '👏', count: 12 },
     ],
   },
   {
     profileImg: profile_image06,
     name: '서희령',
     sex: '여자',
-    contents: '저는 가장 행복했던 할머니께서 살아계실 때로 돌아가보고 싶어요.',
+    contents: '팀원들과 함께 프로젝트에 몰입하며 협업의 진정한\n의미를 깨닫고, 디자인과 개발의 실력을 키워서 좋았습니다!\n모두 취준 탈출해서 1조 넘게 버는 부자 되세요!',
     emojis: [
-      { emoji: '👵', count: 28 },
-      { emoji: '😭', count: 24 },
+      { emoji: '🤩', count: 16 },
+      { emoji: '🙌', count: 24 },
+      { emoji: '💵', count: 20 },
     ],
   },
   {
     profileImg: profile_image01,
-    name: '김맹구',
+    name: '김영윤 튜터님',
     sex: '남자',
-    contents: '아리스토텔레스 선생님을 만나서 인생을 후회 없이 보내는 방법을 배우고 싶어요.',
+    contents: '잘 될까 제가 더 걱정이 많았는데 여러분 덕분에\n잘 마무리한 것 같습니다. 열심히 하신 만큼 좋은 결실\n얻길 바라고 항상 밝게 빛나는 여러분이 되길 바라요!',
     emojis: [
-      { emoji: '👍', count: 26 },
-      { emoji: '📜', count: 15 },
-    ],
-  },
-  {
-    profileImg: profile_image02,
-    name: '이유리',
-    sex: '여자',
-    contents: '2년전에 교통사고로 세상을 떠난 친구가 보고 싶어요.',
-    emojis: [
-      { emoji: '😭', count: 20 },
-      { emoji: '🎗', count: 12 },
-    ],
-  },
-  {
-    profileImg: profile_image03,
-    name: '김철수',
-    sex: '남자',
-    contents: '여행을 하면서 만났던 사람과 잘해보고 싶어요.',
-    emojis: [
-      { emoji: '✈', count: 14 },
-      { emoji: '💗', count: 20 },
+      { emoji: '👍', count: 25 },
+      { emoji: '😊', count: 26 },
+      { emoji: '✨', count: 12 },
     ],
   },
   {
     profileImg: profile_image04,
-    name: '차은주',
+    name: '김소윤 튜터님',
     sex: '여자',
-    contents: '바다에 놀러 갔을때 봤던 돌고래를 다시 보고 싶어요.',
+    contents: '지난 4달 동안 쉴 틈 없이 달려오느라 고생 많으셨고,\n멋지게 완주하신 것을 축하드립니다!',
     emojis: [
-      { emoji: '🐬', count: 28 },
-      { emoji: '🌊', count: 26 },
-    ],
-  },
-  {
-    profileImg: profile_image05,
-    name: '신짱구',
-    sex: '남자',
-    contents: '흰둥이와 다시 산책하고 싶어요.',
-    
-    emojis: [
-      { emoji: '😭', count: 26 },
-      { emoji: '🐕', count: 22 },
-    ],
-    
-  },
-  {
-    profileImg: profile_image06,
-    name: '나미리',
-    sex: '여자',
-    isMe :true,
-    contents: '1등 당첨 로또 번호를 외워서 내 집을 마련하고 싶어요.',
-    emojis: [
-      { emoji: '💵', count: 28 },
-      { emoji: '🏠', count: 24 },
+      { emoji: '💖', count: 28 },
+      { emoji: '😄', count: 24 },
+      { emoji: '🎉', count: 16 },
     ],
   },
 ];
@@ -176,9 +122,10 @@ const ChatRoom = () => {
       <TopNavBar ref={topNavBarRef} navtitle="단기챕 채팅방" bell={true} settings={true} />
       <DebateTopicCard
       ref={debateTopicCardRef}
-        subtitle="[세상의 마지막 기차역] 토론 주제"
-        title="만약 단 하루, 과거로 돌아갈 수 있다면 누구를 만나고 싶나요?"
-        replyCount="32"
+        subtitle="[최종 프로젝트 소감] 토론 주제"
+        title="약 한 달간, 최선을 다해 프로젝트를
+        준비하신 소감은 어떠신가요?"
+        replyCount="72"
         onHeightChange={handleHeightChange}
       />
     </div>
@@ -194,9 +141,9 @@ const ChatRoom = () => {
             sex={data.sex}
             content={data.contents}
             reactions={data.emojis}
-            comments={0} // 임시 값
+            comments={5} // 임시 값
             isMe={Boolean(data.isMe)}
-            badge={seed_badge} // 임시 값
+            badge={tree_badgeY} // 임시 값
           />
         ))}
       </div>

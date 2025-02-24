@@ -17,6 +17,7 @@ const Top3Card = ({
   participants,
   tags,
   isLongChap, 
+  type = 'short-term',
   ...rest
 }) => {
 
@@ -43,7 +44,7 @@ liveType = eventDate < now ? "live" : "coming"; // 기존 변수 업데이트
             textAlign: 'left',
             lineHeight: 1.5,
             fontFamily: 'extrabold',
-            color: '#FFBE14',
+            color: type === 'short-term' ? '#FFBE14' : '#5FA3FC',
           }}
         >
           {ranking}
