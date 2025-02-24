@@ -1,6 +1,6 @@
 /* ChatRoom.css 또는 해당 컴포넌트의 CSS 파일 */
 .container {
-    padding-top: 200px; /* TopNavBar와 DebateTopicCard의 높이를 고려한 여백 */
+    padding-top: 220px; /* TopNavBar와 DebateTopicCard의 높이를 고려한 여백 */
   }
   
   .topsection {
