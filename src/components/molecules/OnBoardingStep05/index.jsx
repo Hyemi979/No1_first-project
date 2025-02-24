@@ -56,10 +56,12 @@ const OnBoardingStep05 = ({ nextStep, beforeStep }) => {
 
       <div className={styles.contents}>
         <div className={styles.content}>
+
           {/* 진행률 바 표시 */}
           <div className={styles.progressBar}>
             <ProgressBar progress={3} />
           </div>
+          
 
           {/* 제목 및 설명 */}
           <div className={styles.subtitle}>

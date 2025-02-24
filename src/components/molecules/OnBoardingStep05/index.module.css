@@ -1,6 +1,5 @@
 .wrap {
-  width: 335px;
-  height: 812px;
+  height: 100vh;
   border-radius: 5px;
   display: flex;
   flex-direction: column;
@@ -71,7 +70,7 @@
 .genreGrid {
   display: grid; /* 그리드 레이아웃 사용 */
   grid-template-columns: repeat(2, 1fr); /* 2개의 열 설정 */
-  gap: 11px; /* 버튼 간의 간격 */
+  gap: 16px; /* 버튼 간의 간격 */
   margin-top: 20px; /* 상단 여백 */
 }
 

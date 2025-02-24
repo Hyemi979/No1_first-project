@@ -20,17 +20,24 @@ const OnBoardingStep03 = ({ nextStep, beforeStep }) => {
 
   return (
     <OnboardingLayout>
-      <div className={styles.header_wrap}>
+      
+      <div className={styles.favoritetopnavbar}>
         <FavoriteTopNavbar onClick={beforeStep}>
-          <div className={styles.text_box2}>나의 독서 스타일은?</div>
+          나의 독서 스타일은?
         </FavoriteTopNavbar>
-        <div className={styles.align_progress}>
-          <ProgressBar progress={1} />
-        </div>
+      </div>
+
+     <div className={styles.contents}>
+             <div className={styles.content}>
+              {/* 진행률 바 표시 */}
+              <div className={styles.progressBar}>
+            <ProgressBar progress={1} />
+          </div>
         <div className={styles.text_box}>
           챕챕 내에서
           <br />
           사용할 이름을 작성해주세요
+        </div>
         </div>
         <Input
           placeholder='본명이나 닉네임을 입력해주세요!'
