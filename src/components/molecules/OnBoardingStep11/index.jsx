@@ -149,7 +149,7 @@ const OnBoardingStep11 = ({ items, beforeStep, resetStep }) => {
     }
     return false;
   });
-  const { type, title, contentTitle, content, tags } = myStyle;
+  const { type, title, contentTitle, content } = myStyle;
 
   const myBookStyle = favoriteBooks.find((el) => {
     if (el.title === items[4][0]) {
@@ -175,6 +175,8 @@ const OnBoardingStep11 = ({ items, beforeStep, resetStep }) => {
     });
     routePage('/', { ...myStyle });
   };
+
+  const tags = [title, myBookType.title, myBookStyle.title];
 
   return (
     <div
