@@ -20,10 +20,9 @@ import _ from 'lodash';
 const ShortTerm = () => {
   const { routePage } = useNavigationPage();
   const { chaps } = useRecoilValue(chapState);
-  
- // Chips의 클릭 상태를 관리하는 상태
- const [pressedChips, setPressedChips] = useState([]);
 
+  // Chips의 클릭 상태를 관리하는 상태
+  const [pressedChips, setPressedChips] = useState([]);
 
   // Chips 클릭 핸들러
   const handleChipClick = (chip) => {
@@ -47,7 +46,7 @@ const ShortTerm = () => {
       <div className={styles.topcontentWrap}>
         <HelloChater />
         <ToastBar />
-        <MeetingCardCarousel />
+        <MeetingCardCarousel handlePage={handlePage} />
       </div>
 
       <div className={styles.keywordcontentWrap}>
@@ -71,7 +70,7 @@ const ShortTerm = () => {
           </div>
         </div>
         <div className={styles.chipswrap}>
-         <Chips
+          <Chips
             isPressed={pressedChips.includes('#느긋한책방손님')} // 클릭 상태 전달
             onClick={() => handleChipClick('#느긋한책방손님')} // 클릭 핸들러
           >
@@ -93,21 +92,19 @@ const ShortTerm = () => {
         <div className={styles.soonBookCardWrap}>
           {_.shuffle(chaps).map((el, idx) => {
             if (idx < 3) {
-              console.log('el', el);
               return (
-                <div className={styles.bookCard}>
-                <BookCard
-                  key={el.title}
-                  onClick={() => handlePage(el)}
-                  title={el.title}
-                  coverImage={el.coverImage}
-                  bookname={el.bookName}
-                  date={el.date}
-                  participants={el.participants}
-                  tag={el.tag}
-                  matchRate={97}
-                   
-                />
+                <div key={el.title} className={styles.bookCard}>
+                  <BookCard
+                    key={el.title}
+                    onClick={() => handlePage(el)}
+                    title={el.title}
+                    coverImage={el.coverImage}
+                    bookname={el.bookName}
+                    date={el.date}
+                    participants={el.participants}
+                    tag={el.tag}
+                    matchRate={97}
+                  />
                 </div>
               );
             }
@@ -167,16 +164,16 @@ const ShortTerm = () => {
               console.log('el', el);
               return (
                 <div className={styles.bookCard}>
-                <BookCard
-                  key={el.title}
-                  onClick={() => handlePage(el)}
-                  title={el.title}
-                  coverImage={el.coverImage}
-                  bookname={el.bookName}
-                  date={el.date}
-                  participants={el.participants}
-                  tag={el.tag}
-                />
+                  <BookCard
+                    key={el.title}
+                    onClick={() => handlePage(el)}
+                    title={el.title}
+                    coverImage={el.coverImage}
+                    bookname={el.bookName}
+                    date={el.date}
+                    participants={el.participants}
+                    tag={el.tag}
+                  />
                 </div>
               );
             }
