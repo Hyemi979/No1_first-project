@@ -258,7 +258,7 @@ const Home = () => {
                     bookname={el.bookName}
                     date={el.date}
                     participants={el.participants}
-                    tags={el.tag}
+                    tag={el.tag}
                     isLongChap={true}
                   />
                 );
