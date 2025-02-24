@@ -15,6 +15,7 @@ const Top3Card = ({
   date,
   participants,
   tags,
+  type = 'short-term',
   ...rest
 }) => {
   return (
@@ -27,7 +28,7 @@ const Top3Card = ({
             textAlign: 'left',
             lineHeight: 1.5,
             fontFamily: 'extrabold',
-            color: '#FFBE14',
+            color: type === 'short-term' ? '#FFBE14' : '#5FA3FC',
           }}
         >
           {ranking}

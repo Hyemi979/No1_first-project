@@ -133,17 +133,17 @@ const Home = () => {
             if (idx < 3) {
               return (
                 <div className={styles.Top3Card}>
-                <Top3Card
-                  key={el.title}
-                  onClick={() => handlePage(el)}
-                  ranking={idx + 1}
-                  title={el.title}
-                  coverImage={el.coverImage}
-                  bookname={el.bookName}
-                  date={el.date}
-                  participants={el.participants}
-                  tags={el.tag}
-                />
+                  <Top3Card
+                    key={el.title}
+                    onClick={() => handlePage(el)}
+                    ranking={idx + 1}
+                    title={el.title}
+                    coverImage={el.coverImage}
+                    bookname={el.bookName}
+                    date={el.date}
+                    participants={el.participants}
+                    tags={el.tag}
+                  />
                 </div>
               );
             }
@@ -189,17 +189,18 @@ const Home = () => {
               if (idx < 3) {
                 return (
                   <div className={styles.Top3Card}>
-                  <Top3Card
-                    key={el.title}
-                    onClick={() => handlePage(el)}
-                    ranking={idx + 1}
-                    title={el.title}
-                    coverImage={el.coverImage}
-                    bookname={el.bookName}
-                    date={el.date}
-                    participants={el.participants}
-                    tags={el.tag}
-                  />
+                    <Top3Card
+                      key={el.title}
+                      onClick={() => handlePage(el)}
+                      ranking={idx + 1}
+                      title={el.title}
+                      coverImage={el.coverImage}
+                      bookname={el.bookName}
+                      date={el.date}
+                      participants={el.participants}
+                      tags={el.tag}
+                      type='long-term'
+                    />
                   </div>
                 );
               }
@@ -285,18 +286,17 @@ const Home = () => {
           if (idx < 3) {
             return (
               <div className={styles.bookCard}>
-              <BookCard
-                key={el.title}
-                onClick={() => handlePage(el)}
-                ranking={idx + 1}
-                title={el.title}
-                coverImage={el.coverImage}
-                bookname={el.bookName}
-                date={el.date}
-                participants={el.participants}
-                tag={el.tag}
-                 
-              />
+                <BookCard
+                  key={el.title}
+                  onClick={() => handlePage(el)}
+                  ranking={idx + 1}
+                  title={el.title}
+                  coverImage={el.coverImage}
+                  bookname={el.bookName}
+                  date={el.date}
+                  participants={el.participants}
+                  tag={el.tag}
+                />
               </div>
             );
           }
