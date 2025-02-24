@@ -1,5 +1,3 @@
-
-
 import Chatting from '../../components/molecules/Chatting';
 import profile_image01 from '/src/assets/image/profile_image01.svg';
 import profile_image02 from '/src/assets/image/profile_image02.svg';
@@ -20,10 +18,10 @@ const datas = [
     profileImg: profile_image02,
     name: '김혜미',
     sex: '여자',
-    contents: '고생했던만큼 의미있던 시간들이었습니다!\n고생해준 팀원들에게 무한 감사!🙏',
+    contents: '고생했던 만큼 의미 있던 시간들이었습니다!\n고생해 준 팀원들에게 무한 감사🙏',
     emojis: [
-      { emoji: '🙏', count: 15 },
-      { emoji: '😊', count: 28 },
+      { emoji: '🙏', count: 16 },
+      { emoji: '😊', count: 26 },
       { emoji: '💗', count: 14 },
     ],
   },
@@ -31,7 +29,7 @@ const datas = [
     profileImg: profile_image03,
     name: '김재경',
     sex: '남자',
-    contents: '한달 동안 정말 많은걸 배워갔습니다.\n팀원분들이 정말 열심히 해주셔서 감사했습니다.\n다들 퇴실버튼누르셨나요?',
+    contents: '한 달 동안 정말 많은 걸 배워갔습니다.\n팀원분들이 정말 열심히 해주셔서 감사했습니다.\n다들 퇴실 버튼 누르셨나요?',
     emojis: [
       { emoji: '💲', count: 16 },
       { emoji: '💸', count: 25 },
@@ -43,7 +41,7 @@ const datas = [
     name: '윤주영',
     sex: '여자',
     isMe :true,
-    contents: '처음 기획 단계에서 많이 힘들었지만\n그런 과정을 함께하면서 성장했고, 이후 디자인 단계에서\n어벤저스를 보여주셨던 우리 취탈원1조 여러분들!\n모두 감사했고 즐거웠습니다! 수료 하시고 나서\n다들 취뽀성공 하시고 멋진 직장인으로 만났으면 좋겠어요!',
+    contents: '처음 기획 단계에서 많이 힘들었지만\n그런 과정을 함께하면서 성장했고, 이후 디자인 단계에서\n어벤저스를 보여주셨던 우리 취탈원 1조 여러분들!\n모두 감사했고 즐거웠습니다! 수료하시고 나서\n다들 취뽀 성공하시고 멋진 직장인으로 만났으면 좋겠어요!',
     emojis: [
       { emoji: '💛', count: 24 },
       { emoji: '😊', count: 16 },
@@ -74,9 +72,9 @@ const datas = [
   },
   {
     profileImg: profile_image01,
-    name: '김영윤T',
+    name: '김영윤 튜터님',
     sex: '남자',
-    contents: '잘 될까 제가 더 걱정이 많았는데 여러분 덕분에\n잘 마무리 한 것 같습니다. 열심히 하신만큼 좋은 결실\n얻길 바라고 항상 밝게 빛나는 여러분이 되길 바래요!',
+    contents: '잘 될까 제가 더 걱정이 많았는데 여러분 덕분에\n잘 마무리한 것 같습니다. 열심히 하신 만큼 좋은 결실\n얻길 바라고 항상 밝게 빛나는 여러분이 되길 바라요!',
     emojis: [
       { emoji: '👍', count: 25 },
       { emoji: '😊', count: 26 },
@@ -85,7 +83,7 @@ const datas = [
   },
   {
     profileImg: profile_image04,
-    name: '김소윤T',
+    name: '김소윤 튜터님',
     sex: '여자',
     contents: '지난 4달 동안 쉴 틈 없이 달려오느라 고생 많으셨고,\n멋지게 완주하신 것을 축하드립니다!',
     emojis: [
