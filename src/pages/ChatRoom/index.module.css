@@ -1,0 +1,22 @@
+/* ChatRoom.css 또는 해당 컴포넌트의 CSS 파일 */
+.container {
+    padding-top: 200px; /* TopNavBar와 DebateTopicCard의 높이를 고려한 여백 */
+  }
+  
+  .topsection {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* 다른 요소 위에 표시 */
+    background-color: white; /* 배경색 추가 (필요한 경우) */
+   
+   
+  }
+  
+ 
