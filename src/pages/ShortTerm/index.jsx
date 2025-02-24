@@ -176,7 +176,7 @@ const ShortTerm = () => {
         </div>
 
         <div className={styles.calendercontentWrap}>
-          <div className={styles.ContentTitleWrap}>
+          <div className={styles.ContentTitleWrap_01}>
             <Title
               type='SubTitle02'
               className={styles.SubTitle_02_ExtraBold}
