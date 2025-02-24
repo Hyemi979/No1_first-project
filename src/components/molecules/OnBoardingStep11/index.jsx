@@ -5,8 +5,11 @@ import FavoriteTopNavbar from '../../atoms/FavoriteTopNavbar';
 import Tag from '../../atoms/Tag';
 import result_selfie from '../../../assets/image/result_selfie.svg';
 import result_selfie_fantasy from '../../../assets/image/result_selfie_fantasy.svg';
+import result_hipster from '../../../assets/image/result_hipster.svg';
 import result_hipster_fantasy from '../../../assets/image/result_hipster_fantasy.svg';
+import result_infohunter from '../../../assets/image/result_infohunter.svg';
 import result_infohunter_fantasy from '../../../assets/image/result_infohunter_fantasy.svg';
+import result_onebite from '../../../assets/image/result_onebite.svg';
 import result_onebite_fantasy from '../../../assets/image/result_onebite_fantasy.svg';
 import useNavigationPage from '../../../hooks/useNavigationPage';
 import BookCard from '../../../components/molecules/BookCard';
@@ -22,6 +25,13 @@ const images = [
   result_hipster_fantasy,
   result_infohunter_fantasy,
   result_onebite_fantasy,
+];
+
+const resultImage = [
+  result_selfie,
+  result_hipster,
+  result_infohunter,
+  result_onebite,
 ];
 
 const bookType = [
@@ -139,7 +149,7 @@ const OnBoardingStep11 = ({ items, beforeStep, resetStep }) => {
     }
     return false;
   });
-  const { type, title, contentTitle, content, tags } = myStyle;
+  const { type, title, contentTitle, content } = myStyle;
 
   const myBookStyle = favoriteBooks.find((el) => {
     if (el.title === items[4][0]) {
@@ -166,6 +176,8 @@ const OnBoardingStep11 = ({ items, beforeStep, resetStep }) => {
     routePage('/', { ...myStyle });
   };
 
+  const tags = [title, myBookType.title, myBookStyle.title];
+
   return (
     <div
       className={
@@ -188,7 +200,7 @@ const OnBoardingStep11 = ({ items, beforeStep, resetStep }) => {
         나의 독서 스타일은?
       </FavoriteTopNavbar>
       <div className={styles.result_title}>
-        <img src={result_selfie} alt='챕챕이 이미지' />
+        <img src={resultImage[type]} alt='챕챕이 이미지' />
         <div className={styles.title_text_box}>
           <Title
             type='Body02'
