@@ -42,183 +42,185 @@ const ShortTerm = () => {
   };
 
   return (
-    <div className={styles.wrap}>
+    <div className={styles.wrapcontainer}>
       <TopNavBar navtitle='단기챕' search={true} bell={true} chat={true} />
-      <div className={styles.topcontentWrap}>
-        <HelloChater />
-        <ToastBar />
-        <MeetingCardCarousel handlePage={handlePage} />
-      </div>
+      <div className={styles.wrap}>
+        <div className={styles.topcontentWrap}>
+          <HelloChater />
+          <ToastBar />
+          <MeetingCardCarousel handlePage={handlePage} />
+        </div>
 
-      <div className={styles.keywordcontentWrap}>
-        <div className={styles.keywordTitleWrap}>
-          <Title
-            type='SubTitle02'
-            className={styles.SubTitle_02_ExtraBold}
-            style={{
-              textAlign: 'left',
-              lineHeight: 1.5,
-              fontFamily: 'Extrabold',
-              color: '#000000',
-              alignSelf: 'flex-start',
-            }}
-          >
-            성향에 맞는 챕을 <br></br>키워드로 찾아보세요!
-          </Title>
-          <Viewbutton>전체보기</Viewbutton>
-        </div>
-        <div className={styles.chipswrap}>
-          <Chips
-            isPressed={pressedChips.includes('#느긋한책방손님')} // 클릭 상태 전달
-            onClick={() => handleChipClick('#느긋한책방손님')} // 클릭 핸들러
-          >
-            #느긋한책방손님
-          </Chips>
-          <Chips
-            isPressed={pressedChips.includes('#소설/문학')}
-            onClick={() => handleChipClick('#소설/문학')}
-          >
-            #소설/문학
-          </Chips>
-          <Chips
-            isPressed={pressedChips.includes('#판타지')}
-            onClick={() => handleChipClick('#판타지')}
-          >
-            #판타지
-          </Chips>
-        </div>
-        <div className={styles.soonBookCardWrap}>
-          {_.shuffle(chaps).map((el, idx) => {
-            if (idx < 3) {
-              return (
-                <div key={el.title} className={styles.bookCard}>
-                  <BookCard
-                    key={el.title}
-                    onClick={() => handlePage(el)}
-                    title={el.title}
-                    coverImage={el.coverImage}
-                    bookname={el.bookName}
-                    date={el.date}
-                    participants={el.participants}
-                    tag={el.tag}
-                    matchRate={97}
-                  />
-                </div>
-              );
-            }
-            return false;
-          })}
-        </div>
-      </div>
-      <div className={styles.livecontentWrap}>
-        <div className={styles.ContentTitleWrap}>
-          <Title
-            type='SubTitle02'
-            className={styles.SubTitle_02_ExtraBold}
-            style={{
-              textAlign: 'left',
-              lineHeight: 1.5,
-              fontFamily: 'Extrabold',
-              color: '#000000',
-              alignSelf: 'flex-start',
-            }}
-          >
-            지금 진행 중인 단기챕
-          </Title>
-          <Viewbutton>전체보기</Viewbutton>
-        </div>
-        <div className={styles.LiveShortChapCardMWarp}>
-          <LiveShortChapCardM></LiveShortChapCardM>
-          <LiveShortChapCardM></LiveShortChapCardM>
-        </div>
-      </div>
-
-      <div className={styles.sooncontentWrap}>
-        <div className={styles.ContentTitleWrap}>
-          <Title
-            type='SubTitle02'
-            className={styles.SubTitle_02_ExtraBold}
-            style={{
-              textAlign: 'left',
-              lineHeight: 1.5,
-              fontFamily: 'Extrabold',
-              color: '#000000',
-              alignSelf: 'flex-start',
-            }}
-          >
-            잠시 후 챕이 시작됩니다!
-          </Title>
-          <Viewbutton>전체보기</Viewbutton>
-        </div>
-        <div className={styles.LiveBookCardWarp}>
-          {_.shuffle(chaps).map((el, idx) => {
-            if (idx < 3) {
-              console.log('el', el);
-              return (
-                <div className={styles.bookCard}>
-                  <BookCard
-                    key={el.title}
-                    onClick={() => handlePage(el)}
-                    title={el.title}
-                    coverImage={el.coverImage}
-                    bookname={el.bookName}
-                    date={el.date}
-                    participants={el.participants}
-                    tag={el.tag}
-                  />
-                </div>
-              );
-            }
-            return false;
-          })}
-        </div>
-      </div>
-
-      <div className={styles.calendercontentWrap}>
-        <div className={styles.ContentTitleWrap}>
-          <Title
-            type='SubTitle02'
-            className={styles.SubTitle_02_ExtraBold}
-            style={{
-              textAlign: 'left',
-              lineHeight: 1.5,
-              fontFamily: 'Extrabold',
-              color: '#000000',
-              alignSelf: 'flex-start',
-            }}
-          >
-            챕 캘린더
-          </Title>
-          <div className={styles.Calenderdatefilter}>
-            <span>2025</span>
-            <img src={chevron_down} />
+        <div className={styles.keywordcontentWrap}>
+          <div className={styles.keywordTitleWrap}>
+            <Title
+              type='SubTitle02'
+              className={styles.SubTitle_02_ExtraBold}
+              style={{
+                textAlign: 'left',
+                lineHeight: 1.5,
+                fontFamily: 'Extrabold',
+                color: '#000000',
+                alignSelf: 'flex-start',
+              }}
+            >
+              성향에 맞는 챕을 <br></br>키워드로 찾아보세요!
+            </Title>
+            <Viewbutton>전체보기</Viewbutton>
+          </div>
+          <div className={styles.chipswrap}>
+            <Chips
+              isPressed={pressedChips.includes('#느긋한책방손님')} // 클릭 상태 전달
+              onClick={() => handleChipClick('#느긋한책방손님')} // 클릭 핸들러
+            >
+              #느긋한책방손님
+            </Chips>
+            <Chips
+              isPressed={pressedChips.includes('#소설/문학')}
+              onClick={() => handleChipClick('#소설/문학')}
+            >
+              #소설/문학
+            </Chips>
+            <Chips
+              isPressed={pressedChips.includes('#판타지')}
+              onClick={() => handleChipClick('#판타지')}
+            >
+              #판타지
+            </Chips>
+          </div>
+          <div className={styles.soonBookCardWrap}>
+            {_.shuffle(chaps).map((el, idx) => {
+              if (idx < 3) {
+                return (
+                  <div key={el.title} className={styles.bookCard}>
+                    <BookCard
+                      key={el.title}
+                      onClick={() => handlePage(el)}
+                      title={el.title}
+                      coverImage={el.coverImage}
+                      bookname={el.bookName}
+                      date={el.date}
+                      participants={el.participants}
+                      tag={el.tag}
+                      matchRate={97}
+                    />
+                  </div>
+                );
+              }
+              return false;
+            })}
           </div>
         </div>
-        <div className={styles.calenderdatewrap}>
-          <img src={calenderdate02} />
+        <div className={styles.livecontentWrap}>
+          <div className={styles.ContentTitleWrap}>
+            <Title
+              type='SubTitle02'
+              className={styles.SubTitle_02_ExtraBold}
+              style={{
+                textAlign: 'left',
+                lineHeight: 1.5,
+                fontFamily: 'Extrabold',
+                color: '#000000',
+                alignSelf: 'flex-start',
+              }}
+            >
+              지금 진행 중인 단기챕
+            </Title>
+            <Viewbutton>전체보기</Viewbutton>
+          </div>
+          <div className={styles.LiveShortChapCardMWarp}>
+            <LiveShortChapCardM></LiveShortChapCardM>
+            <LiveShortChapCardM></LiveShortChapCardM>
+          </div>
         </div>
 
-        <div className={styles.LiveBookCardWarp}>
-          {_.shuffle(chaps).map((el, idx) => {
-            if (idx < 3) {
-              return (
-                <BookCard
-                  onClick={() => handlePage(el)}
-                  key={el.title}
-                  title={el.title}
-                  coverImage={el.coverImage}
-                  bookname={el.bookName}
-                  date={el.date}
-                  participants={el.participants}
-                  tag={el.tag}
-                />
-              );
-            }
-            return false;
-          })}
+        <div className={styles.sooncontentWrap}>
+          <div className={styles.ContentTitleWrap}>
+            <Title
+              type='SubTitle02'
+              className={styles.SubTitle_02_ExtraBold}
+              style={{
+                textAlign: 'left',
+                lineHeight: 1.5,
+                fontFamily: 'Extrabold',
+                color: '#000000',
+                alignSelf: 'flex-start',
+              }}
+            >
+              잠시 후 챕이 시작됩니다!
+            </Title>
+            <Viewbutton>전체보기</Viewbutton>
+          </div>
+          <div className={styles.LiveBookCardWarp}>
+            {_.shuffle(chaps).map((el, idx) => {
+              if (idx < 3) {
+                console.log('el', el);
+                return (
+                  <div className={styles.bookCard}>
+                    <BookCard
+                      key={el.title}
+                      onClick={() => handlePage(el)}
+                      title={el.title}
+                      coverImage={el.coverImage}
+                      bookname={el.bookName}
+                      date={el.date}
+                      participants={el.participants}
+                      tag={el.tag}
+                    />
+                  </div>
+                );
+              }
+              return false;
+            })}
+          </div>
         </div>
+
+        <div className={styles.calendercontentWrap}>
+          <div className={styles.ContentTitleWrap}>
+            <Title
+              type='SubTitle02'
+              className={styles.SubTitle_02_ExtraBold}
+              style={{
+                textAlign: 'left',
+                lineHeight: 1.5,
+                fontFamily: 'Extrabold',
+                color: '#000000',
+                alignSelf: 'flex-start',
+              }}
+            >
+              챕 캘린더
+            </Title>
+            <div className={styles.Calenderdatefilter}>
+              <span>2025</span>
+              <img src={chevron_down} />
+            </div>
+          </div>
+          <div className={styles.calenderdatewrap}>
+            <img src={calenderdate02} />
+          </div>
+
+          <div className={styles.LiveBookCardWarp}>
+            {_.shuffle(chaps).map((el, idx) => {
+              if (idx < 3) {
+                return (
+                  <BookCard
+                    onClick={() => handlePage(el)}
+                    key={el.title}
+                    title={el.title}
+                    coverImage={el.coverImage}
+                    bookname={el.bookName}
+                    date={el.date}
+                    participants={el.participants}
+                    tag={el.tag}
+                  />
+                );
+              }
+              return false;
+            })}
+          </div>
+        </div>
+        <BottomBar></BottomBar>
       </div>
-      <BottomBar></BottomBar>
     </div>
   );
 };
