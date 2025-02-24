@@ -50,18 +50,16 @@ const OnBoardingStep05 = ({ nextStep, beforeStep }) => {
       {/* 최상단 네비게이션 바 */}
       <div className={styles.favoritetopnavbar}>
         <FavoriteTopNavbar onClick={beforeStep}>
-          나의 독서 스타일은?
+          나의 독서 성향은?
         </FavoriteTopNavbar>
       </div>
 
       <div className={styles.contents}>
         <div className={styles.content}>
-
           {/* 진행률 바 표시 */}
           <div className={styles.progressBar}>
             <ProgressBar progress={3} />
           </div>
-          
 
           {/* 제목 및 설명 */}
           <div className={styles.subtitle}>
