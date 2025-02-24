@@ -5,6 +5,7 @@ import favorite_image07 from '../../../assets/image/favorite_image07.svg';
 import favorite_image08 from '../../../assets/image/favorite_image08.svg';
 import ProgressBar from '../../atoms/ProgressBar';
 import styles from './index.module.css';
+import OnboardingLayout from '../../atoms/OnboardingLayout';
 
 const OnBoardingStep07 = ({ nextStep, choice, beforeStep }) => {
   const handleNextStep = (choice) => {
@@ -13,17 +14,24 @@ const OnBoardingStep07 = ({ nextStep, choice, beforeStep }) => {
 
   if (choice === '감성적인 문장 및 리뷰를 찾아본다.') {
     return (
-      <div className={styles.container}>
-        <div className={styles.favoritetopnavbar}>
-          <FavoriteTopNavbar onClick={beforeStep}>
-            나의 독서 스타일은?
-          </FavoriteTopNavbar>
+      <OnboardingLayout>
+      <div className={styles.favoritetopnavbar}>
+      <FavoriteTopNavbar onClick={beforeStep}>
+          나의 독서 스타일은?
+        </FavoriteTopNavbar>
         </div>
 
+         <div className={styles.contents}>
+          <div className={styles.content}>
+        
+
         {/* 프로그래스 바 추가 */}
-        <div className={styles.align_progress}>
-          <ProgressBar progress={5} /> {/* 5/7 상태 표시 */}
+       {/* 진행률 바 표시 */}
+       <div className={styles.progressBar}>
+          <ProgressBar progress={5} />
         </div>
+
+
 
         <div className={styles.image}>
           <img
@@ -42,6 +50,7 @@ const OnBoardingStep07 = ({ nextStep, choice, beforeStep }) => {
             하루 10분 독서 챌린지가 <br /> 유행 중이라고 한다.
           </Title>
         </div>
+        </div>
 
         <div className={styles.buttonGroup}>
           <Favorite_selection_button onClick={() => handleNextStep(0)}>
@@ -52,21 +61,27 @@ const OnBoardingStep07 = ({ nextStep, choice, beforeStep }) => {
           </Favorite_selection_button>
         </div>
       </div>
+      </OnboardingLayout>
     );
   }
 
   return (
-    <div className={styles.container}>
+    <OnboardingLayout>
       <div className={styles.favoritetopnavbar}>
-        <FavoriteTopNavbar onClick={beforeStep}>
+      <FavoriteTopNavbar onClick={beforeStep}>
           나의 독서 스타일은?
         </FavoriteTopNavbar>
-      </div>
+        </div>
 
-      {/* 프로그래스 바 추가 */}
-      <div className={styles.align_progress}>
-        <ProgressBar progress={5} /> {/* 5/7 상태 표시 */}
-      </div>
+         <div className={styles.contents}>
+          <div className={styles.content}>
+        
+
+        {/* 프로그래스 바 추가 */}
+       {/* 진행률 바 표시 */}
+       <div className={styles.progressBar}>
+          <ProgressBar progress={5} />
+        </div>
 
       <div className={styles.image}>
         <img
@@ -85,7 +100,7 @@ const OnBoardingStep07 = ({ nextStep, choice, beforeStep }) => {
           책을 다 읽고 난 후, 당신의 피드는?
         </Title>
       </div>
-
+</div>
       <div className={styles.buttonGroup}>
         <Favorite_selection_button onClick={() => handleNextStep(2)}>
           실용적인 정보 공유
@@ -95,6 +110,7 @@ const OnBoardingStep07 = ({ nextStep, choice, beforeStep }) => {
         </Favorite_selection_button>
       </div>
     </div>
+    </OnboardingLayout>
   );
 };
 

@@ -4,6 +4,7 @@ import Favorite_selection_button from '../../atoms/Favorite_selection_button';
 import favorite_image09 from '../../../assets/image/favorite_image09.svg';
 import ProgressBar from '../../atoms/ProgressBar';
 import styles from './index.module.css';
+import OnboardingLayout from '../../atoms/OnboardingLayout';
 
 const OnBoardingStep08 = ({ nextStep, beforeStep }) => {
   const handleNextStep = (choice) => {
@@ -11,17 +12,22 @@ const OnBoardingStep08 = ({ nextStep, beforeStep }) => {
   };
 
   return (
-    <div className={styles.container}>
-      <div className={styles.favoritetopnavbar}>
-        <FavoriteTopNavbar onClick={beforeStep}>
+    <OnboardingLayout>
+    <div className={styles.favoritetopnavbar}>
+      <FavoriteTopNavbar onClick={beforeStep}>
           나의 독서 스타일은?
         </FavoriteTopNavbar>
-      </div>
+        </div>
 
-      {/* 프로그래스 바 추가 */}
-      <div className={styles.align_progress}>
-        <ProgressBar progress={6} /> {/* 5/7 상태 표시 */}
-      </div>
+        <div className={styles.contents}>
+                <div className={styles.content}>
+
+     {/* 프로그래스 바 추가 */}
+       {/* 진행률 바 표시 */}
+       <div className={styles.progressBar}>
+          <ProgressBar progress={6} />
+        </div>
+
 
       <div className={styles.image}>
         <img
@@ -40,7 +46,7 @@ const OnBoardingStep08 = ({ nextStep, beforeStep }) => {
           새로운 독서 핫플레이스로 <br /> 모임이 결정되었다.
         </Title>
       </div>
-
+      </div>
       <div className={styles.buttonGroup}>
         <Favorite_selection_button
           onClick={() => handleNextStep('책에 몰입 할 수 있는 곳')}
@@ -54,6 +60,7 @@ const OnBoardingStep08 = ({ nextStep, beforeStep }) => {
         </Favorite_selection_button>
       </div>
     </div>
+    </OnboardingLayout>
   );
 };
 

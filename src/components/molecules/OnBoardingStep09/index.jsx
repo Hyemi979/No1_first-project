@@ -5,6 +5,7 @@ import favorite_image10 from '../../../assets/image/favorite_image10.svg';
 import favorite_image11 from '../../../assets/image/favorite_image11.svg';
 import Title from '../../atoms/Title';
 import Favorite_selection_button from '../../atoms/Favorite_selection_button';
+import OnboardingLayout from '../../atoms/OnboardingLayout';
 
 const OnBoardingStep09 = ({ nextStep, choice, beforeStep }) => {
   const handleNextStep = (choice) => {
@@ -13,12 +14,21 @@ const OnBoardingStep09 = ({ nextStep, choice, beforeStep }) => {
 
   if (choice === '책에 몰입 할 수 있는 곳') {
     return (
-      <div className={styles.container}>
+      <OnboardingLayout>
+      <div className={styles.favoritetopnavbar}>
         <FavoriteTopNavbar onClick={beforeStep}>
-          나의 독서 스타일은?
-        </FavoriteTopNavbar>
+            나의 독서 스타일은?
+          </FavoriteTopNavbar>
+          </div>
 
-        <div className={styles.progressContainer}>
+          <div className={styles.contents}>
+        <div className={styles.content}>
+
+                 
+
+      {/* 프로그래스 바 추가 */}
+       {/* 진행률 바 표시 */}
+        <div className={styles.progressBar}>
           <ProgressBar progress={7} />
         </div>
 
@@ -35,6 +45,7 @@ const OnBoardingStep09 = ({ nextStep, choice, beforeStep }) => {
             모임에서 고른 자리는?
           </Title>
         </div>
+        </div>
         <div className={styles.buttonGroup}>
           <Favorite_selection_button onClick={() => handleNextStep(0)}>
             조용한 프라이빗 독서룸
@@ -44,18 +55,28 @@ const OnBoardingStep09 = ({ nextStep, choice, beforeStep }) => {
           </Favorite_selection_button>
         </div>
       </div>
+      </OnboardingLayout>
     );
   }
 
   return (
-    <div className={styles.container}>
-      <FavoriteTopNavbar onClick={beforeStep}>
-        나의 독서 스타일은?
-      </FavoriteTopNavbar>
+    <OnboardingLayout>
+      <div className={styles.favoritetopnavbar}>
+        <FavoriteTopNavbar onClick={beforeStep}>
+            나의 독서 스타일은?
+          </FavoriteTopNavbar>
+          </div>
 
-      <div className={styles.progressContainer}>
-        <ProgressBar progress={7} />
-      </div>
+          <div className={styles.contents}>
+        <div className={styles.content}>
+
+                 
+
+      {/* 프로그래스 바 추가 */}
+       {/* 진행률 바 표시 */}
+        <div className={styles.progressBar}>
+          <ProgressBar progress={7} />
+        </div>
 
       <div className={styles.image}>
         <img src={favorite_image11} alt='독서 스타일' />
@@ -72,7 +93,7 @@ const OnBoardingStep09 = ({ nextStep, choice, beforeStep }) => {
           분위기가 풀어졌다!
         </Title>
       </div>
-
+</div>
       <div className={styles.buttonGroup}>
         <Favorite_selection_button onClick={() => handleNextStep(2)}>
           편안하게 감상 공유
@@ -82,6 +103,7 @@ const OnBoardingStep09 = ({ nextStep, choice, beforeStep }) => {
         </Favorite_selection_button>
       </div>
     </div>
+    </OnboardingLayout>
   );
 };
 

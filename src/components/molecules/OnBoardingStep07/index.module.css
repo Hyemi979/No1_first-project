@@ -16,6 +16,37 @@
   }
   
   
+
+  .contents {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start; /* 위쪽 정렬 */
+    flex-grow: 1; /* 남은 공간을 채우기 */
+    
+     padding: 0 20px;
+  }
+  
+  
+  .progressBar {
+    display: flex;
+    margin-right: auto;
+    margin-top: 30px;
+  }
+  
+  
+  .content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    
+  
+    align-items: center;
+  }
+  
+  
+
+
   .align_progress {
     display: flex;
   margin-right: auto;
@@ -82,3 +113,6 @@
     align-items: center;
     margin-top: 24px; /* 타이틀과 버튼 간 간격 */
   }
+
+  
+  

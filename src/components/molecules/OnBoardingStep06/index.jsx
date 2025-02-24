@@ -4,6 +4,7 @@ import Favorite_selection_button from '../../atoms/Favorite_selection_button';
 import like336 from '../../../assets/like336.svg';
 import ProgressBar from '../../atoms/ProgressBar';
 import styles from './index.module.css';
+import OnboardingLayout from '../../atoms/OnboardingLayout';
 
 const OnBoardingStep06 = ({ nextStep, beforeStep }) => {
   const handleNextStep = (choice) => {
@@ -11,17 +12,23 @@ const OnBoardingStep06 = ({ nextStep, beforeStep }) => {
   };
 
   return (
-    <div className={styles.container}>
-      <div className={styles.favoritetopnavbar}>
-        <FavoriteTopNavbar onClick={beforeStep}>
+    <OnboardingLayout>
+    <div className={styles.favoritetopnavbar}>
+      <FavoriteTopNavbar onClick={beforeStep}>
           나의 독서 스타일은?
         </FavoriteTopNavbar>
-      </div>
+        </div>
+
+        <div className={styles.contents}>
+        <div className={styles.content}>
+
+                 
 
       {/* 프로그래스 바 추가 */}
-      <div className={styles.align_progress}>
-        <ProgressBar progress={4} /> {/* 5/7 상태 표시 */}
-      </div>
+       {/* 진행률 바 표시 */}
+        <div className={styles.progressBar}>
+          <ProgressBar progress={4} />
+        </div>
 
       <div className={styles.image}>
         <img src={like336} alt='독서 스타일' className={styles.image} />
@@ -35,6 +42,7 @@ const OnBoardingStep06 = ({ nextStep, beforeStep }) => {
         >
           책을 고르다가 SNS에서 <br /> "요즘 화제인 책"이라는 글을 봤다!
         </Title>
+      </div>
       </div>
 
       <div className={styles.buttonGroup}>
@@ -50,6 +58,7 @@ const OnBoardingStep06 = ({ nextStep, beforeStep }) => {
         </Favorite_selection_button>
       </div>
     </div>
+    </OnboardingLayout>
   );
 };
 
