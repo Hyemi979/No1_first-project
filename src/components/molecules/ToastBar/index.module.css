@@ -1,69 +1,62 @@
-
-
 .wrap1 {
-    background-color: rgb(255, 255, 255);
-    border-radius: 8px;
-    border-color: #DBEAFF;
-    border: 1px solid #DBEAFF;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-   align-items: left;
-   padding: 0px;
-    width: 100%;
-    height: 81px;
-    white-space: nowrap;
+  background-color: rgb(255, 255, 255);
+  border-radius: 8px;
+  border-color: #dbeaff;
+  border: 1px solid #dbeaff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: left;
+  padding: 0px;
+  width: 100%;
+  height: 81px;
+  white-space: nowrap;
+  padding: 10px;
 }
 
 .wrap2 {
-    display: flex;
-    padding-bottom: 10px;
-    justify-content: space-between;
+  display: flex;
+  padding-bottom: 4px;
+  justify-content: space-between;
 }
-
 
 .wrap3 {
-    font-size: 12px;
-    font-family: 'regular';
-    color :#000000;
+  font-size: 12px;
+  font-family: 'regular';
+  color: #000000;
 }
 
-
-.image1{
-    padding-right: 4px;
-    padding-left: 10px;
+.wrap4 {
+  display: flex;
+  gap: 4px;
 }
 
-.button1{
-    border: 0px solid rgb(255, 255, 255);
-    background-color: rgba(255, 255, 255, 0);
-    
+.button1 {
+  border: 0px solid rgb(255, 255, 255);
+  background-color: rgba(255, 255, 255, 0);
 }
-
 
 .Caption_01_Regular {
-    font-size: 12px;
-    font-family: 'regular';
-    color :#666666;
-    line-height: 150%;
-    padding-left: 10px;
+  font-size: 12px;
+  font-family: 'regular';
+  color: #666666;
+  line-height: 150%;
 }
 
 .Body_02_Bold {
-    font-size: 14px;
-    font-family: 'bold';
-    color :#2D87FB;
-    padding-top: 3px;
-    padding-right: 310px;
-}
-
-
-@font-face {
-    font-family: 'regular';
-    src: url('../src/fonts/NanumSquareNeo-bRg.ttf') format('truetype');
+  font-size: 14px;
+  font-family: 'bold';
+  color: #2d87fb;
+  padding-top: 4px;
+  padding-right: auto;
 }
 
 @font-face {
-    font-family: 'bold';
-    src: url('../src/fonts/NanumSquareNeo-cBd.ttf') format('truetype');
+  font-family: 'regular';
+  src: url('../src/fonts/NanumSquareNeo-bRg.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'bold';
+  src: url('../src/fonts/NanumSquareNeo-cBd.ttf') format('truetype');
 }
