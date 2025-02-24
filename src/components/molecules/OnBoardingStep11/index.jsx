@@ -423,6 +423,7 @@ const OnBoardingStep11 = ({ items, beforeStep, resetStep }) => {
                       participants={'12/20'}
                       matchRate={96}
                       tag={['만렙성장독서가', '소설/문학']}
+                      isLongChap={true}
                     />
                   </div>
                   <div className={styles.bookCard}>
@@ -433,7 +434,8 @@ const OnBoardingStep11 = ({ items, beforeStep, resetStep }) => {
                       date='매주 토요일∙야간'
                       participants={'8/20'}
                       matchRate={88}
-                      tag={['리스닝 요정', '에세이/시']}
+                      tag={['만렙성장독서가', '에세이/시']}
+                      isLongChap={true}
                     />
                   </div>
                 </div>
@@ -450,6 +452,7 @@ const OnBoardingStep11 = ({ items, beforeStep, resetStep }) => {
                       participants={22}
                       matchRate={96}
                       tag={['느긋한책방손님', '소설/문학']}
+                      isLongChap={true}
                     />
                   </div>
                   <div className={styles.bookCard}>
@@ -457,10 +460,11 @@ const OnBoardingStep11 = ({ items, beforeStep, resetStep }) => {
                       title='누군가와 함께하는 것이...'
                       coverImage={book_image_your}
                       bookname='너의 췌장을 먹고 싶어'
-                      date='25.02.21(금)∙19시'
+                      date='25.03.01(금)∙19시'
                       participants={21}
                       matchRate={88}
                       tag={['느긋한책방손님', '소설/문학']}
+                      
                     />
                   </div>
                 </div>
