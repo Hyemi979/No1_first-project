@@ -126,6 +126,7 @@
   margin: 20px;
   width: 335px;
   
+  
 }
 
 .shortchap::-webkit-scrollbar {
@@ -135,15 +136,15 @@
 
 .longchap .bookCard {
   background: #ffffff; /* 하얀색 배경 */
-  border: 1px solid #E6E6E6;
-  border-radius: 12px;
+  position: relative;
+  border-radius: 14px;
   width: 100%;
 } 
 
 .shortchap .bookCard {
   background: #ffffff; /* 하얀색 배경 */
-  border: 1px solid #E6E6E6;
-  border-radius: 12px;
+  position: relative;
+  border-radius: 14px;
   width: 100%;
 } 
 
