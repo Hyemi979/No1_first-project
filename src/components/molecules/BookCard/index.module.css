@@ -6,6 +6,7 @@
   width: 100%; /* 카드 전체 너비 */
   height: auto; /* 카드 전체 높이 */
   border: 1px solid #e6e6e6;
+  cursor: pointer;
 }
 
 .card_small {
@@ -16,6 +17,7 @@
   width: 100%; /* 카드 전체 너비 */
   height: auto; /* 카드 전체 높이 */
   border: 1px solid #e6e6e6;
+  cursor: pointer;
 }
 
 .cover {
