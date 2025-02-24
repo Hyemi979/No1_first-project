@@ -1,7 +1,7 @@
 import Title from '../../atoms/Title';
 import styles from './index.module.css';
 import Button from '../../atoms/Button';
-import FavoriteTopNavbar from '../../atoms/FavoriteTopNavbar';
+import FavoriteResultTopNavbar from '../../atoms/FavoriteResultTopNavbar';
 import Tag from '../../atoms/Tag';
 import result_selfie from '../../../assets/image/result_selfie.svg';
 import result_selfie_fantasy from '../../../assets/image/result_selfie_fantasy.svg';
@@ -186,7 +186,7 @@ const OnBoardingStep11 = ({ items, beforeStep, resetStep }) => {
           : styles.wrap_01
       }
     >
-      <FavoriteTopNavbar
+      <FavoriteResultTopNavbar
         onClick={beforeStep}
         style={{
           margin: '0',
@@ -197,8 +197,8 @@ const OnBoardingStep11 = ({ items, beforeStep, resetStep }) => {
           alignItems: 'center',
         }}
       >
-        나의 독서 스타일은?
-      </FavoriteTopNavbar>
+        나의 독서 성향은?
+      </FavoriteResultTopNavbar>
       <div className={styles.result_title}>
         <img src={resultImage[type]} alt='챕챕이 이미지' />
         <div className={styles.title_text_box}>
@@ -464,7 +464,6 @@ const OnBoardingStep11 = ({ items, beforeStep, resetStep }) => {
                       participants={21}
                       matchRate={88}
                       tag={['느긋한책방손님', '소설/문학']}
-                      
                     />
                   </div>
                 </div>

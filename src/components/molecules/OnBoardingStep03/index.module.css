@@ -1,14 +1,12 @@
- 
-
 .buttonWrap {
   margin-bottom: 34px;
   width: 100%;
-  padding: 0 20px; 
+  padding: 0 20px;
 }
 
 .header_wrap {
   width: 100%;
-  padding: 0 20px; 
+  padding: 0 20px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -52,12 +50,11 @@
   justify-content: flex-start; /* 위쪽 정렬 */
   flex-grow: 1; /* 남은 공간을 채우기 */
   gap: 40px;
-   padding: 0 20px;
-   width: 100%;
+  padding: 0 20px;
+  width: 100%;
 }
 
-
-.content{
+.content {
   display: flex;
   flex-direction: column;
   width: 100%;
