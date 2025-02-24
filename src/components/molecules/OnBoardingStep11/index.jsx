@@ -101,12 +101,14 @@ const myBookTypes = [
     title: '감성셀피독서가!',
     contentTitle: '책 한줄이 내 하루 분위기를 좌우함...',
     content: `책 속 감정에 몰입하는 타입!\n내가 느낀 감정, 문장을 기록하면서\n그 순간을 나만의 감성으로 담아내는 게 중요해요.\n책을 읽는 것도, 내 감정을 기록하는 것도 모두 예술~`,
+    tags: ['감성셀피독서가', '에세이/시', '느긋한책방손님'],
   },
   {
     type: 1,
     title: '사색의 힙스터!',
     contentTitle: `이 문장, 의미 해석만 세 시간째...`,
     content: `책 한 줄에서도 철학을 찾는 타입!\n한 권을 빨리 읽는 것보다,\n한 문장을 곱씹으며세상과 연결 짓는 게 더 중요하죠.\n오늘도 깊은 사색 속으로~`,
+    tags: ['사색의 힙스터', '소설/문학', '만랩성장독서러'],
   },
   {
     type: 2,
@@ -114,14 +116,18 @@ const myBookTypes = [
     contentTitle: '이 책에서 얻을 수 있는 핵심은 이거닷!!',
     content:
       '책을 읽을 때, 핵심만 파악하고 실용적인 정보만 쫙!\n최신 트렌드나 정보가 중요하죠. 길게 읽는 것보다는\n중요한 부분만 정확하게 건져내는 게 내 스타일!',
+    tags: ['인포 헌터', '자기개발', '리스닝요정'],
   },
   {
     type: 3,
     title: '한입 독서러!',
     contentTitle: '한 권만 읽기엔 세상이 너무 넓음',
     content: `하나의 책을 완전히 끝내는 것보다는\n여러 책을 가볍게 맛보는 게 내 스타일!\n책의 핵심만 빠르게 짚어보며,\n다양한 책을 동시에 읽는 재미를 느껴요.`,
+    tags: ['한입 독서러', 'SF', '하이텐션북토커'],
   },
 ];
+
+const color = ['#056BF0', '#666666', '#7A5900'];
 
 const OnBoardingStep11 = ({ items, beforeStep, resetStep }) => {
   const { routePage } = useNavigationPage();
@@ -133,7 +139,7 @@ const OnBoardingStep11 = ({ items, beforeStep, resetStep }) => {
     }
     return false;
   });
-  const { type, title, contentTitle, content } = myStyle;
+  const { type, title, contentTitle, content, tags } = myStyle;
 
   const myBookStyle = favoriteBooks.find((el) => {
     if (el.title === items[4][0]) {
@@ -212,45 +218,22 @@ const OnBoardingStep11 = ({ items, beforeStep, resetStep }) => {
         {/* 성향 태그 부분 */}
         <div className={styles.chip_container}>
           {/* 회색 태그, 노란 태그 안에 글자 테스트에 따라 바뀜 */}
-          <Tag
-            type='skyblue'
-            style={{
-              fontWeight: '700',
-              fontSize: '12px',
-              color: '#056BF0',
-              textAlign: 'center',
-              lineHeight: '1.5',
-              margin: '0',
-            }}
-          >
-            # 감성셀피독서가
-          </Tag>
-          <Tag
-            type='gray'
-            style={{
-              fontWeight: '700',
-              fontSize: '12px',
-              color: '#666666',
-              textAlign: 'center',
-              lineHeight: '1.5',
-              margin: '0',
-            }}
-          >
-            # 책장르
-          </Tag>
-          <Tag
-            type='yellow'
-            style={{
-              fontWeight: '700',
-              fontSize: '12px',
-              color: '#7A5900',
-              textAlign: 'center',
-              lineHeight: '1.5',
-              margin: '0',
-            }}
-          >
-            # 독서모임성향
-          </Tag>
+          {tags.map((el, idx) => (
+            <Tag
+              key={el}
+              type='skyblue'
+              style={{
+                fontWeight: '700',
+                fontSize: '12px',
+                color: color[idx],
+                textAlign: 'center',
+                lineHeight: '1.5',
+                margin: '0',
+              }}
+            >
+              # {el}
+            </Tag>
+          ))}
         </div>
         <div className={styles.text_box1}>
           <Title
@@ -419,55 +402,55 @@ const OnBoardingStep11 = ({ items, beforeStep, resetStep }) => {
             {myBookType.type === 0 || myBookType.type === 1 ? (
               <>
                 <div className={styles.longchap}>
-                <div className={styles.bookCard}>
-                  <BookCard
-                    title='한 줄의 여운'
-                    coverImage={book_image_jump}
-                    bookname='여름을 달려 너에게 점프!'
-                    date='매주 금요일∙오후'
-                    participants={'12/20'}
-                    matchRate={96}
-                    tag={['만렙성장독서가', '소설/문학']}
-                  />
+                  <div className={styles.bookCard}>
+                    <BookCard
+                      title='한 줄의 여운'
+                      coverImage={book_image_jump}
+                      bookname='여름을 달려 너에게 점프!'
+                      date='매주 금요일∙오후'
+                      participants={'12/20'}
+                      matchRate={96}
+                      tag={['만렙성장독서가', '소설/문학']}
+                    />
                   </div>
                   <div className={styles.bookCard}>
-                  <BookCard
-                    title='독서를합시다'
-                    coverImage={book_image_adult}
-                    bookname='어떤 어른'
-                    date='매주 토요일∙야간'
-                    participants={'8/20'}
-                    matchRate={88}
-                    tag={['리스닝 요정', '에세이/시']}
-                  />
-                </div>
+                    <BookCard
+                      title='독서를합시다'
+                      coverImage={book_image_adult}
+                      bookname='어떤 어른'
+                      date='매주 토요일∙야간'
+                      participants={'8/20'}
+                      matchRate={88}
+                      tag={['리스닝 요정', '에세이/시']}
+                    />
+                  </div>
                 </div>
               </>
             ) : (
               <>
                 <div className={styles.shortchap}>
-                <div className={styles.bookCard}>
-                  <BookCard
-                    title='만약 단 하루, 과거로 돌...'
-                    coverImage={book_image_lasttrain}
-                    bookname='세상의 마지막 기차역'
-                    date='지금 진행 중'
-                    participants={22}
-                    matchRate={96}
-                    tag={['느긋한책방손님', '소설/문학']}
-                  />
+                  <div className={styles.bookCard}>
+                    <BookCard
+                      title='만약 단 하루, 과거로 돌...'
+                      coverImage={book_image_lasttrain}
+                      bookname='세상의 마지막 기차역'
+                      date='지금 진행 중'
+                      participants={22}
+                      matchRate={96}
+                      tag={['느긋한책방손님', '소설/문학']}
+                    />
                   </div>
                   <div className={styles.bookCard}>
-                  <BookCard
-                    title='누군가와 함께하는 것이...'
-                    coverImage={book_image_your}
-                    bookname='너의 췌장을 먹고 싶어'
-                    date='25.02.21(금)∙19시'
-                    participants={21}
-                    matchRate={88}
-                    tag={['느긋한책방손님', '소설/문학']}
-                  />
-                </div>
+                    <BookCard
+                      title='누군가와 함께하는 것이...'
+                      coverImage={book_image_your}
+                      bookname='너의 췌장을 먹고 싶어'
+                      date='25.02.21(금)∙19시'
+                      participants={21}
+                      matchRate={88}
+                      tag={['느긋한책방손님', '소설/문학']}
+                    />
+                  </div>
                 </div>
               </>
             )}
