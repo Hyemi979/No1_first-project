@@ -5,7 +5,7 @@ import Layout from '../components/commons/Layout';
 import ShortTerm from '../pages/ShortTerm';
 import ChapDetail from '../pages/ChapDetail';
 import ChatRoom from '../pages/ChatRoom';
-import OnBoarding from '../pages/Onboarding';
+import OnBoarding from '../pages/OnBoardingPage';
 
 const Router = () => {
   return (
