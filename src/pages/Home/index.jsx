@@ -120,7 +120,7 @@ const Home = () => {
               TOP3
             </Title>
           </div>
-          <ViewButton>전체보기</ViewButton>
+          <ViewButton onClick={callModal}>전체보기</ViewButton>
         </div>
         <section className={styles.section_01}>
           {_.shuffle(chaps).map((el, idx) => {
@@ -174,7 +174,7 @@ const Home = () => {
                 TOP3
               </Title>
             </div>
-            <ViewButton>전체보기</ViewButton>
+            <ViewButton onClick={callModal}>전체보기</ViewButton>
           </div>
           <section className={styles.section_01}>
             {_.shuffle(chaps).map((el, idx) => {
@@ -229,7 +229,7 @@ const Home = () => {
             내 성향에 맞는 모임. 직접 찾아보세요
           </Title>
         </div>
-        <div className={styles.image}>
+        <div className={styles.image} onClick={callModal}>
           <img src={filter_image} alt='필터이미지' />
         </div>
         <section className={styles.section_01_discover}>
@@ -269,7 +269,7 @@ const Home = () => {
           <br />
           모여서 완성된 색다른 챕
         </Title>
-        <ViewButton>전체보기</ViewButton>
+        <ViewButton onClick={callModal}>전체보기</ViewButton>
       </div>
       <section className={styles.section_02}>
         {_.shuffle(chaps).map((el, idx) => {
