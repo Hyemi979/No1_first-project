@@ -1,12 +1,11 @@
 .card {
   display: flex;
-   
+
   border-radius: 12px;
   padding: 12px;
   width: 100%; /* 카드 전체 너비 */
   height: auto; /* 카드 전체 높이 */
-  border: 1px solid #E6E6E6; 
-  
+  border: 1px solid #e6e6e6;
 }
 
 .card_small {
@@ -21,7 +20,7 @@
 
 .cover {
   width: 115px; /* 이미지 너비 */
-   
+
   border-radius: 0 4px 4px 0;
   overflow: hidden;
   flex-shrink: 0;
@@ -56,13 +55,27 @@
   flex-direction: column; /* 세로 방향으로 배치 */
   gap: 8px; /* 세로 간격 8px */
   height: auto;
-   
 }
 
 .tags {
   display: flex;
+  min-width: 0;
   gap: 2px;
-  flex-wrap: wrap
+  flex-wrap: nowrap;
+}
+.tags > * {
+  display: block;
+  max-width: 100%;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.tags > *:last-child {
+  flex-shrink: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  min-width: 0;
+  max-width: 100%;
 }
 
 .icontext {
@@ -74,11 +87,7 @@
   font-weight: Regular;
   justify-content: center;
   font-family: NanumSquareNeo, sans-serif;
-  
-
 }
- 
- 
 
 .matchRate {
   display: flex;
