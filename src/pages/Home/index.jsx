@@ -199,6 +199,7 @@ const Home = () => {
                     date={el.date}
                     participants={el.participants}
                     tags={el.tag}
+                    isLongChap={true}
                   />
                   </div>
                 );
@@ -255,6 +256,7 @@ const Home = () => {
                   date={el.date}
                   participants={el.participants}
                   tag={el.tag}
+                  isLongChap={true}
                 />
               );
             }
@@ -295,7 +297,7 @@ const Home = () => {
                 date={el.date}
                 participants={el.participants}
                 tag={el.tag}
-                 
+                isLongChap={true}
               />
               </div>
             );

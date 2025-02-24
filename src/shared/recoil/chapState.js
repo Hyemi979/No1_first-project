@@ -30,7 +30,7 @@ export const chapState = atom({
         coverImage: chap_book_image00,
         bookName: '어떤 어른',
         genre: '에세이',
-        date: '2025.12.31',
+        date: '2025.02.23',
         participants: 21,
         tag: ['느긋한책방손님', '에세이/시'],
       },
@@ -58,7 +58,7 @@ export const chapState = atom({
         coverImage: chap_book_image03,
         bookName: '아무튼 디지몬',
         genre: '에세이/시',
-        date: '2025.03.17',
+        date: '2025.02.23',
         participants: 30,
         tag: ['만렙성장독서러', '에세이/시'],
       },
@@ -67,7 +67,7 @@ export const chapState = atom({
         coverImage: chap_book_image04,
         bookName: '트로피컬나이트',
         genre: '소설/문학',
-        date: '2025.03.12',
+        date: '2025.03.02',
         participants: 30,
         tag: ['하이텐션북토커', '소설/문학'],
       },
@@ -94,7 +94,7 @@ export const chapState = atom({
         coverImage: chap_book_image07,
         bookName: '아직 멀었다는 말',
         genre: '소설/문학',
-        date: '2025.03.21',
+        date: '2025.03.05',
         participants: 15, // 참여인원
         tag: ['하이텐션북토커', '토론', '소설/문학'],
       },
@@ -112,7 +112,7 @@ export const chapState = atom({
         coverImage: chap_book_image09,
         bookName: '외사랑',
         genre: '소설/문학',
-        date: '2025.05.13',
+        date: '2025.03.06',
         participants: 8, // 참여인원
         tag: ['리스닝요정', '소설/문학'],
       },
@@ -121,7 +121,7 @@ export const chapState = atom({
         coverImage: chap_book_image10,
         bookName: '사랑과 결함',
         genre: '소설/문학',
-        date: '2025.06.12',
+        date: '2025.03.03',
         participants: 10, // 참여인원
         tag: ['느긋한책방손님', '소설/문학'],
       },
@@ -130,7 +130,7 @@ export const chapState = atom({
         coverImage: chap_book_image11,
         bookName: '아무튼, 디지몬',
         genre: '에세이/시',
-        date: '2025.06.12',
+        date: '2025.02.26',
         participants: 12, // 참여인원
         tag: ['느긋한책방손님', '에세이/시'],
       },
@@ -139,7 +139,7 @@ export const chapState = atom({
         coverImage: chap_book_image12,
         bookName: '쿠튀리에 신부에게 보내는 편지',
         genre: '인문/철학',
-        date: '2025.05.10',
+        date: '2025.02.27',
         participants: 12, // 참여인원
         tag: ['하이텐션북토커', '인문', '교양'],
       },
@@ -148,7 +148,7 @@ export const chapState = atom({
         coverImage: chap_book_image13,
         bookName: '미래로 가는 사람들',
         genre: 'SF',
-        date: '2025.04.28',
+        date: '2025.02.28',
         participants: 19, // 참여인원
         tag: ['하이텐션북토커', '소설/문학', 'SF'],
       },
@@ -157,7 +157,7 @@ export const chapState = atom({
         coverImage: chap_book_image14,
         bookName: '사랑 없이 우리가 법을 말할 수 있을까',
         genre: '에세이/시',
-        date: '2025.04.12',
+        date: '2025.02.25',
         participants: 12, // 참여인원
         tag: ['느긋한책방손님', '소설/문학', '에세이/시'],
       },
@@ -184,7 +184,7 @@ export const chapState = atom({
         coverImage: chap_book_image17,
         bookName: '바깥은 여름',
         genre: '소설/문학',
-        date: '2025.05.02',
+        date: '2025.03.02',
         participants: 8, // 참여인원
         tag: ['리스닝요정', '소설/문학'],
       },
