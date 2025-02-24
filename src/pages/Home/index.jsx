@@ -256,7 +256,8 @@ const Home = () => {
                     bookname={el.bookName}
                     date={el.date}
                     participants={el.participants}
-                    tag={el.tag}
+                    tags={el.tag}
+                    isLongChap={true}
                   />
                 );
               }
@@ -286,19 +287,18 @@ const Home = () => {
           {_.shuffle(chaps).map((el, idx) => {
             if (idx < 3) {
               return (
-                <div className={styles.bookCard}>
-                  <BookCard
-                    key={el.title}
-                    onClick={() => handlePage(el)}
-                    ranking={idx + 1}
-                    title={el.title}
-                    coverImage={el.coverImage}
-                    bookname={el.bookName}
-                    date={el.date}
-                    participants={el.participants}
-                    tag={el.tag}
-                  />
-                </div>
+                <BookCard
+                  key={el.title}
+                  onClick={() => handlePage(el)}
+                  ranking={idx + 1}
+                  title={el.title}
+                  coverImage={el.coverImage}
+                  bookname={el.bookName}
+                  date={el.date}
+                  participants={el.participants}
+                  tag={el.tag}
+                  isLongChap={true}
+                />
               );
             }
             return false;
@@ -306,6 +306,48 @@ const Home = () => {
         </section>
         <BottomBar></BottomBar>
       </div>
+      <div className={styles.top_text_box_container_02}>
+        <Title
+          type='SubTitle02'
+          className={styles.Title_02_Bold}
+          style={{
+            textAlign: 'left',
+            lineHeight: 1.5,
+            fontFamily: 'extrabold',
+            color: '#333333',
+            overflow: 'hidden',
+          }}
+        >
+          각기 다른 사람들이
+          <br />
+          모여서 완성된 색다른 챕
+        </Title>
+        <ViewButton>전체보기</ViewButton>
+      </div>
+      <section className={styles.section_02}>
+        {_.shuffle(chaps).map((el, idx) => {
+          if (idx < 3) {
+            return (
+              <div className={styles.bookCard}>
+              <BookCard
+                key={el.title}
+                onClick={() => handlePage(el)}
+                ranking={idx + 1}
+                title={el.title}
+                coverImage={el.coverImage}
+                bookname={el.bookName}
+                date={el.date}
+                participants={el.participants}
+                tag={el.tag}
+                isLongChap={true}
+              />
+              </div>
+            );
+          }
+          return false;
+        })}
+      </section>
+      <BottomBar></BottomBar>
     </div>
   );
 };
