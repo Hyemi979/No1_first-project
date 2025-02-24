@@ -52,7 +52,7 @@ const LiveShortChapCardL = ({
         <Title
           type='Body02'
           style={{
-            fontFamily: 'extrBold',
+            fontFamily: 'extraBold',
             color: isLive ? '#E4575D' : '#808080',
           }}
         >

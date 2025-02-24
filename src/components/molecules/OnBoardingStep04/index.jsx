@@ -24,10 +24,19 @@ const OnBoardingStep04 = ({ nextStep, beforeStep }) => {
 
   return (
     <OnboardingLayout>
-      <div className={styles.contents}>
-        <FavoriteTopNavbar onClick={beforeStep}>
-           <div className={styles.text_box2}>나의 독서 스타일은?</div>
+      <div className={styles.favoritetopnavbar}>
+      <FavoriteTopNavbar onClick={beforeStep}>
+          나의 독서 스타일은?
         </FavoriteTopNavbar>
+        </div>
+
+<div className={styles.contents}>
+        <div className={styles.content}>
+
+
+        
+
+         {/* 진행률 바 표시 */}
         <div className={styles.progressBar}>
           <ProgressBar progress={2} />
         </div>
@@ -37,7 +46,8 @@ const OnBoardingStep04 = ({ nextStep, beforeStep }) => {
             성별을 선택해주세요!
           </Title>
         </div>
-
+        </div>
+        
         <div className={styles.genderGrid}>
           <Favorite_small_selection_button
             onClick={() => handleGenderSelection('male')}

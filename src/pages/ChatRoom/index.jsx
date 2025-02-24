@@ -11,7 +11,7 @@ import seed_badge from '/src/assets/image/seed_badge.svg';
 import tree_badgeY from '/src/assets/image/tree_badgeY.svg';
 import tree_badgeB from '/src/assets/image/tree_badgeB.svg';
 import DebateTopicCard from '../../components/molecules/DebateTopicCard';
-import TopNavBar from '../../components/atoms/TopNavbar';
+import TopNavBar from '../../components/atoms/TopNavBar';
 import styles from './index.module.css';
 import React, { useRef, useEffect, useState } from 'react';
 
