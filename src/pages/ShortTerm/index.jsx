@@ -13,6 +13,7 @@ import styles from './index.module.css';
 import chevron_down from '../../assets/chevron_down.svg';
 import rightarrow from '../../assets/rightarrow.svg';
 import ViewButton from '../../components/atoms/ViewButton';
+import calenderdate02 from '../../assets/image/calenderdate02.svg';
 
 import { useRecoilValue } from 'recoil';
 import { chapState } from '../../shared/recoil/chapState';
@@ -21,10 +22,9 @@ import _ from 'lodash';
 const ShortTerm = () => {
   const { routePage } = useNavigationPage();
   const { chaps } = useRecoilValue(chapState);
-  
- // Chips의 클릭 상태를 관리하는 상태
- const [pressedChips, setPressedChips] = useState([]);
 
+  // Chips의 클릭 상태를 관리하는 상태
+  const [pressedChips, setPressedChips] = useState([]);
 
   // Chips 클릭 핸들러
   const handleChipClick = (chip) => {
@@ -71,28 +71,28 @@ const ShortTerm = () => {
             >
               성향에 맞는 챕을 <br></br>키워드로 찾아보세요!
             </Title>
-            
+
             <ViewButton>전체보기</ViewButton>
           </div>
           <div className={styles.chipswrap}>
-          <Chips
-            isPressed={pressedChips.includes('#느긋한책방손님')} // 클릭 상태 전달
-            onClick={() => handleChipClick('#느긋한책방손님')} // 클릭 핸들러
-          >
-            #느긋한책방손님
-          </Chips>
-          <Chips
-            isPressed={pressedChips.includes('#소설/문학')}
-            onClick={() => handleChipClick('#소설/문학')}
-          >
-            #소설/문학
-          </Chips>
-          <Chips
-            isPressed={pressedChips.includes('#판타지')}
-            onClick={() => handleChipClick('#판타지')}
-          >
-            #판타지
-          </Chips>
+            <Chips
+              isPressed={pressedChips.includes('#느긋한책방손님')} // 클릭 상태 전달
+              onClick={() => handleChipClick('#느긋한책방손님')} // 클릭 핸들러
+            >
+              #느긋한책방손님
+            </Chips>
+            <Chips
+              isPressed={pressedChips.includes('#소설/문학')}
+              onClick={() => handleChipClick('#소설/문학')}
+            >
+              #소설/문학
+            </Chips>
+            <Chips
+              isPressed={pressedChips.includes('#판타지')}
+              onClick={() => handleChipClick('#판타지')}
+            >
+              #판타지
+            </Chips>
           </div>
           <div className={styles.soonBookCardWrap}>
             {_.shuffle(chaps).map((el, idx) => {
@@ -100,17 +100,17 @@ const ShortTerm = () => {
                 console.log('el', el);
                 return (
                   <div className={styles.bookCard}>
-                  <BookCard
-                    key={el.title}
-                    onClick={() => handlePage(el)}
-                    title={el.title}
-                    coverImage={el.coverImage}
-                    bookname={el.bookName}
-                    date={el.date}
-                    participants={el.participants}
-                    tag={el.tag}
-                    matchRate={97}
-                  />
+                    <BookCard
+                      key={el.title}
+                      onClick={() => handlePage(el)}
+                      title={el.title}
+                      coverImage={el.coverImage}
+                      bookname={el.bookName}
+                      date={el.date}
+                      participants={el.participants}
+                      tag={el.tag}
+                      matchRate={97}
+                    />
                   </div>
                 );
               }
@@ -164,16 +164,16 @@ const ShortTerm = () => {
                 console.log('el', el);
                 return (
                   <div className={styles.bookCard}>
-                  <BookCard
-                    key={el.title}
-                    onClick={() => handlePage(el)}
-                    title={el.title}
-                    coverImage={el.coverImage}
-                    bookname={el.bookName}
-                    date={el.date}
-                    participants={el.participants}
-                    tag={el.tag}
-                  />
+                    <BookCard
+                      key={el.title}
+                      onClick={() => handlePage(el)}
+                      title={el.title}
+                      coverImage={el.coverImage}
+                      bookname={el.bookName}
+                      date={el.date}
+                      participants={el.participants}
+                      tag={el.tag}
+                    />
                   </div>
                 );
               }
@@ -203,7 +203,7 @@ const ShortTerm = () => {
             </div>
           </div>
           <div className={styles.calenderdatewrap}>
-            <img src='calenderdate.svg' />
+            <img src={calenderdate02} />
           </div>
           <div className={styles.LiveBookCardWarp02}>
             {_.shuffle(chaps).map((el, idx) => {
