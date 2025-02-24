@@ -44,8 +44,8 @@ const ChapDetail = () => {
         bookname='소설'
         bookname2={genre}
         date={date}
-        participants={`${participants}/30`}
-        participants2='자유참여'
+        participants={`${participants}/30 `}
+        participants2=' 자유참여'
         uploadtext='답변 등록 마감'
       />
       <div className={styles.same_book_group}>
@@ -54,9 +54,7 @@ const ChapDetail = () => {
             type='Body01'
             style={{ fontFamily: 'bold', lineHeight: '1.5' }}
           >
-            지금 [세상의 마지막 기차역]
-            <br />
-            으로 진행 중인 단기챕
+            지금 진행 중인 단기챕
           </Title>
           <div className={styles.all_list}>
             <Title type='Caption01' style={{ color: '#666666' }}>
