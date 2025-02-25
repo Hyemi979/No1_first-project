@@ -26,37 +26,22 @@ const ConfirmModal = () => {
                 shouldCloseOnOverlayClick={false}
                 style={{
                     content: {
-                        width: '400px',
-                        height: '300px',
+                        width: '250px',
+                        height: '200px',
                         margin: 'auto',
                         display: 'flex',
                         flexDirection: 'column',
                         justifyContent: 'center',
                         alignItems: 'center',
                         border:'0px',
-                        backgroundColor:'white'
+                        backgroundColor:'white',
+                        borderRadius: '10px',
                     }
                     
                 }}
             >
 
 
-               <button 
-                    className='wrap1'
-                    onClick={handleClose}
-                    onMouseEnter={() => setIsHovered(true)}
-                    onMouseLeave={() => setIsHovered(false)}
-                    style={{ 
-                        backgroundColor: '#ffffff', 
-                      
-                        paddingLeft: '300px',
-                        border: '3px', 
-                        
-                        borderRadius: '5px' 
-                    }}
-                >
-                     <img src={icon2} alt='exit' height='24px' width='24px'/>
-                </button>
 
 
 
@@ -90,7 +75,7 @@ color:'#333333'
                         borderRadius: '8px',
                         cursor: 'pointer',
                         transition: 'background-color 0.3s ease',
-                        width: '335px',
+                        width: '150px',
                         height: '54px'
                 }}>
 
