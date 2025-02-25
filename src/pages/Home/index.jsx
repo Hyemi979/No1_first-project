@@ -296,7 +296,11 @@ const Home = () => {
             return false;
           })}
         </section>
+          
+        <div className={styles.BottomBarContainer}>
         <BottomBar></BottomBar>
+        </div>
+         
       </div>
        </div>
   );

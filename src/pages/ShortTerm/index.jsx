@@ -219,7 +219,9 @@ const ShortTerm = () => {
             })}
           </div>
         </div>
+        <div className={styles.BottomBarContainer}>
         <BottomBar></BottomBar>
+        </div>
       </div>
     </div>
   );
