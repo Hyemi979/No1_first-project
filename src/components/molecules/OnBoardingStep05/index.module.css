@@ -24,8 +24,9 @@
   align-items: center;
   justify-content: flex-start; /* 위쪽 정렬 */
   flex-grow: 1; /* 남은 공간을 채우기 */
-  gap: 40px;
+  gap: 30px;
   padding: 0 20px;
+  width: 100%;
 }
 
 .content {
@@ -33,7 +34,6 @@
   flex-direction: column;
   width: 100%;
   gap: 20px;
-
   align-items: center;
 }
 
@@ -47,7 +47,7 @@
   display: flex;
   flex-direction: column;
 
-  gap: 10px;
+  gap: 20px;
   align-items: center;
 }
 
@@ -84,5 +84,5 @@
 .buttonWrap {
   margin-bottom: 34px;
   width: 100%;
-  padding: 0 20px;
+  padding: 10px 20px 20px 20px;
 }

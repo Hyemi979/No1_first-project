@@ -1,9 +1,9 @@
 .container {
-  padding: 0 20px 0 20px ;
+  padding: 0 20px 0 20px;
   display: flex;
   flex-direction: column;
   align-items: center; /* 전체 요소들 가운데 정렬 */
-  width: 100%;  /* 화면 너비 고정 */
+  width: 100%; /* 화면 너비 고정 */
 }
 
 .favoritetopnavbar {
@@ -21,10 +21,9 @@
   align-items: center;
   justify-content: flex-start; /* 위쪽 정렬 */
   flex-grow: 1; /* 남은 공간을 채우기 */
-  
-   padding: 0 20px;
+  width: 100%;
+  padding: 0 20px;
 }
-
 
 .progressBar {
   display: flex;
@@ -32,16 +31,13 @@
   margin-top: 30px;
 }
 
-
 .content {
   display: flex;
   flex-direction: column;
   width: 100%;
-  
 
   align-items: center;
 }
-
 
 .align_progress {
   display: flex;
@@ -55,31 +51,30 @@
 
 .progressBackground {
   fill: none;
-  stroke: #DBEAFF; /* 배경 테두리 색상 */
+  stroke: #dbeaff; /* 배경 테두리 색상 */
 }
 
 .progressForeground {
   fill: none;
-  stroke: #5FA3FC; /* 진행되는 테두리 색상 */
+  stroke: #5fa3fc; /* 진행되는 테두리 색상 */
   stroke-linecap: round;
   transition: stroke-dashoffset 0.3s ease;
 }
 
 .progressText {
   transform: rotate(90deg);
-  transform-origin: 60px 60px;  
+  transform-origin: 60px 60px;
   font-size: 38.3px;
   font-weight: bold;
-  fill: #0455BE;
+  fill: #0455be;
 }
 
 .image {
   width: 200px; /* 이미지 사이즈 설정 */
-  height: 200px; 
-  margin: 20px 0 30px 0; /* 프로그래스 바와 이미지 간 간격 */
+  height: 200px;
+  margin: 0 0 30px 0; /* 프로그래스 바와 이미지 간 간격 */
   align-self: center; /* 가운데 정렬 */
 }
-
 
 .titleContainer {
   width: 100%; /* 전체 너비 사용 */
@@ -102,11 +97,10 @@
   vertical-align: middle; /* 수직 정렬을 위해 사용 */
 }
 
-
 .buttonGroup {
   display: flex;
   flex-direction: column;
   gap: 10px;
   align-items: center;
-  margin-top: 24px; /* 타이틀과 버튼 간 간격 */
+  margin-top: 30px; /* 타이틀과 버튼 간 간격 */
 }
