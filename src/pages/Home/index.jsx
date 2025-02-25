@@ -13,7 +13,7 @@ import MainButton from '../../components/molecules/MainButton';
 import ViewButton from '../../components/atoms/ViewButton';
 import MainTopNavbar from '../../components/atoms/MainTopNavbar';
 import BottomBar from '../../components/atoms/BottomBar';
-import filter_image from '../../assets/image/filter_image.svg';
+import filter_icon03 from '../../assets/image/filter_icon03.svg';
 import _ from 'lodash';
 import { useEffect } from 'react';
 import { myTasteState } from '../../shared/recoil/myTasteState';
@@ -57,7 +57,7 @@ const Home = () => {
         )}
         <section className={styles.section_00}>
           <MainButton onClick={() => routePage('/shortTerm')} />
-          <MainButton type={'longChap'}  onClick={callModal}/>
+          <MainButton type={'longChap'} onClick={callModal} />
         </section>
         <SearchBar />
         <div className={styles.content_wrap01}>
@@ -121,7 +121,7 @@ const Home = () => {
                 TOP3
               </Title>
             </div>
-            <ViewButton  onClick={callModal}>전체보기</ViewButton>
+            <ViewButton onClick={callModal}>전체보기</ViewButton>
           </div>
           <section className={styles.section_01}>
             {_.shuffle(chaps).map((el, idx) => {
@@ -175,7 +175,7 @@ const Home = () => {
                   TOP3
                 </Title>
               </div>
-              <ViewButton  onClick={callModal}>전체보기</ViewButton>
+              <ViewButton onClick={callModal}>전체보기</ViewButton>
             </div>
             <section className={styles.section_01}>
               {_.shuffle(chaps).map((el, idx) => {
@@ -232,8 +232,10 @@ const Home = () => {
               내 성향에 맞는 모임. 직접 찾아보세요
             </Title>
           </div>
-          <div className={styles.image}  onClick={callModal}>
-            <img src={filter_image} alt='필터이미지' />
+          <div className={styles.image} onClick={callModal}>
+            <div className={styles.image_size}>
+              <img src={filter_icon03} alt='필터이미지' />
+            </div>
           </div>
           <section className={styles.section_01_discover}>
             {_.shuffle(chaps).map((el, idx) => {
@@ -273,7 +275,7 @@ const Home = () => {
             <br />
             모여서 완성된 색다른 챕
           </Title>
-          <ViewButton  onClick={callModal}>전체보기</ViewButton>
+          <ViewButton onClick={callModal}>전체보기</ViewButton>
         </div>
         <section className={styles.section_02}>
           {_.shuffle(chaps).map((el, idx) => {
@@ -296,13 +298,11 @@ const Home = () => {
             return false;
           })}
         </section>
-        </div>
-        <div className={styles.BottomBarContainer}>
+      </div>
+      <div className={styles.BottomBarContainer}>
         <BottomBar></BottomBar>
-        </div>
-         
-      
-       </div>
+      </div>
+    </div>
   );
 };
 export default Home;
