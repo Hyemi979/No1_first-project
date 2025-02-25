@@ -12,7 +12,7 @@ const FavoriteResultTopNavbar = ({ children, className, onClick, ...rest }) => {
       onClick();
     } else {
       routePage(-1);
-    } // -1만 넣기
+    } // -1만 넣기d
   };
   return (
     <div {...rest} className={`${styles.navbar} ${className || ''}`}>
