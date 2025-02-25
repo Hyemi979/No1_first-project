@@ -39,7 +39,9 @@ const ChapDetail = () => {
       />
       <MatchBar tags={tag} />
       <ChatterCarousel />
-      <RegisteredAnswerPreview />
+      <RegisteredAnswerPreview
+        description={`현재 ${participants}명이 참가중이에요`}
+      />
       <InfoCard
         bookname='소설'
         bookname2={genre}
