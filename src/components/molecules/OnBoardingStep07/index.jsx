@@ -69,7 +69,7 @@ const OnBoardingStep07 = ({ nextStep, choice, beforeStep }) => {
     <OnboardingLayout>
       <div className={styles.favoritetopnavbar}>
         <FavoriteTopNavbar onClick={beforeStep}>
-          나의 독서 스타일은?
+          나의 독서 성향은?
         </FavoriteTopNavbar>
       </div>
 
