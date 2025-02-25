@@ -22,6 +22,7 @@ const OnBoardingStep00 = ({ handlePage }) => {
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
+    infinite: false,
 
     customPaging: (i) => (
       <div
