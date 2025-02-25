@@ -16,11 +16,11 @@ const LiveShortChapCardL = ({
 }) => {
   return (
     <>
-      <div
-        className={styles.bgImage}
-        style={{ backgroundImage: `url(${image})` }}
-      />
       <div {...rest} className={styles.wrap}>
+        <div
+          className={styles.bgImage}
+          style={{ backgroundImage: `url(${image})` }}
+        />
         <div className={isLive ? styles.tagText : styles.nonLiveTagText}>
           <Title
             type='Caption01'
