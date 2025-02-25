@@ -12,7 +12,7 @@ const HomeAfStep01 = ({ tags, handleClick, name, ...rest }) => {
         <h2>{name}님의 취향은</h2>
         <div className={styles.tags}>
           {tags.map((el, idx) => (
-            <Tag key={el} type={color[idx]}>
+            <Tag size='large' key={el} type={color[idx]}>
               #{el}
             </Tag>
           ))}
@@ -21,7 +21,7 @@ const HomeAfStep01 = ({ tags, handleClick, name, ...rest }) => {
           <p onClick={handleClick} className={styles.retry}>
             다시 한 번 취향 테스트 해볼까요?
           </p>
-          <img src={testRightArrow} alt='아이콘' width={18} height={18} />
+          <img src={testRightArrow} alt='아이콘' width={16} height={16} />
         </div>
         <img
           className={styles.image}
