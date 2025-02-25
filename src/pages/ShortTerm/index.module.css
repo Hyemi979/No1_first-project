@@ -9,7 +9,10 @@
   padding: 0px 20px;
   box-sizing: border-box;
   overflow: hidden;
+  padding-top: 60px;
+  padding-bottom: 60px
 }
+
 
 .topcontentWrap {
   display: flex;
@@ -198,6 +201,16 @@
   justify-content: flex-start;
   flex-direction: column;
   align-items: flex-start; /* 왼쪽 정렬 */
+}
+
+.BottomBarContainer{
+  max-width: 450px;
+  width: 100%;
+  display: flex;
+ 
+  justify-content: center;
+  align-items: center;
+ 
 }
 
 /* Title_01 */

@@ -6,8 +6,17 @@
     height: 60px;
     padding: 0 20px;
     background-color: white;
-    border-bottom: 1px solid #ddd;
+    position: fixed;
+    top: 0;
+max-width: 450px;
+z-index: 1000;
+    border-bottom: 1px solid #F2F2F2;
 }
+
+
+ 
+
+
 
 .left {
     display: flex;
