@@ -3,6 +3,8 @@
   flex-direction: column;
   width: 100%;
   overflow: hidden;
+  padding-top: 59px;
+  padding-bottom: 150px
 }
 
 .carousel_box {
