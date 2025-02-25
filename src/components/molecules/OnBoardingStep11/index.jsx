@@ -19,7 +19,7 @@ import book_image_your from '../../../assets/image/book_image_your.svg';
 import book_image_adult from '../../../assets/image/book_image_adult.svg';
 import { useSetRecoilState } from 'recoil';
 import { myTasteState } from '../../../shared/recoil/myTasteState';
-import useCallModal from '../../hooks/useCallModal';
+
 
 const images = [
   result_selfie_fantasy,
@@ -141,7 +141,7 @@ const myBookTypes = [
 const color = ['#056BF0', '#666666', '#7A5900'];
 
 const OnBoardingStep11 = ({ items, beforeStep, resetStep }) => {
-  const { callModal } = useCallModal();
+  
   const { routePage } = useNavigationPage();
   const setMyTaste = useSetRecoilState(myTasteState);
 
