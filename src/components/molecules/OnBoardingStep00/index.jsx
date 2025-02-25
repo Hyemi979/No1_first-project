@@ -3,6 +3,7 @@ import slide_01 from '../../../assets/image/slide_01.svg';
 import slide_02 from '../../../assets/image/slide_02.svg';
 import slide_03 from '../../../assets/image/slide_03.svg';
 import slide_04 from '../../../assets/image/slide_04.svg';
+import slide_01_1 from '../../../assets/image/slide_01_1.svg';
 import Button from '../../atoms/Button';
 
 import Slider from 'react-slick';
@@ -43,7 +44,7 @@ const OnBoardingStep00 = ({ handlePage }) => {
 
   const slides = [
     // 슬라이드에 표시할 이미지 정보 배열
-    { src: slide_01, alt: '앱 이용 안내 1' },
+    { src: slide_01_1, alt: '앱 이용 안내 1' },
     { src: slide_02, alt: '앱 이용 안내 2' },
     { src: slide_03, alt: '앱 이용 안내 3' },
     { src: slide_04, alt: '앱 이용 안내 4' },
