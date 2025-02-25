@@ -12,6 +12,7 @@ import right_arrow_mini from '../../assets/right_arrow_mini.svg';
 import Button from '../../components/atoms/Button';
 import { useRecoilValue } from 'recoil';
 import { chapState } from '../../shared/recoil/chapState';
+import ViewButton from '../../components/atoms/ViewButton';
 import _ from 'lodash';
 
 const ChapDetail = () => {
@@ -59,12 +60,7 @@ const ChapDetail = () => {
             지금 진행 중인 단기챕
           </Title>
           <div className={styles.all_list}>
-            <Title type='Caption01' style={{ color: '#666666' }}>
-              전체보기
-            </Title>
-            <div className={styles.arrow_box}>
-              <img src={right_arrow_mini} alt='>' />
-            </div>
+            <ViewButton>전체보기</ViewButton>
           </div>
         </div>
 
@@ -99,12 +95,7 @@ const ChapDetail = () => {
             비슷한 '소설' 단기챕 추천
           </Title>
           <div className={styles.all_list}>
-            <Title type='Caption01' style={{ color: '#666666' }}>
-              전체보기
-            </Title>
-            <div className={styles.arrow_box}>
-              <img src={right_arrow_mini} alt='>' />
-            </div>
+            <ViewButton>전체보기</ViewButton>
           </div>
         </div>
 
@@ -139,12 +130,7 @@ const ChapDetail = () => {
             비슷한 '성향' 단기챕 추천
           </Title>
           <div className={styles.all_list}>
-            <Title type='Caption01' style={{ color: '#666666' }}>
-              전체보기
-            </Title>
-            <div className={styles.arrow_box}>
-              <img src={right_arrow_mini} alt='>' />
-            </div>
+            <ViewButton>전체보기</ViewButton>
           </div>
         </div>
 
