@@ -40,7 +40,7 @@ const datas = [
     profileImg: profile_image04,
     name: '윤주영',
     sex: '여자',
-    isMe :true,
+    isMe: true,
     contents: '처음 기획 단계에서 많이 힘들었지만\n그런 과정을 함께하면서 성장했고,\n이후 디자인 단계에서 어벤저스를 보여주셨던\n우리 취탈원 1조 여러분들! 모두 감사했고\n즐거웠습니다! 수료하시고 나서 다들 취뽀\n성공하시고 멋진 직장인으로 만났으면 좋겠어요!',
     emojis: [
       { emoji: '💛', count: 24 },
@@ -74,7 +74,7 @@ const datas = [
     profileImg: profile_image01,
     name: '김영윤 튜터님',
     sex: '남자',
-    contents: '잘 될까 제가 더 걱정이 많았는데 여러분 덕분에\n잘 마무리한 것 같습니다. 열심히 하신 만큼 좋은\n결실 얻길 바라고 항상 밝게 빛나는 여러분이 되길 바라요!',
+    contents: '잘 될까 제가 더 걱정이 많았는데 여러분 덕분에\n잘 마무리한 것 같습니다. 열심히 하신 만큼 좋은\n결실 얻길 바라고 항상 밝게 빛나는 여러분이\n되길 바라요!',
     emojis: [
       { emoji: '👍', count: 25 },
       { emoji: '😊', count: 26 },
@@ -85,7 +85,7 @@ const datas = [
     profileImg: profile_image04,
     name: '김소윤 튜터님',
     sex: '여자',
-    contents: '지난 4달 동안 쉴 틈 없이 달려오느라\n고생 많으셨고, 멋지게 완주하신 것을 축하드립니다!',
+    contents: '지난 4달 동안 쉴 틈 없이 달려오느라\n고생 많으셨고, 멋지게 완주하신 것을\n축하드립니다!',
     emojis: [
       { emoji: '💖', count: 28 },
       { emoji: '😄', count: 24 },
