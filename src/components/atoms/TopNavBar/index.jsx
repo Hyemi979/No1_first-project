@@ -29,7 +29,7 @@ const TopNavBar = ({ navtitle='', search, bell, chat, dots, settings, children, 
                 {bell && <span className={styles.icon}><img src={bell_icon} alt='알림 아이콘' width={25} height={25} /></span>}
                 {chat && <span className={styles.icon}><img src={DM_icon} alt='개인 채팅 아이콘' width={25} height={25} /></span>}
                 {dots && <span className={styles.icon}><img src={dotsMenu_icon} alt='점세개 아이콘' width={25} height={25} /></span>}
-                {settings && <span className={styles.icon}><img src={cog_icon} alt='설정 아이콘' width={25} height={25} /></span>}
+                {settings && <span className={styles.icon}><img src={cog_icon} alt='설정 아이콘' width={22} height={22} /></span>}
             </div>
         </div>
     )

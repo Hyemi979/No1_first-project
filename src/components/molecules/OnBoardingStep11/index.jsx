@@ -20,6 +20,7 @@ import book_image_adult from '../../../assets/image/book_image_adult.svg';
 import { useSetRecoilState } from 'recoil';
 import { myTasteState } from '../../../shared/recoil/myTasteState';
 
+
 const images = [
   result_selfie_fantasy,
   result_hipster_fantasy,
@@ -140,6 +141,7 @@ const myBookTypes = [
 const color = ['#056BF0', '#666666', '#7A5900'];
 
 const OnBoardingStep11 = ({ items, beforeStep, resetStep }) => {
+  
   const { routePage } = useNavigationPage();
   const setMyTaste = useSetRecoilState(myTasteState);
 

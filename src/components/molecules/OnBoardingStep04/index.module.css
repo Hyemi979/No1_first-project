@@ -23,7 +23,7 @@
   justify-content: flex-start; /* 위쪽 정렬 */
   flex-grow: 1; /* 남은 공간을 채우기 */
   gap: 40px;
-   padding: 0 20px;
+  spadding: 0 20px;
 }
 
 .content {
@@ -34,7 +34,6 @@
 
   align-items: center;
 }
-
 
 .contents {
   width: 100%;
@@ -58,7 +57,7 @@
   flex-direction: column;
   align-items: center;
   gap: 5px;
-  margin-bottom: 40px;
+  padding-bottom: 40px;
 }
 
 .genderGrid {
@@ -74,7 +73,6 @@
   color: black;
   font-weight: bold;
 }
-
 
 .text_box2 {
   font-size: 18px;

@@ -17,29 +17,25 @@ import filter_image from '../../assets/image/filter_image.svg';
 import _ from 'lodash';
 import { useEffect } from 'react';
 import { myTasteState } from '../../shared/recoil/myTasteState';
-
+import useCallModal from '../../hooks/useCallModal';
 const Home = () => {
   const { routePage } = useNavigationPage();
-
+  const { callModal } = useCallModal();
   const { chaps } = useRecoilValue(chapState);
   const { isOnboarding, myTastes, isTaste } = useRecoilValue(myTasteState);
-
   useEffect(() => {
     if (!isOnboarding) {
       routePage('/onboarding');
     }
   });
-
   const handlePreference = () => {
     window.scrollTo(0, 0);
     routePage('/preference');
   };
-
   const handlePage = (data) => {
     window.scrollTo(0, 0);
     routePage('/chapDetail', data);
   };
-
   return (
     <div className={styles.wrap_01}>
       <div className={styles.TopNavbar}>
@@ -59,13 +55,11 @@ const Home = () => {
             className={styles.my_taste}
           />
         )}
-
         <section className={styles.section_00}>
           <MainButton onClick={() => routePage('/shortTerm')} />
-          <MainButton type={'longChap'} />
+          <MainButton type={'longChap'}  onClick={callModal}/>
         </section>
         <SearchBar />
-
         <div className={styles.content_wrap01}>
           <Title
             type='Title02'
@@ -127,7 +121,7 @@ const Home = () => {
                 TOP3
               </Title>
             </div>
-            <ViewButton>전체보기</ViewButton>
+            <ViewButton  onClick={callModal}>전체보기</ViewButton>
           </div>
           <section className={styles.section_01}>
             {_.shuffle(chaps).map((el, idx) => {
@@ -151,7 +145,6 @@ const Home = () => {
               return false;
             })}
           </section>
-
           <div className={styles.Top3_Box_Container02}>
             <div className={styles.top_text_box_container}>
               <div className={styles.Top_text_box}>
@@ -182,8 +175,7 @@ const Home = () => {
                   TOP3
                 </Title>
               </div>
-
-              <ViewButton>전체보기</ViewButton>
+              <ViewButton  onClick={callModal}>전체보기</ViewButton>
             </div>
             <section className={styles.section_01}>
               {_.shuffle(chaps).map((el, idx) => {
@@ -202,7 +194,6 @@ const Home = () => {
                         tags={el.tag}
                         isLongChap={true}
                         type='long-term'
-                        
                       />
                     </div>
                   );
@@ -241,10 +232,9 @@ const Home = () => {
               내 성향에 맞는 모임. 직접 찾아보세요
             </Title>
           </div>
-          <div className={styles.image}>
+          <div className={styles.image}  onClick={callModal}>
             <img src={filter_image} alt='필터이미지' />
           </div>
-
           <section className={styles.section_01_discover}>
             {_.shuffle(chaps).map((el, idx) => {
               if (idx < 3) {
@@ -283,7 +273,7 @@ const Home = () => {
             <br />
             모여서 완성된 색다른 챕
           </Title>
-          <ViewButton>전체보기</ViewButton>
+          <ViewButton  onClick={callModal}>전체보기</ViewButton>
         </div>
         <section className={styles.section_02}>
           {_.shuffle(chaps).map((el, idx) => {
@@ -315,5 +305,4 @@ const Home = () => {
        </div>
   );
 };
-
 export default Home;
