@@ -12,7 +12,7 @@ import OnBoardingStep10 from '../../components/molecules/OnBoardingStep10';
 import OnBoardingStep11 from '../../components/molecules/OnBoardingStep11';
 
 const Home = () => {
-  const [step, setStep] = useState(0);
+  const [step, setStep] = useState(1);
   const [onBoardingArr, setOnBoardingArr] = useState([]);
 
   // 다음 단계로 보내주는 함수
