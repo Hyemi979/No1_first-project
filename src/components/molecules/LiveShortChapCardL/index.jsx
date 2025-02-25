@@ -15,51 +15,60 @@ const LiveShortChapCardL = ({
   ...rest
 }) => {
   return (
-    <div {...rest} className={styles.wrap}>
-      <div className={isLive ? styles.tagText : styles.nonLiveTagText}>
-        <Title type='Caption01' style={{ color: isLive ? '#fff' : '#808080' }}>
-          {isLive ? tagText : nonLiveTagText}
-        </Title>
+    <>
+      <div
+        className={styles.bgImage}
+        style={{ backgroundImage: `url(${image})` }}
+      />
+      <div {...rest} className={styles.wrap}>
+        <div className={isLive ? styles.tagText : styles.nonLiveTagText}>
+          <Title
+            type='Caption01'
+            style={{ color: isLive ? '#fff' : '#808080' }}
+          >
+            {isLive ? tagText : nonLiveTagText}
+          </Title>
+        </div>
+        <div className={styles.img_box}>
+          <img className={styles.book_img} src={image} alt='책 표지' />
+        </div>
+        <div className={styles.text_box}>
+          <Title
+            type='SubTitle02'
+            style={{
+              fontFamily: 'Bold',
+              textAlign: 'center',
+              lineHeight: '1.5',
+              color: '#333',
+              marginBottom: '10px',
+              wordBreak: 'keep-all',
+            }}
+          >
+            {topic}
+          </Title>
+          <Title
+            type='Body02'
+            style={{
+              fontFamily: 'regular',
+              lineHeight: '1.5',
+              color: '#666',
+              marginBottom: '8px',
+            }}
+          >
+            {`[${bookTitle}]`}
+          </Title>
+          <Title
+            type='Body02'
+            style={{
+              fontFamily: 'extraBold',
+              color: isLive ? '#E4575D' : '#808080',
+            }}
+          >
+            {isLive ? scheduleText : nonLiveScheduleText}
+          </Title>
+        </div>
       </div>
-      <div className={styles.img_box}>
-        <img className={styles.book_img} src={image} alt='책 표지' />
-      </div>
-      <div className={styles.text_box}>
-        <Title
-          type='SubTitle02'
-          style={{
-            fontFamily: 'Bold',
-            textAlign: 'center',
-            lineHeight: '1.5',
-            color: '#333',
-            marginBottom: '10px',
-            wordBreak: 'keep-all',
-          }}
-        >
-          {topic}
-        </Title>
-        <Title
-          type='Body02'
-          style={{
-            fontFamily: 'regular',
-            lineHeight: '1.5',
-            color: '#666',
-            marginBottom: '8px',
-          }}
-        >
-          {`[${bookTitle}]`}
-        </Title>
-        <Title
-          type='Body02'
-          style={{
-            fontFamily: 'extraBold',
-            color: isLive ? '#E4575D' : '#808080',
-          }}
-        >
-          {isLive ? scheduleText : nonLiveScheduleText}
-        </Title>
-      </div>
-    </div>
+    </>
   );
 };
 
