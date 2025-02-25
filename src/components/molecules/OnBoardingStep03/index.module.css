@@ -1,7 +1,7 @@
 .buttonWrap {
+  padding: 10px 20px 20px 20px;
   margin-bottom: 34px;
   width: 100%;
-  padding: 0 20px;
 }
 
 .header_wrap {
@@ -40,7 +40,7 @@
   width: 100%; /* 전체 너비 사용 */
   display: flex; /* 플렉스를 사용하여 아이콘과 텍스트 정렬 */
   justify-content: space-between; /* 아이콘을 왼쪽, 텍스트는 가운데로 */
-  align-items: ceter; /* 아이콘과 텍스트 수직 정렬 */
+  align-items: center; /* 아이콘과 텍스트 수직 정렬 */
 }
 
 .contents {

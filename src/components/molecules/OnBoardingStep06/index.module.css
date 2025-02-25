@@ -21,10 +21,9 @@
   align-items: center;
   justify-content: flex-start; /* 위쪽 정렬 */
   flex-grow: 1; /* 남은 공간을 채우기 */
-  
-   padding: 0 20px;
+  width: 100%;
+  padding: 0 20px;
 }
-
 
 .progressBar {
   display: flex;
@@ -32,17 +31,12 @@
   margin-top: 30px;
 }
 
-
 .content {
   display: flex;
   flex-direction: column;
   width: 100%;
-  
-
   align-items: center;
 }
-
-
 
 .align_progress {
   display: flex;
@@ -66,8 +60,6 @@
   transition: stroke-dashoffset 0.3s ease;
 }
 
- 
-
 .progressText {
   transform: rotate(90deg);
   transform-origin: 60px 60px;
@@ -79,7 +71,7 @@
 .image {
   width: 200px; /* 이미지 사이즈 설정 */
   height: 200px;
-  margin: 20px 0 30px 0; /* 프로그래스 바와 이미지 간 간격 */
+  margin: 0 0 30px 0; /* 프로그래스 바와 이미지 간 간격 */
   align-self: center; /* 가운데 정렬 */
 }
 
@@ -109,6 +101,5 @@
   flex-direction: column;
   gap: 10px;
   align-items: center;
-  margin-top: 24px; /* 타이틀과 버튼 간 간격 */
-  
+  margin-top: 30px; /* 타이틀과 버튼 간 간격 */
 }
