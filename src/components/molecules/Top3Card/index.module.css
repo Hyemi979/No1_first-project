@@ -38,6 +38,8 @@
   flex: 1;
   padding-left: 10px; /* 책 이미지와의 간격 */
   gap: 12px;
+  min-width: 0;
+  overflow: hidden;
 }
 
 .topblock {
@@ -45,12 +47,34 @@
   flex-direction: column; /* 세로 방향으로 배치 */
   gap: 8px; /* 세로 간격 8px */
   height: auto;
+  max-width: 100%;
+  min-width: 0;
+  overflow: hidden;
 }
 
 .tag {
   display: flex;
   gap: 2px;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
+  max-width: 100%;
+  min-width: 0;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.tag > * {
+  display: block;
+  flex-shrink: 0;
+  max-width: 100%;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  min-width: 0;
+}
+.tag > *:last-child {
+  flex-shrink: 1;
+  max-width: 100%;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .icontext {
