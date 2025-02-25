@@ -6,7 +6,7 @@
   align-items: center; /* 전체 요소 가운데 정렬 */
   position: relative;
   justify-content: space-between;
-  padding: 0px 20px
+  padding: 0px 20px;
 }
 
 .favoritetopnavbar {
@@ -25,7 +25,7 @@
   justify-content: flex-start; /* 위쪽 정렬 */
   flex-grow: 1; /* 남은 공간을 채우기 */
   gap: 40px;
-   padding: 0 20px;
+  padding: 0 20px;
 }
 
 .content {
@@ -71,7 +71,8 @@
   display: grid; /* 그리드 레이아웃 사용 */
   grid-template-columns: repeat(2, 1fr); /* 2개의 열 설정 */
   gap: 16px; /* 버튼 간의 간격 */
-  margin-top: 20px; /* 상단 여백 */
+  padding-bottom: 40px;
+  margin: 20px; /* 상단 여백 */
 }
 
 .selected {
